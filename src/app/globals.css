@@ -51,3 +51,8 @@ p {
   font-size: 1rem;
   font-weight: normal;
 }
+
+/* Utility */
+.blue-link {
+  @apply text-blue-700 hover:text-blue-900 dark:text-blue-400;
+}
