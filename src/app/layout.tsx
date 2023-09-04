@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,30 +19,30 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className='mx-auto max-w-3xl'>
-          <div className="py-4 xs:py-6 mx-4 xs:mx-6 main-content">
-            <header className=' max-h-min mb-4 xs:mb-8 flex items-center justify-between'>
+          <div className="pt-4 xs:pt-6 mx-4 xs:mx-6 main-content">
+            <header className='mb-4 xs:mb-8 flex items-center justify-between'>
               <h1 className="text-2xl font-extrabold m-0 clickable-text-decorator">
-                <a href="/">Isaac Mattern</a>
+                <Link href="/">Isaac Mattern</Link>
               </h1>
-              <div className='font-semibold flex flex-nowrap align-middle gap-4 justify-end'>
+              <div className='font-semibold flex flex-nowrap items-center gap-4 justify-end h-6'>
                 <h2>
-                  <a className='blue-link text-xl' href="/">About</a>
+                  <Link className='blue-link text-lg' href="/">About</Link>
                 </h2>
                 <h2>
-                  <a className='blue-link text-xl' href="/blog">Blog</a>
+                  <Link className='blue-link text-lg' href="/blog">Blog</Link>
                 </h2>
               </div>
             </header>
             {children}
           </div>
-          <footer className='text-sm block sm:flex items-center justify-between footer'>
+          <footer className='mx-4 xs:mx-6 text-sm block sm:flex items-center justify-between footer'>
               <div className='opacity-60 text-center mb-2 sm:mb-0'>
                 &copy; Isaac Mattern 2023-present
               </div>
               <div className='opacity-100 flex items-center justify-center gap-4'>
-                <div><a href="" className='blue-link'>GitHub</a></div>
-                <div><a href="" className='blue-link'>LinkedIn</a></div>
-                <div><a href="" className='blue-link'>Contact</a></div>
+                <div><Link href="https://github.com/isaacmattern" className='blue-link'>GitHub</Link></div>
+                <div><Link href="https://www.linkedin.com/in/isaacmattern/" className='blue-link'>LinkedIn</Link></div>
+                <div><Link href="mailto:isaac.mattern@gmail.com" className='blue-link'>Contact</Link></div>
               </div>
           </footer>
         </div>

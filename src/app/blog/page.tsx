@@ -3,14 +3,12 @@ import Link from 'next/link'
 import { compareDesc, format, parseISO } from 'date-fns'
 import { allPosts, Post } from 'contentlayer/generated'
 
-function PostCard(post: Post) {
+export function PostCard(post: Post) {
   return (
-    <div className="mb-8">
-      <h2 className="mb-1">
-        <Link href={post.url} className="blue-link">
-          {post.title}
-        </Link>
-      </h2>
+    <div className="my-6">
+      <Link href={post.url} className="blue-link text-xl font-bold mb-0.5">
+        {post.title}
+      </Link>
       <time dateTime={post.date} className="block mb-1 text-xs opacity-60">
         {format(parseISO(post.date), 'LLLL d, yyyy')}
       </time>
@@ -19,7 +17,7 @@ function PostCard(post: Post) {
   )
 }
 
-export default function Home() {
+export default function BlogIndex() {
   const posts = allPosts.sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)))
 
   return (

@@ -13,6 +13,12 @@
   box-sizing: border-box;
 }
 
+:root * {
+  /* transition-property: color, background;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-duration: 0.45s; */
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -70,6 +76,31 @@ h6 {
 p {
   font-weight: normal;
   @apply text-lg
+}
+
+.project-item {
+  width: calc(100%);
+  margin-bottom: 16px;
+  @apply bg-tile-blue p-6 rounded-md
+}
+
+@media (min-width: 576px) {
+  .project-item {
+    width: calc(50% - 8px);
+    margin-bottom: 0;
+  }
+}
+
+.project-item-title:hover {
+  @apply opacity-60
+}
+
+.project-item-description > a {
+  @apply underline
+}
+
+.project-item-description > a:hover {
+  @apply  text-blue-700 dark:text-blue-400 decoration-blue-700 dark:decoration-blue-400;
 }
 
 /* Utility */
