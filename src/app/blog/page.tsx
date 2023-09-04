@@ -11,10 +11,10 @@ function PostCard(post: Post) {
           {post.title}
         </Link>
       </h2>
-      <time dateTime={post.date} className="hidden mb-1 text-xs opacity-60">
+      <time dateTime={post.date} className="block mb-1 text-xs opacity-60">
         {format(parseISO(post.date), 'LLLL d, yyyy')}
       </time>
-      <div className="text-sm [&>*]:mb-3 [&>*:last-child]:mb-0" dangerouslySetInnerHTML={{ __html: post.description }} />
+      <div className="hidden text-sm [&>*]:mb-3 [&>*:last-child]:mb-0" dangerouslySetInnerHTML={{ __html: post.description }} />
     </div>
   )
 }

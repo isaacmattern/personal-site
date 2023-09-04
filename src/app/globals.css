@@ -5,13 +5,19 @@
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-rgb: 240, 240, 240;
-  --code-background-rgb: 3, 6, 15;
+  --code-background-rgb: 31, 31, 31;
+  --tile-background-rgb: 27, 38, 51;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-rgb: 15, 18, 24;
+    --tile-background-rgb: 27, 38, 51;
   }
 }
 
@@ -20,25 +26,33 @@ body {
   background: rgb(var(--background-rgb));
 }
 
+.main-content {
+  min-height: calc(100vh - 72px);
+}
+
+.footer {
+  height: 72px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   @apply leading-9
 }
 
 h1, h2, h3, h4, h5, h6, p {
-  @apply my-3
+  @apply my-4
 }
 
 h1 {
-  @apply text-2xl
+  @apply text-3xl
 }
 
 h2 {
-  @apply text-xl
+  @apply text-2xl
 }
 
 h3 {
-  @apply text-lg
+  @apply text-xl
 }
 
 h4 {
@@ -55,12 +69,16 @@ h6 {
 
 p {
   font-weight: normal;
-  @apply text-base
+  @apply text-lg
 }
 
 /* Utility */
 .blue-link {
   @apply text-blue-700  dark:text-blue-400 hover:text-opacity-60;
+}
+
+.clickable-text-decorator {
+  @apply hover:text-blue-700 dark:hover:text-blue-400
 }
 
 .project-image {
@@ -69,5 +87,22 @@ p {
 
 pre code {
   background: rgb(var(--code-background-rgb));
-  @apply mx-0 p-4 font-mono text-sm rounded-lg w-full text-white
+  @apply mx-0 p-4 font-mono text-sm rounded-md w-full text-white
+}
+
+.tile-background {
+  background-color: rgb(var(--tile-background-rgb));
+  width: calc(100vw);
+  margin-left: -16px;
+  margin-right: -16px;
+  @apply my-3 p-8
+}
+
+@media (min-width: 376px) {
+  .tile-background {
+    width: calc(100% + 64px);
+    margin-left: -32px;
+    margin-right: -32px;
+    @apply rounded-md
+  }
 }

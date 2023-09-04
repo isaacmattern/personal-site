@@ -17,16 +17,35 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="mx-auto max-w-3xl my-2 md:my-8 px-4 md:px-8">
-          <div className='mb-4 md:mb-8 flex items-center justify-between'>
-            <h1 className="text-2xl font-extrabold">Isaac Mattern</h1>
-            <div className='text-xl font-semibold flex flex-nowrap align-middle gap-4 justify-end'>
-              <a className='blue-link' href="/">About</a>
-              <a className='blue-link' href="/blog">Blog</a>
-            </div>
+        <div className='mx-auto max-w-3xl'>
+          <div className="py-4 xs:py-6 mx-4 xs:mx-6 main-content">
+            <header className=' max-h-min mb-4 xs:mb-8 flex items-center justify-between'>
+              <h1 className="text-2xl font-extrabold m-0 clickable-text-decorator">
+                <a href="/">Isaac Mattern</a>
+              </h1>
+              <div className='font-semibold flex flex-nowrap align-middle gap-4 justify-end'>
+                <h2>
+                  <a className='blue-link text-xl' href="/">About</a>
+                </h2>
+                <h2>
+                  <a className='blue-link text-xl' href="/blog">Blog</a>
+                </h2>
+              </div>
+            </header>
+            {children}
           </div>
-          {children}
+          <footer className='text-sm block sm:flex items-center justify-between footer'>
+              <div className='opacity-60 text-center mb-2 sm:mb-0'>
+                &copy; Isaac Mattern 2023-present
+              </div>
+              <div className='opacity-100 flex items-center justify-center gap-4'>
+                <div><a href="" className='blue-link'>GitHub</a></div>
+                <div><a href="" className='blue-link'>LinkedIn</a></div>
+                <div><a href="" className='blue-link'>Contact</a></div>
+              </div>
+          </footer>
         </div>
+
       </body>
     </html>
   )

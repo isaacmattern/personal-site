@@ -1,0 +1,5 @@
+Background:
+
+Links: tailwind blue-400, blue-700
+
+tile backgrounds: 27, 38, 51
