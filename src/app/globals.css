@@ -4,13 +4,14 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-rgb: 255, 255, 255;
+  --background-rgb: 240, 240, 240;
+  --code-background-rgb: 3, 6, 15;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-rgb: 0, 0, 0;
+    --background-rgb: 15, 18, 24;
   }
 }
 
@@ -21,38 +22,52 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
+  @apply leading-9
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  @apply my-3
 }
 
 h1 {
-  font-size: 2rem;
+  @apply text-2xl
 }
 
 h2 {
-  font-size: 1.8rem;
+  @apply text-xl
 }
 
 h3 {
-  font-size: 1.6rem 
+  @apply text-lg
 }
 
 h4 {
-  font-size: 1.4rem 
+  @apply text-base
 }
 
 h5 {
-  font-size: 1.2rem 
+  @apply text-sm
 }
 
 h6 {
-  font-size: 1rem 
+  @apply text-xs
 }
 
 p {
-  font-size: 1rem;
   font-weight: normal;
+  @apply text-base
 }
 
 /* Utility */
 .blue-link {
-  @apply text-blue-700 hover:text-blue-900 dark:text-blue-400;
+  @apply text-blue-700  dark:text-blue-400 hover:text-opacity-60;
+}
+
+.project-image {
+  @apply rounded-xl
+}
+
+pre code {
+  background: rgb(var(--code-background-rgb));
+  @apply mx-0 p-4 font-mono text-sm rounded-lg w-full text-white
 }
