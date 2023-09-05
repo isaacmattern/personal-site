@@ -4,9 +4,10 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-rgb: 240, 240, 240;
+  --background-rgb: 246, 246, 248;
   --code-background-rgb: 31, 31, 31;
-  --tile-background-rgb: 27, 38, 51;
+  --tile-background-rgb: 219, 220, 222;
+  --primary-blue-rgb: 37, 100, 235;
 
   margin: 0;
   padding: 0;
@@ -24,6 +25,7 @@
     --foreground-rgb: 255, 255, 255;
     --background-rgb: 15, 18, 24;
     --tile-background-rgb: 27, 38, 51;
+    --primary-blue-rgb: 96, 165, 250;
   }
 }
 
@@ -100,16 +102,16 @@ p {
 }
 
 .project-item-description > a:hover {
-  @apply  text-blue-700 dark:text-blue-400 decoration-blue-700 dark:decoration-blue-400;
+  @apply  text-primary-blue decoration-primary-blue;
 }
 
 /* Utility */
 .blue-link {
-  @apply text-blue-700  dark:text-blue-400 hover:text-opacity-60;
+  @apply text-primary-blue hover:text-opacity-60;
 }
 
 .clickable-text-decorator {
-  @apply hover:text-blue-700 dark:hover:text-blue-400
+  @apply hover:text-primary-blue
 }
 
 .project-image {

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import parse from 'html-react-parser'
 import { allPosts } from 'contentlayer/generated';
 import { PostCard } from './blog/page';
+import LinkButton from '@/components/LinkButton';
 
 interface IPersonalProject {
   title: string;
@@ -68,12 +69,10 @@ export default function Home() {
             <PostCard key={idx} {...post} />
           ))}
         </>
-        <Link
-          href={'/blog'}
-          className='block px-3 py-2 text-base bg-tile-blue rounded-md max-w-fit m-auto hover:opacity-70 hover:text-blue-700 hover:dark:text-blue-400 cursor-pointer'
-        >
-          View all posts
-        </Link>
+        <LinkButton 
+          href='/blog'
+          buttonText='View all posts'
+        />
       </div>
 
       {/* <div className='my-12'>
@@ -86,7 +85,7 @@ export default function Home() {
           {projects.map((project, key) => {
             return (
               <div key={key} className='project-item'>
-                <p className='my-0 font-bold text-lg project-item-title text-blue-700 dark:text-blue-400'><a href={project.url}>{project.title}</a></p>
+                <p className='my-0 font-bold text-lg project-item-title text-primary-blue'><a href={project.url}>{project.title}</a></p>
                 <p className='my-0 text-sm project-item-description'>{parse(project.description)}</p>
               </div>
             )
