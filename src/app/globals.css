@@ -14,10 +14,14 @@
   box-sizing: border-box;
 }
 
-:root * {
-  /* transition-property: color, background;
+:root *:hover {
+  transition-property: color;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition-duration: 0.45s; */
+
+  -webkit-transition:0.20s;
+  -moz-transition:0.20s;
+  -o-transition:0.20s;
+  transition:0.20s;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -93,10 +97,6 @@ p {
   }
 }
 
-.project-item-title:hover {
-  @apply opacity-60
-}
-
 .project-item-description > a {
   @apply underline
 }
@@ -107,7 +107,7 @@ p {
 
 /* Utility */
 .blue-link {
-  @apply text-primary-blue hover:text-opacity-60;
+  @apply text-primary-blue hover:opacity-60;
 }
 
 .clickable-text-decorator {
@@ -118,17 +118,27 @@ p {
   @apply rounded-xl
 }
 
-pre code {
+pre {
   background: rgb(var(--code-background-rgb));
-  @apply mx-0 p-4 font-mono text-sm rounded-md w-full text-white
+  @apply mx-0 my-4 p-4 font-mono text-sm rounded-md w-full text-white
 }
+
+/* TODO - create tile component */
 
 .tile-background {
   background-color: rgb(var(--tile-background-rgb));
   width: calc(100vw);
   margin-left: -16px;
   margin-right: -16px;
-  @apply my-3 p-8
+  @apply my-4 p-8
+}
+
+.tile-background > *:first-child {
+  @apply mt-0
+}
+
+.tile-background > *:last-child {
+  @apply mb-0
 }
 
 @media (min-width: 376px) {

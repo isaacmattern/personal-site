@@ -25,7 +25,7 @@ export default function Home() {
     },
     {
       title: "What Are You Cooking?",
-      url: "https://colab.research.google.com/drive/1sj6Yd2Ckswmcwa5ZRH6Uk8mYffwVf07B?usp=sharing",
+      url: "https://whatareyou.cooking",
       date: "2022",
       description: "Recipe sharing website with Sign-In with Google, profiles, tags, and search by tags. I used React for building the UI, TypeScript to increase type safety, and Tailwind CSS for styling. <a href='https://github.com/isaacmattern/what-are-you-cooking'>View on GitHub</a>"
     },
@@ -85,7 +85,7 @@ export default function Home() {
           {projects.map((project, key) => {
             return (
               <div key={key} className='project-item'>
-                <p className='my-0 font-bold text-lg project-item-title text-primary-blue'><a href={project.url}>{project.title}</a></p>
+                <p className='my-0 font-bold text-lg blue-link'><a href={project.url}>{project.title}</a></p>
                 <p className='my-0 text-sm project-item-description'>{parse(project.description)}</p>
               </div>
             )

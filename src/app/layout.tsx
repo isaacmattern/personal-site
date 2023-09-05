@@ -25,12 +25,16 @@ export default function RootLayout({
                 <Link href="/">Isaac Mattern</Link>
               </h1>
               <div className='font-semibold flex flex-nowrap items-center gap-4 justify-end h-6'>
-                <h2>
-                  <Link className='blue-link text-lg' href="/">About</Link>
-                </h2>
-                <h2>
-                  <Link className='blue-link text-lg' href="/blog">Blog</Link>
-                </h2>
+                <Link href="/">
+                  <div className="text-xl blue-link">
+                    About
+                  </div>
+                </Link>
+                <Link href="/blog">
+                  <div className="text-xl blue-link">
+                    Blog
+                  </div>
+                </Link>
               </div>
             </header>
             {children}

@@ -10,7 +10,7 @@ function LinkButton({buttonText, href}: LinkButtonPropsType) : JSX.Element {
 
   return (
     <Link
-      href={{href}}
+      href={href}
       className='block px-3 py-2 text-base bg-tile-blue rounded-md max-w-fit m-auto hover:text-primary-blue cursor-pointer button-hover-effect-listener'
     >
       <div className="flex items-center justify-center">
@@ -22,10 +22,7 @@ function LinkButton({buttonText, href}: LinkButtonPropsType) : JSX.Element {
           <polygon points="7.293 4.707 14.586 12 7.293 19.293 8.707 20.707 17.414 12 8.707 3.293 7.293 4.707"/>
           </svg>
         </div>
-
       </div>
-
-
     </Link>
 
   );
