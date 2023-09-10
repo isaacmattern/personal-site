@@ -1,0 +1,12 @@
+.formatted-code-block {
+  font-family: monospace;
+  @apply text-base
+}
+
+.formatted-code-block > div {
+  @apply p-4
+}
+
+.formatted-code-block button {
+  @apply mt-2
+}
