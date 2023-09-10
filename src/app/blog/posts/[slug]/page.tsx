@@ -2,6 +2,7 @@
 import { allPosts } from 'contentlayer/generated'
 import { getMDXComponent } from 'next-contentlayer/hooks'
 import { notFound } from 'next/navigation'
+import './blog-post.css'
 
 export async function generateStaticParams() {
   return allPosts.map((post) => ({
@@ -21,7 +22,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   return (
     <div>
-      {/* Some code ... */}
+      <h1 className='blog-post-title'>{post.title}</h1>
       <MDXContent />
     </div>
   )
