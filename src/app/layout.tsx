@@ -30,7 +30,7 @@ export default function RootLayout({
                     About
                   </div>
                 </Link>
-                <Link href="/blog">
+                <Link href="/posts">
                   <div className="text-xl blue-link">
                     Blog
                   </div>

@@ -4,7 +4,7 @@ import { compareDesc, format, parseISO } from 'date-fns'
 import Image from 'next/image';
 import parse from 'html-react-parser'
 import { allPosts } from 'contentlayer/generated';
-import { PostCard } from './blog/page';
+import { PostCard } from './posts/page';
 import LinkButton from '@/components/LinkButton';
 
 interface IPersonalProject {
@@ -70,7 +70,7 @@ export default function Home() {
           ))}
         </>
         <LinkButton 
-          href='/blog'
+          href='/posts'
           buttonText='View all posts'
         />
       </div>
