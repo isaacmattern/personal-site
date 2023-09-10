@@ -1,5 +1,5 @@
 import Link from "next/link";
-import './LinkButton.css'
+// import './LinkButton.css'
 
 interface LinkButtonPropsType {
   buttonText: string
