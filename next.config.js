@@ -24,7 +24,21 @@ const withMDX = require('@next/mdx')({
       [
         rehypePrettyCode, 
         {
-          theme: 'one-dark-pro'
+          theme: 'one-dark-pro',
+          onVisitLine(node) {
+            // Prevent lines from collapsing in `display: grid` mode, and allow empty
+            // lines to be copy/pasted
+            if (node.children.length === 0) {
+              node.children = [{ type: "text", value: " " }];
+            }
+          },
+          onVisitHighlightedLine(node) {
+            console.log('visited')
+            node.properties.className.push("line--highlighted");
+          },
+          onVisitHighlightedWord(node) {
+            node.properties.className = ["word--highlighted"];
+          },
         }
       ]
     ],
