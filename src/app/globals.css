@@ -118,10 +118,10 @@ p {
   @apply rounded-xl
 }
 
-pre {
+/* pre {
   background: rgb(var(--code-background-rgb));
   @apply mx-0 my-4 p-4 font-mono text-sm rounded-md w-full text-white
-}
+} */
 
 /* TODO - create tile component */
 

@@ -1,7 +1,8 @@
+const rehypePrettyCode = require('rehype-pretty-code');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    mdxRs: true,
+    mdxRs: false,
   },
   images: {
     remotePatterns: [
@@ -14,6 +15,19 @@ const nextConfig = {
     ],
   },
 }
- 
-const withMDX = require('@next/mdx')()
+
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [],
+    rehypePlugins: [
+      [
+        rehypePrettyCode, 
+        {
+          theme: 'one-dark-pro'
+        }
+      ]
+    ],
+  },
+});
 module.exports = withMDX(nextConfig)

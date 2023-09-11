@@ -6,9 +6,6 @@ import './blog-post.css'
 import { MDXComponents } from 'mdx/types'
 import Link from 'next/link'
 import Test from '@/components/Test/Test'
-import FormattedCode from '@/components/FormattedCode/FormattedCode'
-import PreTransformer from '@/components/PreTransformer/PreTransformer'
-import BlockTransformer from '@/components/BlockTransformer/BlockTransformer'
 
 export async function generateStaticParams() {
   return allPosts.map((post) => ({
@@ -19,15 +16,17 @@ export async function generateStaticParams() {
 export const generateMetadata = ({ params }: { params: { slug: string } }) => {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
   if (!post) notFound();
-  return { title: post.title };
+  return { 
+    title: post.title,
+    description: post.description,
+    keywords: post.keywords,
+    authors: [{ name: 'Isaac Mattern', url: 'https://isaacmattern.com' }],
+  };
 };
 
 const mdxComponents: MDXComponents = { 
   Test, 
-  FormattedCode,
   a: ({ href, children }) => <Link href={href as string}>{children}</Link>,
-  // pre: ({children}) => <PreTransformer>{children}</PreTransformer>,
-  // code: ({children}) => <BlockTransformer>{children}</BlockTransformer>,
 };
 
 export default function Page({ params }: { params: { slug: string } }) {
