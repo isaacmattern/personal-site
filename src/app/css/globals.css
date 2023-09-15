@@ -85,27 +85,6 @@ p {
   @apply text-lg
 }
 
-.project-item {
-  width: calc(100%);
-  margin-bottom: 16px;
-  @apply bg-tile-blue p-6 rounded-md
-}
-
-@media (min-width: 576px) {
-  .project-item {
-    width: calc(50% - 8px);
-    margin-bottom: 0;
-  }
-}
-
-.project-item-description > a {
-  @apply underline
-}
-
-.project-item-description > a:hover {
-  @apply  text-primary-blue decoration-primary-blue;
-}
-
 /* Utility */
 .blue-link {
   @apply text-primary-blue hover:opacity-60;

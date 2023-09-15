@@ -1,5 +1,5 @@
-import './globals.css'
-import './syntax-highlighting.css'
+import './css/globals.css'
+import './css/syntax-highlighting.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'

@@ -1,0 +1,19 @@
+.tile-comp {
+  width: calc(100%);
+  margin-bottom: 16px;
+}
+
+@media (min-width: 576px) {
+  .tile-comp {
+    width: calc(50% - 8px);
+    margin-bottom: 0;
+  }
+}
+
+.tile-comp-description > a {
+  @apply underline
+}
+
+.tile-comp-description > a:hover {
+  @apply  text-primary-blue decoration-primary-blue;
+}
