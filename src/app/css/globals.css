@@ -98,6 +98,11 @@ p {
   @apply rounded-xl
 }
 
+pre, code, div[data-rehype-pretty-code-title] {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  font-weight: 400;
+}
+
 /* pre {
   background: rgb(var(--code-background-rgb));
   @apply mx-0 my-4 p-4 font-mono text-sm rounded-md w-full text-white
