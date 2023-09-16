@@ -10,7 +10,7 @@ export const personalProjects : IPersonalProject[] = [
     title: "Baby Keem Online Store",
     url: "https://keem.science",
     date: "2022",
-    description: "Developed a shopify merchandise store for rapper Baby Keem, along with <a href='https:peter.digital' target='_blank'>Peter Campanelli</a>"
+    description: "Developed a shopify merchandise store for rapper Baby Keem, along with <a href='https://peter.digital' target='_blank'>Peter Campanelli</a>"
   },
   {
     title: "What Are You Cooking?",
@@ -22,7 +22,7 @@ export const personalProjects : IPersonalProject[] = [
     title: "Remi Wolf Online Store",
     url: "https://remiwolf.com",
     date: "2021",
-    description: "Developed a shopify merchandise store for artist Remi Wolf, along with <a href='https:peter.digital' target='_blank'>Peter Campanelli</a>"
+    description: "Developed a shopify merchandise store for artist Remi Wolf, along with <a href='https://peter.digital' target='_blank'>Peter Campanelli</a>"
   },
   {
     title: "Wordle Solver Bot",
