@@ -5,9 +5,34 @@ description: This is my first post
 keywords: ['blog', 'nextjs', 'mdx']
 ---
 
-```js {2} title="dummy.js"
-console.log("Hello");
-console.log("Goodbye")
+# Creating a component in react 
+
+```tsx {5, 15} title="Tile.tsx"
+interface ITile {
+  key?: string | number,
+  title: string,
+  url: string,
+  description: string | JSX.Element | JSX.Element[]
+}
+
+export default function Tile({key, title, url, description} : ITile) {
+  return (
+    <div
+      key={key ? key : ""}
+      className='tile-comp block bg-tile-blue p-6 rounded-md'
+    >
+      <a href={url} target='_blank' className='my-0 font-bold text-lg blue-link'>{title}</a>
+      <p className='my-0 text-sm tile-comp-description'>{description}</p>
+    </div>
+  )
+}
 ```
+
+## Wow
+
+Bruh.
+
+*yeah*
+
 
 this is some `inline code{:js}` as an example

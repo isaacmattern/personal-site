@@ -7,7 +7,7 @@ div[data-rehype-pretty-code-fragment] {
   overflow: hidden;
  
   /* stylist preferences */
-  background-color: rgb(23, 23, 23);
+  background-color: rgb(31, 31, 31);
   border-radius: var(--border-radius);
 }
  
@@ -15,8 +15,8 @@ div[data-rehype-pretty-code-fragment] pre {
   overflow-x: auto;
  
   /* stylist preferences */
-  padding-top: 0.25rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
   font-size: 0.875rem;
   line-height: 1.5rem;
 
@@ -28,16 +28,15 @@ div[data-rehype-pretty-code-fragment] pre {
 
 div[data-rehype-pretty-code-title] {
   /* stylistic preferences */
+  font-weight: 400;
   border: var(--border-style);
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
-  background-color: rgb(34, 34, 34);
-  padding: 0.45rem 0.75rem;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
-  font-size: 0.9rem;
+  background-color: rgb(31, 31, 31);
+  padding: 0.6rem 0.75rem;
+  font-size: 1rem;
   line-height: 1rem;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 div[data-rehype-pretty-code-fragment] > pre > code > span {
@@ -50,8 +49,8 @@ div[data-rehype-pretty-code-fragment] > pre > code > span {
 }
  
 div[data-rehype-pretty-code-fragment] .line--highlighted {
-  border-left-color: rgba(235, 168, 168, 1);
-  background-color: rgba(235, 168, 168, 0.17);
+  border-left-color: rgb(var(--primary-blue-on-dark-rgb));
+  background-color: rgba(var(--primary-blue-on-dark-rgb), 0.17);
 }
 
 div[data-rehype-pretty-code-fragment] code {

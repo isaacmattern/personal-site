@@ -4,7 +4,10 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter'
+})
 
 export const metadata: Metadata = {
   title: 'Isaac Mattern',
@@ -18,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.variable}>
         <div className='mx-auto max-w-3xl'>
           <div className="pt-4 xs:pt-6 mx-4 xs:mx-6 main-content">
             <nav className='mb-4 xs:mb-8 flex items-center justify-between'>

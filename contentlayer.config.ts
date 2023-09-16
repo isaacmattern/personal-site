@@ -26,7 +26,7 @@ export default makeSource({
         // @ts-ignore
         rehypePrettyCode,
         {
-          theme: "github-dark",
+          theme: "dark-plus",
           keepBackground: false,
           onVisitLine(node: any) {
             // Prevent lines from collapsing in `display: grid` mode, and allow empty
