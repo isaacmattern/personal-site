@@ -2,7 +2,6 @@
 import { allPosts } from 'contentlayer/generated'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 import { notFound } from 'next/navigation'
-import './blog-post.css'
 import { MDXComponents } from 'mdx/types'
 import Link from 'next/link'
 import Test from '@/components/Test/Test'
@@ -41,7 +40,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 
   return (
     <div>
-      <h1 className='blog-post-title'>{post.title}</h1>
+      <h1 className='text-center font-medium text-4xl my-8 sm:text-5xl sm:my-12'>{post.title}</h1>
       <MDXContent components={mdxComponents} />
     </div>
   )

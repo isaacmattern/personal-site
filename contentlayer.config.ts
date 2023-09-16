@@ -36,11 +36,11 @@ export default makeSource({
             }
           },
           onVisitHighlightedLine(node: any) {
-            console.log('visited')
             node.properties.className? node.properties.className.push("line--highlighted") : node.properties.className = "line--highlighted";
           },
+          // Not currently used for anything.
           onVisitHighlightedWord(node: any) {
-            node.properties.className = ["word--highlighted"];
+            node.properties.className? node.properties.className.push("word--highlighted") : node.properties.className = "word--highlighted";
           },
         },
       ],

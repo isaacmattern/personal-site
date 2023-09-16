@@ -1,5 +1,5 @@
 ---
-title: My First Post
+title: We're Literally Coding
 date: 2021-12-24
 description: This is my first post
 keywords: ['blog', 'nextjs', 'mdx']
@@ -7,18 +7,16 @@ keywords: ['blog', 'nextjs', 'mdx']
 
 # Creating a component in react 
 
-```tsx {5, 15} title="Tile.tsx"
+```tsx title="Tile.tsx"
 interface ITile {
-  key?: string | number,
   title: string,
   url: string,
   description: string | JSX.Element | JSX.Element[]
 }
 
-export default function Tile({key, title, url, description} : ITile) {
+export default function Tile({title, url, description} : ITile) {
   return (
     <div
-      key={key ? key : ""}
       className='tile-comp block bg-tile-blue p-6 rounded-md'
     >
       <a href={url} target='_blank' className='my-0 font-bold text-lg blue-link'>{title}</a>
@@ -28,11 +26,6 @@ export default function Tile({key, title, url, description} : ITile) {
 }
 ```
 
-## Wow
+## Explanation
 
-Bruh.
-
-*yeah*
-
-
-this is some `inline code{:js}` as an example
+Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah `const MAX_TRIES = 5;{:js}` blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah 

@@ -11,10 +11,10 @@ function LinkButton({buttonText, href}: LinkButtonPropsType) : JSX.Element {
   return (
     <Link
       href={href}
-      className='block px-3 py-2 text-base bg-tile-blue rounded-md max-w-fit m-auto hover:text-primary-blue cursor-pointer button-hover-effect-listener'
+      className='block px-3 py-2 text-base bg-tile-blue rounded-md max-w-fit m-auto hover:opacity-60 cursor-pointer button-hover-effect-listener'
     >
       <div className="flex items-center justify-center">
-        <div className="">
+        <div className="font-bold text-primary-blue">
           {buttonText}
         </div>
         <div className="hidden button-hover-effect-target">

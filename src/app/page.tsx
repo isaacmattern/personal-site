@@ -20,7 +20,7 @@ export default function Home() {
       <div className='my-12'>
         <h1 className='text-center'>{"About"}</h1>
         <p>
-          {"Hi, I'm Isaac. I'm a front-end software engineer at JPMorgan Chase in Columbus, Ohio. I'm interested in web technologies and enjoy creating great experiences on the web. I've also had great opportunites to work on some awesome freelance projects."}
+          {"Hi, I'm Isaac. I'm a software engineer at JPMorgan Chase in Columbus, Ohio. I'm primarily interested in front-end technologies and creating great experiences on the web. I've also had great opportunites to work on some awesome freelance projects."}
         </p>
       </div>
 
