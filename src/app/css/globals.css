@@ -5,7 +5,8 @@
 
 :root {
   --foreground-rgb: 255, 255, 255;
-  --background-rgb: 15, 18, 24;
+  /* --background-rgb: 15, 18, 24; */
+  --background-rgb: 19, 22, 29;
   --tile-background-rgb: 27, 38, 51;
   --primary-blue-rgb: 96, 165, 250;
   /* For code highlighting */
@@ -26,7 +27,7 @@
   transition:0.18s;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
 
     --foreground-rgb: 0, 0, 0;
@@ -34,7 +35,7 @@
     --tile-background-rgb: 219, 220, 222;
     --primary-blue-rgb: 37, 100, 235;
   }
-}
+} */
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -56,36 +57,35 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2, h3, h4, h5, h6, p, .formatted-code-block {
-  @apply my-4
+  @apply my-4 sm:my-8
 }
 
 h1 {
-  @apply text-3xl
+  @apply text-3xl sm:text-4xl
 }
 
-h2 {
-  @apply text-2xl
+h1, h2 {
+  @apply text-2xl sm:text-3xl
 }
 
 h3 {
-  @apply text-xl
+  @apply text-xl sm:text-2xl
 }
 
 h4 {
-  @apply text-base
+  @apply text-lg sm:text-xl
 }
 
 h5 {
-  @apply text-sm
+  @apply text-base sm:text-lg
 }
 
 h6 {
-  @apply text-xs
+  @apply text-sm sm:text-base
 }
 
 p {
-  font-weight: normal;
-  @apply text-lg
+  @apply font-normal text-base sm:text-lg
 }
 
 /* Utility */
@@ -104,8 +104,8 @@ p {
 pre, code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   font-weight: 400;
-  font-size: 0.75rem;
-  line-height: 1.15rem;
+  font-size: 0.70rem;
+  line-height: 1rem;
 }
 
 @media (min-width: 576px) {
@@ -115,12 +115,35 @@ pre, code {
   }
 }
 
-/* pre {
-  background: rgb(var(--code-background-rgb));
-  @apply mx-0 my-4 p-4 font-mono text-sm rounded-md w-full text-white
-} */
+/* Lists */
 
-/* TODO - create tile component */
+ul, ol {
+  @apply ml-4
+}
+
+ul ul, ol ol {
+  @apply ml-16
+}
+
+ul ul ul, ol ol ol {
+  @apply ml-16
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ul ul {
+  list-style-type: circle;
+}
+
+ul ul ul {
+  list-style-type: square;
+}
+
+ol {
+  list-style-type: armenian;
+}
 
 .tile-background {
   background-color: rgb(var(--tile-background-rgb));

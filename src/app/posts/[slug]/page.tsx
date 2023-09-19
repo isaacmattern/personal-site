@@ -40,7 +40,8 @@ export default function Page({ params }: { params: { slug: string } }) {
 
   return (
     <div>
-      <h1 className='text-center font-medium text-4xl my-8 sm:text-5xl sm:my-12'>{post.title}</h1>
+      <h1 className='text-center font-medium text-3xl my-4 sm:mt-12 sm:text-4xl'>{post.title}</h1>
+      <h2 className='opacity-60 font-normal text-base my-4 sm:mb-8 sm:text-lg'>{post.description}</h2>
       <MDXContent components={mdxComponents} />
     </div>
   )

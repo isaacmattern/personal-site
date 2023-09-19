@@ -76,6 +76,6 @@ code[data-line-numbers] .line::before {
 code .line {
   background-color: rgb(var(--code-bg-color-rgb));
   border: var(--border-style);
-  font-size: 0.9rem;
-  @apply py-0.5 px-2 mx-0.5 rounded-md inline-block
+  font-size: 0.85rem;
+  @apply py-1 px-2 mx-0 leading-none rounded-md inline-block
 }

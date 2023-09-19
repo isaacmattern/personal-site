@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.variable}>
         <div className='mx-auto max-w-3xl'>
-          <div className="pt-4 xs:pt-6 mx-4 xs:mx-6 main-content">
+          <div className="pt-4 xs:pt-6 mx-4 xs:mx-6 main-content pb-8">
             <nav className='mb-4 xs:mb-8 flex items-center justify-between'>
               <h1 className="text-2xl font-extrabold m-0 clickable-text-decorator">
                 <Link href="/">Isaac Mattern</Link>

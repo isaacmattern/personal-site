@@ -18,14 +18,14 @@ export default function Home() {
     <>
 
       <div className='my-12'>
-        <h1 className='text-center'>{"About"}</h1>
+        <h2 className='text-center'>{"About"}</h2>
         <p>
           {"Hi, I'm Isaac. I'm a software engineer at JPMorgan Chase in Columbus, Ohio. I'm primarily interested in front-end technologies and creating great experiences on the web. I've also had great opportunites to work on some awesome freelance projects."}
         </p>
       </div>
 
       <div className='my-12'>
-        <h1 className='text-center'>{"Recent Posts"}</h1>
+        <h2 className='text-center'>{"Recent Posts"}</h2>
         <>
           {lastThreePosts.map((post, idx) => (
             <PostCard key={idx} {...post} />
@@ -38,7 +38,7 @@ export default function Home() {
       </div>
 
       <div className='my-12'>
-        <h1 className='text-center'>{"Projects"}</h1>
+        <h2 className='text-center'>{"Projects"}</h2>
         <div className='sm:flex flex-wrap gap-4 flex-auto'>
           {personalProjects.map((project, key) => {
             return (

@@ -5,10 +5,13 @@ import { allPosts, Post } from 'contentlayer/generated'
 
 export function PostCard(post: Post) {
   return (
-    <div className="my-6">
-      <Link href={post.url} className="blue-link text-2xl font-bold mb-0.5">
-        {post.title}
-      </Link>
+    <div className="my-8">
+      <div className="blue-link text-2xl font-bold mb-1">
+        <Link href={post.url}>
+          {post.title}
+        </Link>
+      </div>
+
       <time dateTime={post.date} className="block mb-1 text-sm opacity-60">
         {format(parseISO(post.date), 'LLLL d, yyyy')}
       </time>
@@ -21,10 +24,10 @@ export default function BlogIndex() {
   const posts = allPosts.sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)))
 
   return (
-    <>
+    <div className='sm:mt-12'>
       {posts.map((post, idx) => (
         <PostCard key={idx} {...post} />
       ))}
-    </>
+    </div>
   )
 }
