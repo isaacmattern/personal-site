@@ -28,6 +28,10 @@ export default makeSource({
         {
           theme: "dark-plus",
           keepBackground: false,
+          defaultLang: {
+            block: 'plaintext',
+            inline: 'plaintext',
+          },
           onVisitLine(node: any) {
             // Prevent lines from collapsing in `display: grid` mode, and allow empty
             // lines to be copy/pasted

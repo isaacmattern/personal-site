@@ -1,0 +1,179 @@
+---
+title: Build a Markdown Blog
+date: 2023-9-18
+description: Create a blog with markdown-generated posts, with support for custom React components and syntax highlighting on code snippets. 
+keywords: ['blog', 'nextjs', 'mdx', 'markdown']
+---
+
+## Motivation
+
+I've wanted to create a blog for awhile. When I decided to start building this blog a few weeks ago, I knew that I wanted to use Markdown for the following reasons, among others:
+
+- It's easy to write a new blog post
+- I don't have to worry about an external Content Management System
+- I can turn a note from [Obsidian](https://obsidian.md) into a blog post seamlessly. I use Obsidian to take notes at work and in my personal life.
+
+## Technology Stack
+
+### [Next.js](https://nextjs.org)
+I wanted to use React, and I've watched some YouTube videos about Next.js, which takes advantage of some cool new features like [React Server Components](https://vercel.com/blog/understanding-react-server-components) which I'd like to try out. Also, the built in router is really nice.
+
+---
+
+### [MDX](https://mdxjs.com/)
+MDX allows you to transform markdown into HTML - pretty cool, but nothing special. But it also allows you to insert JSX into your markdown (hence the name), so you can render complicated React components in the middle of your markdown blog post. 
+
+---
+
+### [Contentlayer](https://mdxjs.com/)
+Contentlayer takes care of transforming our local markdown files into data that can be consumed by the Next.js application.
+
+---
+
+### [Rehype Pretty Code](https://rehype-pretty-code.netlify.app/)
+This is a plugin for Rehype, a module which relies on plugins to transform HTML. We'll use Rehype Pretty Code to create code blocks styled by language.
+
+> Note: This tutorial will not cover how to configure rehype-pretty-code within Contentlayer. Some helpful resources I used to accomplish this include [Contentlayer's makeSource docs](https://contentlayer.dev/docs/reference/source-files/make-source) and a [blog post](https://delba.dev/blog/next-blog-build-time-syntax-highlighting) from Delba Oliveira.
+
+### [Tailwind](https://tailwindcss.com/)
+
+Tailwind describes itself as a 'utility-first' CSS framework. I won't go into detail here, but I highly recommend using Tailwind in front-end projects. If you already know CSS, there's very little to learn to get started.
+
+## Building the blog
+
+> If you check out the Contentlayer documentation, you might notice that the first section of my tutorial here overlaps heavily with their [Getting Started](https://contentlayer.dev/docs/getting-started) page. If you're looking for more detail on specific properties or configurations, check out their docs.
+
+Let's begin by creating a new nextjs application
+
+```
+npx create-next-app@latest --typescript --tailwind --src-dir --experimental-app --eslint my-markdown-blog
+```
+
+Open the project in your favorite IDE and replace the contents of `next.config.js` with the following
+
+```js title="next.config.js"
+const { withContentlayer } = require('next-contentlayer')
+
+/** @type {import('next').NextConfig} */
+const nextConfig = { reactStrictMode: true, swcMinify: true }
+
+module.exports = withContentlayer(nextConfig)
+```
+
+Next, add the following lines to `tsconfig.json`
+
+```json title="tsconfig.json"
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "contentlayer/generated": ["./.contentlayer/generated"]
+      // etc.
+    }
+    // etc.
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".contentlayer/generated"
+    // etc.
+  ]
+}
+```
+
+Now add the following line to your `.gitignore`
+
+``` title={gitignore}
+.contentlayer
+```
+
+### Creating a schema for our posts
+
+Because we're using Contentlayer, we need to define a schema for our posts in a file called `contentlayer.config.ts` in the root of our project. 
+
+```ts title="contentlayer.config.ts"
+import { defineDocumentType, makeSource } from 'contentlayer/source-files'
+import rehypePrettyCode from 'rehype-pretty-code'
+
+export const Post = defineDocumentType(() => ({
+  name: 'Post',
+  filePathPattern: `**/*.md*`,
+  contentType: 'mdx',
+  fields: {
+    title: { type: 'string', required: true },
+    date: { type: 'date', required: true },
+    description: { type: 'string', required: true },
+    keywords: {type: 'list', of: {type: 'string'}, required: true}
+  },
+  computedFields: {
+    url: { type: 'string', resolve: (post) => `posts/${post._raw.flattenedPath}` },
+  },
+}))
+
+export default makeSource({ contentDirPath: 'src/posts', documentTypes: [Post] })
+```
+
+There's a few important things to note here. First, I'm defining specific fields to be required at the top of my MDX files in order for Contentlayer to process them. These fields are completely optional, but we'll see their utility soon. 
+
+Also, I'm placing my posts in a folder called `posts`, which is inside the `src` folder in the root of my project. You should replace the `contentDirPath` property in the final line of the file to the path to your folder of MDX files.
+
+### Create your first post
+
+Let's make our first post. To give you an idea of the output, I'll show you the first few lines of the markdown file used to generate this post
+
+```mdx title="your-first-post.mdx"
+---
+title: Build a Markdown Blog
+date: 2023-9-18
+description: Create a blog with markdown-generated posts, with support for custom React components and syntax highlighting on code snippets. 
+keywords: ['blog', 'nextjs', 'mdx', 'markdown']
+---
+
+## Motivation
+
+I've wanted to create a blog for awhile.
+```
+
+Now that we have a post, let's create a home page where users can see each post
+
+```tsx title="app/page.tsx"
+import Link from 'next/link'
+import { compareDesc, format, parseISO } from 'date-fns'
+import { allPosts, Post } from 'contentlayer/generated'
+
+function PostCard(post: Post) {
+  return (
+    <div className="mb-8">
+      <h2 className="mb-1 text-xl">
+        <Link href={post.url} className="text-blue-700 hover:text-blue-900 dark:text-blue-400">
+          {post.title}
+        </Link>
+      </h2>
+      <time dateTime={post.date} className="mb-2 block text-xs text-gray-600">
+        {format(parseISO(post.date), 'LLLL d, yyyy')}
+      </time>
+    </div>
+  )
+}
+
+export default function Home() {
+  const posts = allPosts.sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)))
+
+  return (
+    <div className="mx-auto max-w-xl py-8">
+      <h1 className="mb-8 text-center text-2xl font-black">Next.js + Contentlayer Example</h1>
+      {posts.map((post, idx) => (
+        <PostCard key={idx} {...post} />
+      ))}
+    </div>
+  )
+}
+```
+
+
+
+
+
+## Bells and Whistles

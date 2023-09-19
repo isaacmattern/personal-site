@@ -4,6 +4,7 @@ import { useMDXComponent } from 'next-contentlayer/hooks'
 import { notFound } from 'next/navigation'
 import { MDXComponents } from 'mdx/types'
 import { format, parseISO } from 'date-fns'
+import './post-page.css'
 import Link from 'next/link'
 import Test from '@/components/Test/Test'
 
@@ -25,8 +26,8 @@ export const generateMetadata = ({ params }: { params: { slug: string } }) => {
 };
 
 const mdxComponents: MDXComponents = { 
-  Test, 
-  a: ({ href, children }) => <div>{children}</div>,
+  Test,
+  a: ({ href, children }) => <Link href={href as string}>{children}</Link>,
 };
 
 export default function Page({ params }: { params: { slug: string } }) {
@@ -41,13 +42,13 @@ export default function Page({ params }: { params: { slug: string } }) {
 
   return (
     <div>
-      <h1 className='text-center font-medium text-3xl my-2 sm:mt-12 sm:text-4xl'>
+      <h1 className='font-medium text-3xl mb-1 mt-8 sm:mt-12 sm:text-4xl'>
         {post.title}
       </h1>
-      <p className='my-0 bg-tile-blue py-1 px-2 rounded-md border-primary-blue border-1 w-fit text-base mx-auto'>
+      <time dateTime={post.date} className='text-sm sm:text-base my-1 bg-tile-blue py-1 px-2 rounded-md border-primary-blue border-1 w-fit'>
         {format(parseISO(post.date), 'LLLL d, yyyy')}
-      </p>
-      <h2 className='opacity-60 font-normal text-base mt-2 mb-4 sm:mb-8 sm:text-lg'>
+      </time>
+      <h2 className='opacity-60 font-normal text-sm sm:text-base mt-1 mb-4 sm:mb-8'>
         {post.description}
       </h2>
       <MDXContent components={mdxComponents} />

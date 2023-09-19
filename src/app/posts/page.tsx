@@ -15,7 +15,6 @@ export function PostCard(post: Post) {
       <time dateTime={post.date} className="block mb-1 text-sm my-0 bg-tile-blue py-1 px-2 rounded-md border-primary-blue border-1 w-fit">
         {format(parseISO(post.date), 'LLLL d, yyyy')}
       </time>
-      <div className="hidden text-sm [&>*]:mb-3 [&>*:last-child]:mb-0" dangerouslySetInnerHTML={{ __html: post.description }} />
     </div>
   )
 }

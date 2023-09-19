@@ -56,8 +56,12 @@ h1, h2, h3, h4, h5, h6 {
   @apply leading-9
 }
 
-h1, h2, h3, h4, h5, h6, p, .formatted-code-block {
+h1, h2, h3, h4, h5, h6, p, ul, ol, .formatted-code-block {
   @apply my-4 sm:my-8
+}
+
+h1, h2 {
+  @apply mt-6 sm:mt-12
 }
 
 h1 {
@@ -88,6 +92,10 @@ p {
   @apply font-normal text-base sm:text-lg
 }
 
+hr {
+  @apply opacity-100 border-tile-blue
+}
+
 /* Utility */
 .blue-link {
   @apply text-primary-blue hover:opacity-60;
@@ -97,32 +105,18 @@ p {
   @apply hover:text-primary-blue
 }
 
-.project-image {
-  @apply rounded-xl
-}
-
-pre, code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-  font-weight: 400;
-  font-size: 0.70rem;
-  line-height: 1rem;
-}
-
-@media (min-width: 576px) {
-  pre, code {
-    font-size: inherit;
-    line-height: inherit;
-  }
-}
-
 /* Lists */
 
 ul, ol {
   @apply ml-4
 }
 
+li {
+  @apply text-base sm:text-lg
+}
+
 ul ul, ol ol {
-  @apply ml-16
+  @apply ml-16 my-0
 }
 
 ul ul ul, ol ol ol {
@@ -145,7 +139,9 @@ ol {
   list-style-type: armenian;
 }
 
-.tile-background {
+/* Blockquote */
+
+blockquote {
   background-color: rgb(var(--tile-background-rgb));
   width: calc(100vw);
   margin-left: -16px;
@@ -153,16 +149,16 @@ ol {
   @apply my-4 p-8
 }
 
-.tile-background > *:first-child {
+blockquote > *:first-child {
   @apply mt-0
 }
 
-.tile-background > *:last-child {
+blockquote > *:last-child {
   @apply mb-0
 }
 
 @media (min-width: 376px) {
-  .tile-background {
+  blockquote {
     width: calc(100% + 64px);
     margin-left: -32px;
     margin-right: -32px;
