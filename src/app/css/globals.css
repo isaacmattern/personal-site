@@ -60,7 +60,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, .formatted-code-block {
   @apply my-4 sm:my-8
 }
 
-h1, h2 {
+h1, h2, h3 {
   @apply mt-6 sm:mt-12
 }
 
@@ -107,10 +107,6 @@ hr {
 
 /* Lists */
 
-ul, ol {
-  @apply ml-4
-}
-
 li {
   @apply text-base sm:text-lg
 }
@@ -125,6 +121,7 @@ ul ul ul, ol ol ol {
 
 ul {
   list-style-type: disc;
+  @apply ml-4
 }
 
 ul ul {
@@ -136,7 +133,19 @@ ul ul ul {
 }
 
 ol {
-  list-style-type: armenian;
+  list-style-type: decimal;
+  @apply ml-6
+}
+
+/* Important - must not be moved upwards */
+/* TODO - Create custom tailwind style to increase line-height on text-sm and text-lg*/
+p, li {
+  line-height: 26px;
+}
+@media (min-width: 376px) {
+  p, li {
+    line-height: 30px;
+  }
 }
 
 /* Blockquote */

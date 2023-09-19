@@ -27,7 +27,7 @@ export const generateMetadata = ({ params }: { params: { slug: string } }) => {
 
 const mdxComponents: MDXComponents = { 
   Test,
-  a: ({ href, children }) => <Link href={href as string}>{children}</Link>,
+  a: ({ href, children }) => <Link target='_blank' href={href as string}>{children}</Link>,
 };
 
 export default function Page({ params }: { params: { slug: string } }) {

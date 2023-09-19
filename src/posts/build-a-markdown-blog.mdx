@@ -35,6 +35,8 @@ This is a plugin for Rehype, a module which relies on plugins to transform HTML.
 
 > Note: This tutorial will not cover how to configure rehype-pretty-code within Contentlayer. Some helpful resources I used to accomplish this include [Contentlayer's makeSource docs](https://contentlayer.dev/docs/reference/source-files/make-source) and a [blog post](https://delba.dev/blog/next-blog-build-time-syntax-highlighting) from Delba Oliveira.
 
+---
+
 ### [Tailwind](https://tailwindcss.com/)
 
 Tailwind describes itself as a 'utility-first' CSS framework. I won't go into detail here, but I highly recommend using Tailwind in front-end projects. If you already know CSS, there's very little to learn to get started.
@@ -136,9 +138,9 @@ keywords: ['blog', 'nextjs', 'mdx', 'markdown']
 I've wanted to create a blog for awhile.
 ```
 
-Now that we have a post, let's create a home page where users can see each post
+Now that we have a post, let's create a home page where users can see each post at `src/app/page.tsx`
 
-```tsx title="app/page.tsx"
+```tsx title="src/app/page.tsx"
 import Link from 'next/link'
 import { compareDesc, format, parseISO } from 'date-fns'
 import { allPosts, Post } from 'contentlayer/generated'
@@ -172,8 +174,201 @@ export default function Home() {
 }
 ```
 
+We can run `npm run dev` to start a local server and then visit `localhost:3000` to see our first page. If we click on the link for our first post, we'll get a 404 error, since we never created a page in our application that renders our post's content. Let's create that now at `src/app/posts/[slug]/page.tsx`
 
 
+```tsx title="src/app/posts/[slug]/page.tsx"
+import { allPosts } from 'contentlayer/generated'
+import { useMDXComponent } from 'next-contentlayer/hooks'
+import { notFound } from 'next/navigation'
+import { MDXComponents } from 'mdx/types'
+import { format, parseISO } from 'date-fns'
+import './post-page.css'
 
+export async function generateStaticParams() {
+  return allPosts.map((post) => ({
+    slug: post._raw.flattenedPath,
+  }))
+}
+
+export const generateMetadata = ({ params }: { params: { slug: string } }) => {
+  const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
+  if (!post) notFound();
+  return { 
+    title: post.title,
+    description: post.description,
+    keywords: post.keywords,
+  };
+};
+
+const mdxComponents: MDXComponents = {};
+
+export default function Page({ params }: { params: { slug: string } }) {
+  // Find the post for the current page.
+  const post = allPosts.find((post) => post._raw.flattenedPath === params.slug)
+
+  // 404 if the post does not exist.
+  if (!post) notFound()
+
+  // Parse the MDX file via the useMDXComponent hook.
+  const MDXContent = useMDXComponent(post.body.code)
+
+  return (
+    <div>
+      <h1 className='text-3xl'>
+        {post.title}
+      </h1>
+      <time dateTime={post.date} className='text-xl'>
+        {format(parseISO(post.date), 'LLLL d, yyyy')}
+      </time>
+      <h2 className='text-sm'>
+        {post.description}
+      </h2>
+      <MDXContent components={mdxComponents} />
+    </div>
+  )
+}
+```
+
+### Adding JSX to MDX
+
+At this point, everything should be working. So we have our markdown files correctly being transformed into HTML, but we still need to figure out how to insert custom react components into our blog posts. There's three steps here. 
+
+1. Create a react component
+2. Import the component to your markdown file below the metadata section, and call the component
+3. Add the component to the mdxComponents object in `src/app/posts/[slug]/page.tsx`
+
+Okay, so first, let's build a really simple React component
+
+```tsx title="src/components/Test/Test.tsx"
+"use client";
+
+export default function Test() {
+  return <button onClick={() => console.log('clicked')}>Click Me</button>
+}
+```
+
+Next, let's add this `<Test>{:tsx}` component to our MDX file
+
+```mdx title="your-first-post.mdx" {11}
+---
+title: Build a Markdown Blog
+date: 2023-9-18
+description: Create a blog with markdown-generated posts, with support for custom React components and syntax highlighting on code snippets. 
+keywords: ['blog', 'nextjs', 'mdx', 'markdown']
+---
+
+## Motivation
+
+I've wanted to create a blog for awhile.
+<Test>
+```
+
+Finally, let's update our the `page.tsx` file that renders each of our blog posts
+
+```tsx {2, 21} title="src/app/posts/[slug]/page.tsx"
+// Etc...
+import Test from '@/components/Test/Test'
+
+export async function generateStaticParams() {
+  return allPosts.map((post) => ({
+    slug: post._raw.flattenedPath,
+  }))
+}
+
+export const generateMetadata = ({ params }: { params: { slug: string } }) => {
+  const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
+  if (!post) notFound();
+  return { 
+    title: post.title,
+    description: post.description,
+    keywords: post.keywords,
+  };
+};
+
+const mdxComponents: MDXComponents = { 
+  Test
+};
+
+export default function Page({ params }: { params: { slug: string } }) {
+  {/* Etc.. */}
+
+  return (
+    {/* Etc.. */}
+    <MDXContent components={mdxComponents} />
+    {/* Etc.. */}
+  )
+}
+```
+
+Now if we load our app and select our post, we should see the button! If you open up a console in developer tools and click the button, you'll see the message logged. If you want to understand the purpose of the `'use client'{:tsx}` directive we included at the top of our `<Test>{:tsx}` component, check out [this page](https://nextjs.org/docs/app/building-your-application/rendering/client-components) from the Next.js docs.
+
+At this point, everything should be set up for you to start writing new blog posts
 
 ## Bells and Whistles
+
+One of the cool features of MDX is that we can easily transform any HTML component that would be produced by MDX into something different. As an example, let's transform all of the `<a>{:html}` tags on our site. 
+
+First, let's understand what's going on right now. In our markdown, we can insert a link with the following syntax
+
+```mdx title="your-first-post.mdx" {12}
+---
+title: Build a Markdown Blog
+date: 2023-9-18
+description: Create a blog with markdown-generated posts, with support for custom React components and syntax highlighting on code snippets. 
+keywords: ['blog', 'nextjs', 'mdx', 'markdown']
+---
+
+## Motivation
+
+I've wanted to create a blog for awhile.
+<Test>
+[This is a link to example.com](https://example.com)
+```
+
+Currently, MDX transforms our markdown into an `<a>{:html}` tag. Now, let's see how we can transform all of those into [Next.js Link components](https://nextjs.org/learn/basics/navigate-between-pages/link-component) (`<Link>{:tsx}`)
+
+```tsx {2, 23} title="src/app/posts/[slug]/page.tsx"
+// Etc...
+import Link from 'next/link'
+import Test from '@/components/Test/Test'
+
+export async function generateStaticParams() {
+  return allPosts.map((post) => ({
+    slug: post._raw.flattenedPath,
+  }))
+}
+
+export const generateMetadata = ({ params }: { params: { slug: string } }) => {
+  const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
+  if (!post) notFound();
+  return { 
+    title: post.title,
+    description: post.description,
+    keywords: post.keywords,
+  };
+};
+
+const mdxComponents: MDXComponents = { 
+  Test
+  a: ({ href, children }) => <Link target='_blank' href={href as string}>{children}</Link>,
+};
+
+export default function Page({ params }: { params: { slug: string } }) {
+  {/* Etc.. */}
+
+  return (
+    {/* Etc.. */}
+    <MDXContent components={mdxComponents} />
+    {/* Etc.. */}
+  )
+}
+```
+
+That's it! Adding this line to our mdxComponents Object, which gets passed into our call to `<MDXContent>{:tsx}`, tells MDX to transform all of the `<a>{:html}` tags to `<Link>{:tsx}` React components.
+
+Using the same method with an `<img>{:html}` tag, we could easily format all of our images the exact same way. 
+
+## Hosting
+
+Personally, I'm hosting this site using [Vercel](https://vercel.com), which is probably the easiest option for a Next.js site, although I've used it for plenty of other sites in the past too! It's completely free to use (unless your blog becomes really popular) - and you can configure your domain to point at Vercel's servers very easily. 
