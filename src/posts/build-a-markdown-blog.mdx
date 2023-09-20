@@ -46,7 +46,7 @@ This is a plugin for Rehype, a module which relies on plugins to transform HTML.
 Let's begin by creating a new nextjs application
 
 ```
-npx create-next-app@latest --typescript --tailwind --src-dir --experimental-app --eslint my-markdown-blog
+npx create-next-app@latest --typescript --tailwind --src-dir --experimental-app --app --eslint my-markdown-blog
 ```
 
 > If you check out the Contentlayer documentation, you might notice that the first section of my tutorial here overlaps heavily with their [Getting Started](https://contentlayer.dev/docs/getting-started) page. If you're looking for more detail on specific properties or configurations, check out their docs.
@@ -93,11 +93,17 @@ Now add the following line to your `.gitignore`
 
 ### Creating a schema for our posts
 
+First, we need to install Contentlayer
+
+```
+npm install contentlayer
+npm install next/contentlayer
+```
+
 Because we're using Contentlayer, we need to define a schema for our posts in a file called `contentlayer.config.ts` in the root of our project. 
 
 ```ts title="contentlayer.config.ts"
 import { defineDocumentType, makeSource } from 'contentlayer/source-files'
-import rehypePrettyCode from 'rehype-pretty-code'
 
 export const Post = defineDocumentType(() => ({
   name: 'Post',
@@ -183,14 +189,13 @@ import { useMDXComponent } from 'next-contentlayer/hooks'
 import { notFound } from 'next/navigation'
 import { MDXComponents } from 'mdx/types'
 import { format, parseISO } from 'date-fns'
-import './post-page.css'
-
+ 
 export async function generateStaticParams() {
   return allPosts.map((post) => ({
     slug: post._raw.flattenedPath,
   }))
 }
-
+ 
 export const generateMetadata = ({ params }: { params: { slug: string } }) => {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
   if (!post) notFound();
@@ -200,35 +205,39 @@ export const generateMetadata = ({ params }: { params: { slug: string } }) => {
     keywords: post.keywords,
   };
 };
-
+ 
 const mdxComponents: MDXComponents = {};
-
+ 
 export default function Page({ params }: { params: { slug: string } }) {
   // Find the post for the current page.
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug)
-
+ 
   // 404 if the post does not exist.
   if (!post) notFound()
-
+ 
   // Parse the MDX file via the useMDXComponent hook.
   const MDXContent = useMDXComponent(post.body.code)
-
+ 
   return (
-    <div>
+    <div className='max-w-2xl mx-auto mt-8 px-4'>
       <h1 className='text-3xl'>
         {post.title}
       </h1>
-      <time dateTime={post.date} className='text-xl'>
+      <time dateTime={post.date} className='text-base opacity-60'>
         {format(parseISO(post.date), 'LLLL d, yyyy')}
       </time>
       <h2 className='text-sm'>
         {post.description}
       </h2>
-      <MDXContent components={mdxComponents} />
+      <div className='my-8'>
+        <MDXContent components={mdxComponents} />
+      </div>
     </div>
   )
 }
 ```
+
+Now try navigating to the post again. You'll see a fully rendered version of the markdown you wrote! If the header looks like a paragraph, that's because we haven't styled it yet. If you'd like, you can set the font size for an h2 element in `src/app/globals.css` to make it stand out. 
 
 ### Adding JSX to MDX
 
@@ -242,9 +251,16 @@ Okay, so first, let's build a really simple React component
 
 ```tsx title="src/components/Test/Test.tsx"
 "use client";
-
+ 
 export default function Test() {
-  return <button onClick={() => console.log('clicked')}>Click Me</button>
+  return (
+    <button
+      className="bg-white text-black px-2 rounded-sm hover:opacity-60"
+      onClick={() => console.log('clicked')}
+    >
+      Click Me
+    </button>
+  )
 }
 ```
 

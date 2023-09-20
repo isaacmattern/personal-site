@@ -9,7 +9,6 @@ import { personalProjects } from '@/lib/personalProjects';
 import Tile from '@/components/Tile/Tile';
 import parse from 'html-react-parser'
 
-
 export default function Home() {
 
   const lastThreePosts = allPosts.sort((a, b) => compareDesc(new Date(a.date), new Date(b.date))).slice(0, 3)
