@@ -6,7 +6,7 @@ import { allPosts, Post } from 'contentlayer/generated'
 export function PostCard(post: Post) {
   return (
     <div className="my-8">
-      <div className="blue-link text-2xl font-bold mb-0.5">
+      <div className="blue-link text-2xl font-bold mb-0.5 w-fit">
         <Link href={post.url}>
           {post.title}
         </Link>
