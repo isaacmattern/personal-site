@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
 import { Analytics } from '@vercel/analytics/react';
+import { useEffect } from 'react'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -20,6 +21,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
+
   return (
     <html lang="en" className='overflow-x-hidden'>
       <body className={inter.variable}>

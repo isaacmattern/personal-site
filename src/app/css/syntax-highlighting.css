@@ -7,7 +7,6 @@
 pre, code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   font-weight: 400;
-  font-size: 0.75rem;
   line-height: 1.1rem;
 }
 
@@ -35,12 +34,19 @@ div[data-rehype-pretty-code-fragment] pre {
   /* stylist preferences */
   padding-top: 0.4rem;
   padding-bottom: 0.4rem;
-  font-size: 0.875rem;
-  line-height: 1.5rem;
+  font-size: 0.75rem;
+  line-height: 1.1rem;
 
 
   border-bottom-left-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
+}
+
+@media (min-width: 576px) {
+  div[data-rehype-pretty-code-fragment] pre {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+  }
 }
 
 div[data-rehype-pretty-code-title] {
@@ -96,3 +102,4 @@ code .line {
   font-size: 0.85rem;
   @apply py-1 px-2 mx-0 leading-none rounded-md inline-block
 }
+
