@@ -155,7 +155,7 @@ blockquote {
   width: calc(100vw);
   margin-left: -16px;
   margin-right: -16px;
-  @apply my-4 p-8
+  @apply my-4 sm:my-8 p-8
 }
 
 blockquote > *:first-child {

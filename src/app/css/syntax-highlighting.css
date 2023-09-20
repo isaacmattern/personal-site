@@ -24,7 +24,9 @@ div[data-rehype-pretty-code-fragment] {
   /* stylist preferences */
   background-color: rgb(var(--code-bg-color-rgb));
   border-radius: var(--border-radius);
-  border: var(--border-style)
+  border: var(--border-style);
+
+  @apply my-6 sm:my-12
 }
  
 div[data-rehype-pretty-code-fragment] pre {

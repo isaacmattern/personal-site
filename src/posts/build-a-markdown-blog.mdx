@@ -30,26 +30,26 @@ Contentlayer takes care of transforming our local markdown files into data that 
 
 ---
 
+### [Tailwind](https://tailwindcss.com/)
+
+Tailwind describes itself as a 'utility-first' CSS framework. I won't go into detail here, but I highly recommend using Tailwind in front-end projects. If you already know CSS, there's very little to learn to get started.
+
+---
+
 ### [Rehype Pretty Code](https://rehype-pretty-code.netlify.app/)
 This is a plugin for Rehype, a module which relies on plugins to transform HTML. We'll use Rehype Pretty Code to create code blocks styled by language.
 
 > Note: This tutorial will not cover how to configure rehype-pretty-code within Contentlayer. Some helpful resources I used to accomplish this include [Contentlayer's makeSource docs](https://contentlayer.dev/docs/reference/source-files/make-source) and a [blog post](https://delba.dev/blog/next-blog-build-time-syntax-highlighting) from Delba Oliveira.
 
----
-
-### [Tailwind](https://tailwindcss.com/)
-
-Tailwind describes itself as a 'utility-first' CSS framework. I won't go into detail here, but I highly recommend using Tailwind in front-end projects. If you already know CSS, there's very little to learn to get started.
-
 ## Building the blog
-
-> If you check out the Contentlayer documentation, you might notice that the first section of my tutorial here overlaps heavily with their [Getting Started](https://contentlayer.dev/docs/getting-started) page. If you're looking for more detail on specific properties or configurations, check out their docs.
 
 Let's begin by creating a new nextjs application
 
 ```
 npx create-next-app@latest --typescript --tailwind --src-dir --experimental-app --eslint my-markdown-blog
 ```
+
+> If you check out the Contentlayer documentation, you might notice that the first section of my tutorial here overlaps heavily with their [Getting Started](https://contentlayer.dev/docs/getting-started) page. If you're looking for more detail on specific properties or configurations, check out their docs.
 
 Open the project in your favorite IDE and replace the contents of `next.config.js` with the following
 
@@ -138,7 +138,7 @@ keywords: ['blog', 'nextjs', 'mdx', 'markdown']
 I've wanted to create a blog for awhile.
 ```
 
-Now that we have a post, let's create a home page where users can see each post at `src/app/page.tsx`
+Now that we have a post, let's create a home page where users can see a list of all of our posts at `src/app/page.tsx`
 
 ```tsx title="src/app/page.tsx"
 import Link from 'next/link'
