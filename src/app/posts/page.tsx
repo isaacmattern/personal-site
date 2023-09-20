@@ -6,13 +6,13 @@ import { allPosts, Post } from 'contentlayer/generated'
 export function PostCard(post: Post) {
   return (
     <div className="my-8">
-      <div className="blue-link text-2xl font-bold mb-1">
+      <div className="blue-link text-2xl font-bold mb-0.5">
         <Link href={post.url}>
           {post.title}
         </Link>
       </div>
 
-      <time dateTime={post.date} className="block mb-1 text-sm my-0 bg-tile-blue py-1 px-2 rounded-md border-primary-blue border-1 w-fit">
+      <time dateTime={post.date} className="block text-sm my-0 rounded-md w-fit">
         {format(parseISO(post.date), 'LLLL d, yyyy')}
       </time>
     </div>

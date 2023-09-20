@@ -45,7 +45,7 @@ export default function Page({ params }: { params: { slug: string } }) {
       <h1 className='font-medium text-3xl mb-1 mt-8 sm:mt-12 sm:text-4xl'>
         {post.title}
       </h1>
-      <time dateTime={post.date} className='text-sm sm:text-base my-1 bg-tile-blue py-1 px-2 rounded-md border-primary-blue border-1 w-fit'>
+      <time dateTime={post.date} className='text-sm sm:text-base w-fit'>
         {format(parseISO(post.date), 'LLLL d, yyyy')}
       </time>
       <h2 className='opacity-60 font-normal text-sm sm:text-base mt-1 mb-4 sm:mb-8'>

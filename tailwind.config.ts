@@ -17,6 +17,7 @@ const config: Config = {
         'neutral-gray': '#1f1f1f',
         'tile-blue': 'rgb(var(--tile-background-rgb))',
         'primary-blue': 'rgb(var(--primary-blue-rgb))',
+        'foreground': 'rgb(var(--foreground-rgb))',
       },
     },
     screens: {

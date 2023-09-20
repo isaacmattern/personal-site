@@ -27,6 +27,8 @@
   transition:0.18s;
 }
 
+/* Commented out to require dark mode for now */
+
 /* @media (prefers-color-scheme: light) {
   :root {
 
