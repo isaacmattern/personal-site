@@ -15,7 +15,7 @@ const config: Config = {
       },
       colors: {
         'neutral-gray': '#1f1f1f',
-        'tile-blue': 'rgb(var(--tile-background-rgb))',
+        'tile-color': 'rgb(var(--tile-background-rgb))',
         'primary-blue': 'rgb(var(--primary-blue-rgb))',
         'foreground': 'rgb(var(--foreground-rgb))',
       },

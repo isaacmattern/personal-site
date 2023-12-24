@@ -26,7 +26,10 @@ export default makeSource({
         // @ts-ignore
         rehypePrettyCode,
         {
-          theme: "dark-plus",
+          theme: {
+            dark: 'dark-plus',
+            light: 'light-plus',
+          },
           keepBackground: false,
           defaultLang: {
             block: 'plaintext',

@@ -1,7 +1,31 @@
+/* Config pulled directly from rehype-pretty-code docs for support for multiple themes  */
+
+[data-theme*='light'],
+[data-theme*='light'] span {
+  color: var(--shiki-light);
+  background-color: var(--shiki-light-bg);
+}
+ 
+@media (prefers-color-scheme: dark) {
+  [data-theme*='dark'],
+  [data-theme*='dark'] span {
+    color: var(--shiki-dark);
+    background-color: var(--shiki-dark-bg);
+  }
+}
+
+/* */
+
 :root {
   --border-radius: 0.5rem;
   --border-style: 1px solid rgb(64, 64, 64);
-  --code-bg-color-rgb: 31, 31, 31;
+  --code-bg-color-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --code-bg-color-rgb: 33, 33, 33;
+  }
 }
 
 pre, code {
@@ -17,7 +41,7 @@ pre, code {
   }
 }
 
-div[data-rehype-pretty-code-fragment] {
+figure[data-rehype-pretty-code-figure] {
   overflow: hidden;
  
   /* stylist preferences */
@@ -28,7 +52,7 @@ div[data-rehype-pretty-code-fragment] {
   @apply my-8 sm:my-12
 }
  
-div[data-rehype-pretty-code-fragment] pre {
+figure[data-rehype-pretty-code-figure] pre {
   overflow-x: auto;
  
   /* stylist preferences */
@@ -43,25 +67,24 @@ div[data-rehype-pretty-code-fragment] pre {
 }
 
 @media (min-width: 576px) {
-  div[data-rehype-pretty-code-fragment] pre {
+  figure[data-rehype-pretty-code-figure] pre {
     font-size: 0.875rem;
     line-height: 1.5rem;
   }
 }
 
-div[data-rehype-pretty-code-title] {
+figure[data-rehype-pretty-code-figure] figcaption {
   /* stylistic preferences */
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   font-weight: 400;
   border-bottom: var(--border-style);
-  background-color: rgb(31, 31, 31);
+  background-color: rgb(var(--code-bg-color-rgb));
   padding: 0.5rem 0.6rem;
   font-size: 0.9rem;
   line-height: 1rem;
-  color: rgba(255, 255, 255, 0.85);
 }
 
-div[data-rehype-pretty-code-fragment] > pre > code > span {
+figure[data-rehype-pretty-code-figure] > pre > code > span {
   /* stylistic preferences */
   padding-left: 0.45rem;
   padding-right: 0.6rem;
@@ -70,12 +93,12 @@ div[data-rehype-pretty-code-fragment] > pre > code > span {
   border-left-color: transparent;
 }
  
-div[data-rehype-pretty-code-fragment] .line--highlighted {
-  border-left-color: rgb(var(--primary-blue-on-dark-rgb));
-  background-color: rgba(var(--primary-blue-on-dark-rgb), 0.16);
+figure[data-rehype-pretty-code-figure] .line--highlighted {
+  border-left-color: rgb(var(--primary-blue-on-code-rgb));
+  background-color: rgba(var(--primary-blue-on-code-rgb), 0.16);
 }
 
-div[data-rehype-pretty-code-fragment] code {
+figure[data-rehype-pretty-code-figure] code {
   display: grid;
 }
 
@@ -102,4 +125,3 @@ code .line {
   font-size: 0.85rem;
   @apply py-1 px-2 mx-0 leading-none rounded-md inline-block
 }
-

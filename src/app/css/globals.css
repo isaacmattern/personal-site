@@ -4,18 +4,30 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 255, 255, 255;
-  /* --background-rgb: 15, 18, 24; */
-  --background-rgb: 19, 22, 29;
-  --tile-background-rgb: 27, 38, 51;
-  --primary-blue-rgb: 96, 165, 250;
+
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 248, 248, 250;
+  --tile-background-rgb: 233, 234, 236;
+  --primary-blue-rgb: 37, 100, 235;
   /* For code highlighting */
-  --primary-blue-on-dark-rgb: 96, 165, 250;
+  --primary-blue-on-code-rgb: 82, 157, 250;
 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-rgb: 19, 22, 29;
+    --tile-background-rgb: 27, 38, 51;
+    --primary-blue-rgb: 96, 165, 250;
+    /* For code highlighting */
+    --primary-blue-on-code-rgb: 7, 104, 223;
+  }
+}
+
 
 :root *:hover {
   transition-property: color;
@@ -26,18 +38,6 @@
   -o-transition:0.18s;
   transition:0.18s;
 }
-
-/* Commented out to require dark mode for now */
-
-/* @media (prefers-color-scheme: light) {
-  :root {
-
-    --foreground-rgb: 0, 0, 0;
-    --background-rgb: 246, 246, 248;
-    --tile-background-rgb: 219, 220, 222;
-    --primary-blue-rgb: 37, 100, 235;
-  }
-} */
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -95,7 +95,7 @@ p {
 }
 
 hr {
-  @apply opacity-100 border-tile-blue
+  @apply opacity-20 border-opacity-20 border-foreground
 }
 
 /* Utility */
