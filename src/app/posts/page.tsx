@@ -1,32 +1,40 @@
 // app/page.tsx
-import Link from 'next/link'
-import { compareDesc, format, parseISO } from 'date-fns'
-import { allPosts, Post } from 'contentlayer/generated'
+import Link from "next/link";
+import { compareDesc, format, parseISO } from "date-fns";
+import { allPosts, Post } from "contentlayer/generated";
 
 export function PostCard(post: Post) {
   return (
     <div className="my-8">
       <div className="blue-link text-2xl font-bold mb-0.5 w-fit">
-        <Link href={post.url}>
-          {post.title}
-        </Link>
+        <Link href={post.url}>{post.title}</Link>
       </div>
 
-      <time dateTime={post.date} className="block text-sm my-0 rounded-md w-fit">
-        {format(parseISO(post.date), 'LLLL d, yyyy')}
+      <time
+        dateTime={post.date}
+        className="block text-sm my-0 rounded-md w-fit"
+      >
+        {new Date(post.date).toLocaleDateString("en-US", {
+          month: "long",
+          day: "numeric",
+          year: "numeric",
+          timeZone: "UTC",
+        })}
       </time>
     </div>
-  )
+  );
 }
 
 export default function BlogIndex() {
-  const posts = allPosts.sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)))
+  const posts = allPosts.sort((a, b) =>
+    compareDesc(new Date(a.date), new Date(b.date))
+  );
 
   return (
-    <div className='sm:mt-12'>
+    <div className="sm:mt-12">
       {posts.map((post, idx) => (
         <PostCard key={idx} {...post} />
       ))}
     </div>
-  )
+  );
 }
