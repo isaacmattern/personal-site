@@ -33,7 +33,6 @@ const mdxComponents: MDXComponents = {
       {children}
     </Link>
   ),
-  // pre: ({ children }) => <pre tabIndex={0}>{children}</pre>,
 };
 
 export default function Page({ params }: { params: { slug: string } }) {

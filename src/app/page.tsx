@@ -20,8 +20,16 @@ export default function Home() {
         <h2 className="text-center">{"About"}</h2>
         <p>
           {
-            "Hi, I'm Isaac. I'm a software engineer at JPMorgan Chase in Columbus, Ohio. I'm primarily interested in front-end technologies and creating great experiences on the web. I've also had great opportunites to work on some awesome freelance projects."
+            "Hi, I'm Isaac, and this is my blog. I'm still figuring out how I want to use this thing, but for now you can check out the small amount of articles I've posted. I enjoy writing code, cooking, weightlifting, coffee brewing, and "
           }
+          <a
+            className="blue-link font-bold"
+            href="https://music.isaacmattern.com"
+            target="_blank"
+          >
+            {"making music"}
+          </a>
+          {", among other things."}
         </p>
       </div>
 
@@ -35,8 +43,13 @@ export default function Home() {
         <LinkButton href="/posts" buttonText="View all posts" />
       </div>
 
-      <div className="my-12 m-auto max-w-3xl">
+      <div className="my-12 m-auto max-w-2xl">
         <h2 className="text-center">{"Projects"}</h2>
+        <p>
+          {
+            "Here are some cool projects that I've either done for fun in my free time or have completed for other people."
+          }
+        </p>
         <div className="sm:flex flex-wrap gap-4 flex-auto">
           {personalProjects.map((project, key) => {
             return (

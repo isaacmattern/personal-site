@@ -98,7 +98,7 @@ hr {
 
 /* Utility */
 .blue-link {
-  @apply text-primary-blue hover:opacity-60;
+  @apply text-primary-blue hover:opacity-60
 }
 
 .clickable-text-decorator {

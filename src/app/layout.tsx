@@ -27,7 +27,9 @@ export default function RootLayout({
         <div className="mx-auto max-w-4xl">
           <div className="pt-4 xs:pt-6 mx-4 xs:mx-6 main-content pb-8">
             <nav className="mb-4 xs:mb-8 flex items-center justify-between">
-              <h1 className="text-2xl font-extrabold m-0">{"Isaac Mattern"}</h1>
+              <h1 className="text-2xl font-extrabold m-0">
+                <a href="/">{"Isaac Mattern"}</a>
+              </h1>
               <div className="font-semibold flex flex-nowrap items-center gap-4 justify-end h-6">
                 <Link href="/">
                   <div className="text-xl blue-link">{"About"}</div>
