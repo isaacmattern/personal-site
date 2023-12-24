@@ -18,7 +18,7 @@
   box-sizing: border-box;
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-rgb: 12, 15, 18;
@@ -27,7 +27,7 @@
     --primary-blue-on-code-rgb: 7, 104, 223;
     --code-bg-color-rgb: 33, 33, 33;
   }
-} */
+}
 
 :root * {
   transition: opacity 0.09s ease-in-out;
