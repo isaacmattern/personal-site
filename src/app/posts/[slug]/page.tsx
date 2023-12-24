@@ -7,6 +7,7 @@ import { format, parseISO } from "date-fns";
 import "./post-page.css";
 import Link from "next/link";
 import Test from "@/components/Test/Test";
+import { time } from "console";
 
 export async function generateStaticParams() {
   return allPosts.map((post) => ({
@@ -51,7 +52,12 @@ export default function Page({ params }: { params: { slug: string } }) {
         {post.title}
       </h1>
       <time dateTime={post.date} className="text-sm sm:text-base w-fit">
-        {format(parseISO(post.date), "LLLL d, yyyy")}
+        {new Date(post.date).toLocaleDateString("en-US", {
+          month: "long",
+          day: "numeric",
+          year: "numeric",
+          timeZone: "UTC",
+        })}
       </time>
       <h2 className="opacity-60 font-normal text-sm sm:text-base mt-1 mb-4 sm:mb-8">
         {post.description}
