@@ -19,13 +19,6 @@
 :root {
   --border-radius: 0.5rem;
   --border-style: 1px solid rgb(64, 64, 64);
-  --code-bg-color-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --code-bg-color-rgb: 33, 33, 33;
-  }
 }
 
 pre, code {
@@ -49,7 +42,7 @@ figure[data-rehype-pretty-code-figure] {
   border-radius: var(--border-radius);
   border: var(--border-style);
 
-  @apply my-8 sm:my-12
+  @apply my-6 sm:my-8
 }
  
 figure[data-rehype-pretty-code-figure] pre {
@@ -119,7 +112,7 @@ code[data-line-numbers] .line::before {
 }
 
 /* Inline code */
-code .line {
+span[data-rehype-pretty-code-figure] code {
   background-color: rgb(var(--code-bg-color-rgb));
   border: var(--border-style);
   font-size: 0.85rem;

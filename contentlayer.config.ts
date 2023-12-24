@@ -27,8 +27,8 @@ export default makeSource({
         rehypePrettyCode,
         {
           theme: {
-            dark: 'dark-plus',
-            light: 'light-plus',
+            // dark: 'dark-plus',
+            light: 'github-light',
           },
           keepBackground: false,
           defaultLang: {

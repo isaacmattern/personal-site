@@ -6,37 +6,35 @@
 :root {
 
   --foreground-rgb: 0, 0, 0;
-  --background-rgb: 248, 248, 250;
-  --tile-background-rgb: 233, 234, 236;
-  --primary-blue-rgb: 37, 100, 235;
+  --background-rgb: 251, 252, 255;
+  --tile-background-rgb: 237, 239, 242;
+  --primary-blue-rgb: 35, 110, 222;
   /* For code highlighting */
   --primary-blue-on-code-rgb: 82, 157, 250;
+  --code-bg-color-rgb: 255, 255, 255;
 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-rgb: 19, 22, 29;
-    --tile-background-rgb: 27, 38, 51;
+    --background-rgb: 12, 15, 18;
+    --tile-background-rgb: 18, 27, 34;
     --primary-blue-rgb: 96, 165, 250;
-    /* For code highlighting */
     --primary-blue-on-code-rgb: 7, 104, 223;
+    --code-bg-color-rgb: 33, 33, 33;
   }
-}
+} */
 
+:root * {
+  transition: opacity 0.09s ease-in-out;
 
-:root *:hover {
-  transition-property: color;
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-
-  -webkit-transition:0.18s;
-  -moz-transition:0.18s;
-  -o-transition:0.18s;
-  transition:0.18s;
+  -webkit-transition: opacity 0.09s ease-in-out;
+  -moz-transition: opacity 0.09s ease-in-out;
+  -o-transition: opacity 0.09s ease-in-out;
 }
 
 body {

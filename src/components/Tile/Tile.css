@@ -11,7 +11,7 @@
 }
 
 .tile-comp-description > a {
-  @apply underline
+  @apply underline font-normal text-foreground
 }
 
 .tile-comp-description > a:hover {
