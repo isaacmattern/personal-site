@@ -3,11 +3,8 @@ import { allPosts } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { notFound } from "next/navigation";
 import { MDXComponents } from "mdx/types";
-import { format, parseISO } from "date-fns";
-import "./post-page.css";
 import Link from "next/link";
 import Test from "@/components/Test/Test";
-import { time } from "console";
 
 export async function generateStaticParams() {
   return allPosts.map((post) => ({

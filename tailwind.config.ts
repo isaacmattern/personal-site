@@ -18,6 +18,7 @@ const config: Config = {
         'tile-color': 'rgb(var(--tile-background-rgb))',
         'primary-blue': 'rgb(var(--primary-blue-rgb))',
         'foreground': 'rgb(var(--foreground-rgb))',
+        'link-hover': 'rgb(var(--link-hover-rgb))'
       },
     },
     screens: {
