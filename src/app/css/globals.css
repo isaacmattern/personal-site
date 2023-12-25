@@ -4,10 +4,10 @@
 @tailwind utilities;
 
 :root {
-
   --foreground-rgb: 0, 0, 0;
-  --background-rgb: 251, 252, 255;
-  --tile-background-rgb: 234, 236, 238;
+  --background-rgb: 251, 251, 253;
+  --tile-background-rgb: 239, 241, 243;
+  /* --primary-blue-rgb: 31, 106, 214; */
   --primary-blue-rgb: 35, 110, 222;
   --primary-blue-on-code-rgb: 82, 157, 250;
   --code-bg-color-rgb: 255, 255, 255;
@@ -30,7 +30,6 @@
 
 :root * {
   transition: opacity 0.09s ease-in-out;
-
   -webkit-transition: opacity 0.09s ease-in-out;
   -moz-transition: opacity 0.09s ease-in-out;
   -o-transition: opacity 0.09s ease-in-out;
@@ -50,51 +49,6 @@ body {
   height: 72px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
-  @apply leading-9
-}
-
-h1, h2, h3, h4, h5, h6, p, ul, ol, .formatted-code-block {
-  @apply my-4 sm:my-8
-}
-
-h1, h2, h3 {
-  @apply mt-6 sm:mt-12
-}
-
-h1 {
-  @apply text-3xl sm:text-4xl
-}
-
-h1, h2 {
-  @apply text-2xl sm:text-3xl
-}
-
-h3 {
-  @apply text-xl sm:text-2xl
-}
-
-h4 {
-  @apply text-lg sm:text-xl
-}
-
-h5 {
-  @apply text-base sm:text-lg
-}
-
-h6 {
-  @apply text-sm sm:text-base
-}
-
-p {
-  @apply font-normal text-base sm:text-lg
-}
-
-hr {
-  @apply opacity-20 border-opacity-20 border-foreground
-}
-
 /* Utility */
 .blue-link {
   @apply text-primary-blue hover:opacity-60
@@ -102,74 +56,4 @@ hr {
 
 .clickable-text-decorator {
   @apply hover:text-primary-blue
-}
-
-/* Lists */
-
-li {
-  @apply text-base sm:text-lg
-}
-
-ul ul, ol ol {
-  @apply ml-8 sm:ml-12 my-0
-}
-
-ul ul ul, ol ol ol {
-  @apply ml-8 sm:ml-12
-}
-
-ul {
-  list-style-type: disc;
-  @apply ml-4
-}
-
-ul ul {
-  list-style-type: circle;
-}
-
-ul ul ul {
-  list-style-type: square;
-}
-
-ol {
-  list-style-type: decimal;
-  @apply ml-6
-}
-
-/* Important - must not be moved upwards */
-/* TODO - Create custom tailwind style to increase line-height on text-sm and text-lg*/
-p, li {
-  line-height: 26px;
-}
-@media (min-width: 376px) {
-  p, li {
-    line-height: 30px;
-  }
-}
-
-/* Blockquote */
-
-blockquote {
-  background-color: rgb(var(--tile-background-rgb));
-  width: calc(100vw);
-  margin-left: -16px;
-  margin-right: -16px;
-  @apply my-4 sm:my-8 p-8
-}
-
-blockquote > *:first-child {
-  @apply mt-0
-}
-
-blockquote > *:last-child {
-  @apply mb-0
-}
-
-@media (min-width: 376px) {
-  blockquote {
-    width: calc(100% + 64px);
-    margin-left: -32px;
-    margin-right: -32px;
-    @apply rounded-md
-  }
 }

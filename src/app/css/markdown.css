@@ -1,0 +1,55 @@
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  @apply leading-9
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, .formatted-code-block {
+  @apply my-4 sm:my-8
+}
+
+h1, h2, h3 {
+  @apply mt-6 sm:mt-12
+}
+
+h1 {
+  @apply text-3xl sm:text-4xl
+}
+
+h1, h2 {
+  @apply text-2xl sm:text-3xl
+}
+
+h3 {
+  @apply text-xl sm:text-2xl
+}
+
+h4 {
+  @apply text-lg sm:text-xl
+}
+
+h5 {
+  @apply text-base sm:text-lg
+}
+
+h6 {
+  @apply text-sm sm:text-base
+}
+
+p {
+  @apply font-normal text-base sm:text-lg
+}
+
+hr {
+  @apply opacity-20 border-opacity-20 border-foreground
+}
+
+/* Important - must not be moved upwards */
+/* TODO - Create custom tailwind style to increase line-height on text-sm and text-lg*/
+p, li {
+  line-height: 26px;
+}
+@media (min-width: 376px) {
+  p, li {
+    line-height: 30px;
+  }
+}

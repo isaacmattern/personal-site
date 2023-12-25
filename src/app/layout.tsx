@@ -1,10 +1,14 @@
 import "./css/globals.css";
+
+import "./css/blockquote.css";
+import "./css/lists.css";
+import "./css/markdown.css";
 import "./css/syntax-highlighting.css";
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import { Analytics } from "@vercel/analytics/react";
-import { useEffect } from "react";
 
 const inter = Inter({
   subsets: ["latin"],
