@@ -5,10 +5,10 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-rgb: 251, 251, 253;
-  --tile-background-rgb: 239, 241, 243;
+  --background-rgb: 238, 238, 245;
+  --tile-background-rgb: 228, 228, 235;
   /* --primary-blue-rgb: 31, 106, 214; */
-  --primary-blue-rgb: 35, 110, 222;
+  --primary-blue-rgb: 33, 81, 145;
   --primary-blue-on-code-rgb: 82, 157, 250;
   --code-bg-color-rgb: 255, 255, 255;
 
@@ -29,10 +29,10 @@
 }
 
 :root * {
-  transition: opacity 0.09s ease-in-out;
-  -webkit-transition: opacity 0.09s ease-in-out;
-  -moz-transition: opacity 0.09s ease-in-out;
-  -o-transition: opacity 0.09s ease-in-out;
+  transition: opacity 0.12s ease-in-out, color 0.12s ease-in-out;
+  -webkit-transition: opacity 0.12s ease-in-out, color 0.12s ease-in-out;
+  -moz-transition: opacity 0.12s ease-in-out, color 0.12s ease-in-out;
+  -o-transition: opacity 0.12s ease-in-out, color 0.12s ease-in-out;
 }
 
 body {
@@ -51,9 +51,10 @@ body {
 
 /* Utility */
 .blue-link {
-  @apply text-primary-blue hover:opacity-60
+  @apply text-primary-blue hover:text-foreground hover:opacity-40
 }
 
-.clickable-text-decorator {
-  @apply hover:text-primary-blue
+p .blue-link, li .blue-link {
+  padding: 1px 4px;
+  @apply bg-tile-color rounded-md
 }
