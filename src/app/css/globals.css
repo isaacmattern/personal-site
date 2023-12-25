@@ -7,9 +7,8 @@
 
   --foreground-rgb: 0, 0, 0;
   --background-rgb: 251, 252, 255;
-  --tile-background-rgb: 237, 239, 242;
+  --tile-background-rgb: 234, 236, 238;
   --primary-blue-rgb: 35, 110, 222;
-  /* For code highlighting */
   --primary-blue-on-code-rgb: 82, 157, 250;
   --code-bg-color-rgb: 255, 255, 255;
 
@@ -22,7 +21,7 @@
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-rgb: 14, 20, 24;
-    --tile-background-rgb: 18, 27, 34;
+    --tile-background-rgb: 25, 36, 44;
     --primary-blue-rgb: 96, 165, 250;
     --primary-blue-on-code-rgb: 7, 104, 223;
     --code-bg-color-rgb: 33, 33, 33;
