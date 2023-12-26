@@ -4,29 +4,29 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 248, 248, 251;
-  --tile-background-rgb: 236, 236, 239;
-  /* --primary-blue-rgb: 31, 106, 214; */
-  --primary-blue-rgb: 33, 81, 145;
-  --primary-blue-on-code-rgb: 82, 157, 250;
-  --code-bg-color-rgb: 255, 255, 255;
-  --link-hover-rgb: 114, 114, 130;
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 12, 16, 20;
+  --tile-background-rgb: 25, 36, 44;
+  /* --primary-blue-rgb: 96, 165, 250; */
+  --primary-blue-rgb: 107, 181, 255;
+  --primary-blue-on-code-rgb: 7, 104, 223;
+  --code-bg-color-rgb: 33, 33, 33;
+  --link-hover-rgb: 190, 190, 190;
 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-rgb: 14, 20, 24;
-    --tile-background-rgb: 25, 36, 44;
-    --primary-blue-rgb: 96, 165, 250;
-    --primary-blue-on-code-rgb: 7, 104, 223;
-    --code-bg-color-rgb: 33, 33, 33;
-    --link-hover-rgb: 190, 190, 190;
+    --foreground-rgb: 0, 0, 0;
+    --background-rgb: 248, 248, 251;
+    --tile-background-rgb: 236, 236, 239;
+    --primary-blue-rgb: 33, 81, 145;
+    --primary-blue-on-code-rgb: 82, 157, 250;
+    --code-bg-color-rgb: 255, 255, 255;
+    --link-hover-rgb: 114, 114, 130;
   }
 }
 
@@ -53,10 +53,11 @@ body {
 
 /* Utility */
 .blue-link {
-  @apply text-primary-blue hover:text-link-hover
+  @apply font-bold text-primary-blue hover:text-foreground
 }
 
-p .blue-link, li .blue-link {
+/* Padding for links within posts */ 
+/* p .blue-link, li .blue-link {
   padding: 1px 4px;
   @apply bg-tile-color rounded-md
-}
+} */

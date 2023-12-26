@@ -23,7 +23,7 @@ export default function Home() {
             "Hi, I'm Isaac, and this is my blog. I'm still figuring out how I want to use this thing, but for now you can check out the small amount of articles I've posted. I enjoy writing code, cooking, weightlifting, coffee brewing, and "
           }
           <a
-            className="blue-link font-bold"
+            className="blue-link"
             href="https://music.isaacmattern.com"
             target="_blank"
           >
