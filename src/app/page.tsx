@@ -1,13 +1,12 @@
 // app/page.tsx
 import Link from "next/link";
-import { compareDesc, format, parseISO } from "date-fns";
-import Image from "next/image";
+import { compareDesc } from "date-fns";
 import { allPosts } from "contentlayer/generated";
-import { PostCard } from "./posts/page";
-import LinkButton from "@/components/LinkButton";
 import { personalProjects } from "@/lib/personalProjects";
 import Tile from "@/components/Tile/Tile";
 import parse from "html-react-parser";
+import PostCard from "@/components/PostCard/PostCard";
+import LinkButton from "@/components/LinkButton";
 
 export default function Home() {
   const lastThreePosts = allPosts
@@ -20,7 +19,13 @@ export default function Home() {
         <h2 className="text-center">{"About"}</h2>
         <p>
           {
-            "Hi, I'm Isaac, and this is my blog. I'm still figuring out how I want to use this thing, but for now you can check out the small amount of articles I've posted. I enjoy writing code, cooking, weightlifting, coffee brewing, and "
+            "Hi, I'm Isaac, and this is my personal site. I'm still figuring out how I want to use this thing, but for now you can check out the small amount of articles I've posted on my "
+          }
+          <Link href="/posts" className="blue-link">
+            {"blog"}
+          </Link>
+          {
+            ". I enjoy writing code, cooking, weightlifting, coffee brewing, and "
           }
           <a
             className="blue-link"

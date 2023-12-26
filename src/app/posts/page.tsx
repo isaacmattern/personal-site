@@ -1,29 +1,7 @@
 // app/page.tsx
-import Link from "next/link";
-import { compareDesc, format, parseISO } from "date-fns";
-import { allPosts, Post } from "contentlayer/generated";
-
-export function PostCard(post: Post) {
-  return (
-    <div className="my-8">
-      <div className="blue-link text-2xl w-fit">
-        <Link href={post.url}>{post.title}</Link>
-      </div>
-
-      <time
-        dateTime={post.date}
-        className="block text-sm my-0 rounded-md w-fit"
-      >
-        {new Date(post.date).toLocaleDateString("en-US", {
-          month: "long",
-          day: "numeric",
-          year: "numeric",
-          timeZone: "UTC",
-        })}
-      </time>
-    </div>
-  );
-}
+import { compareDesc } from "date-fns";
+import { allPosts } from "contentlayer/generated";
+import PostCard from "@/components/PostCard/PostCard";
 
 export default function BlogIndex() {
   const posts = allPosts.sort((a, b) =>
