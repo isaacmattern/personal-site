@@ -1,8 +1,6 @@
 import "./css/globals.css";
-
 import "./css/blockquote.css";
 import "./css/lists.css";
-import "./css/markdown.css";
 import "./css/syntax-highlighting.css";
 import Image from "next/image";
 

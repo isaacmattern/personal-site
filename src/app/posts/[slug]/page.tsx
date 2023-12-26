@@ -1,4 +1,3 @@
-// app/posts/[slug]/page.tsx
 import { allPosts } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { notFound } from "next/navigation";
