@@ -1,9 +1,8 @@
 import "./css/globals.css";
-
 import "./css/blockquote.css";
 import "./css/lists.css";
 import "./css/syntax-highlighting.css";
-import "./css/markdown.css";
+import "./css/markdown-styles.css";
 
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
