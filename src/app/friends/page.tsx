@@ -6,7 +6,7 @@ export default function Page() {
         <a
           target="_blank"
           className="blue-link"
-          href="https://en.wikipedia.org/wiki/Real_life"
+          href="https://en.wikipedia.org/wiki/Real_life#As_distinct_from_the_Internet"
         >
           real life
         </a>
