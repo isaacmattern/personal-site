@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { MDXComponents } from "mdx/types";
 import Link from "next/link";
 import Test from "@/components/Test/Test";
+import "./../../css/markdown.css";
 
 export async function generateStaticParams() {
   return allPosts.map((post) => ({
