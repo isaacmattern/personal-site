@@ -11,5 +11,5 @@
 }
 
 .tile-comp-description > a {
-  @apply underline font-normal text-foreground hover:text-link-hover 
+  @apply underline font-normal text-primary-blue
 }

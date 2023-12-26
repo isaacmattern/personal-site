@@ -10,10 +10,10 @@ function LinkButton({ buttonText, href }: LinkButtonPropsType): JSX.Element {
   return (
     <Link
       href={href}
-      className="block px-3 py-2 text-base bg-tile-color rounded-md max-w-fit m-auto blue-link"
+      className="block text-xl max-w-fit m-auto blue-link bg-tile-color py-2 px-4 rounded-md"
     >
       <div className="flex items-center justify-center">
-        <div className="font-bold">{buttonText}</div>
+        <div>{buttonText}</div>
       </div>
     </Link>
   );

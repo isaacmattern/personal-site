@@ -44,7 +44,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 
   return (
     <div>
-      <h1 className="font-medium text-3xl mb-1 mt-8 sm:mt-12 sm:text-4xl">
+      <h1 className="font-medium text-3xl mb-0 mt-8 sm:mt-12 sm:text-4xl">
         {post.title}
       </h1>
       <time dateTime={post.date} className="text-sm sm:text-base w-fit">
@@ -55,7 +55,7 @@ export default function Page({ params }: { params: { slug: string } }) {
           timeZone: "UTC",
         })}
       </time>
-      <h2 className="opacity-60 font-normal text-sm sm:text-base mt-1 mb-4 sm:mb-8">
+      <h2 className="opacity-70 font-normal text-sm sm:text-base mt-0 mb-4 sm:mb-8">
         {post.description}
       </h2>
       <MDXContent components={mdxComponents} />

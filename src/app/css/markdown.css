@@ -45,11 +45,12 @@ hr {
 
 /* Important - must not be moved upwards */
 /* TODO - Create custom tailwind style to increase line-height on text-sm and text-lg*/
-p, li {
+
+/* p, li {
   line-height: 26px;
 }
 @media (min-width: 376px) {
   p, li {
     line-height: 30px;
   }
-}
+} */

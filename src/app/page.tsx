@@ -33,7 +33,7 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="my-12">
+      {/* <div className="my-12">
         <h2 className="text-center">{"Recent Posts"}</h2>
         <>
           {lastThreePosts.map((post, idx) => (
@@ -41,9 +41,35 @@ export default function Home() {
           ))}
         </>
         <LinkButton href="/posts" buttonText="View all posts" />
+      </div> */}
+
+      <div className="my-12">
+        <h2 className="text-center">Contact Me</h2>
+        <p>Some other places I exist</p>
+        <ul>
+          <li>Email: isaac[dot]mattern[at]gmail.com</li>
+          <li>
+            <Link
+              target="_blank"
+              href="https://github.com/isaacmattern"
+              className="blue-link"
+            >
+              {"GitHub"}
+            </Link>
+          </li>
+          <li>
+            <Link
+              target="_blank"
+              href="https://www.goodreads.com/user/show/30791276-isaac"
+              className="blue-link"
+            >
+              {"Goodreads"}
+            </Link>
+          </li>
+        </ul>
       </div>
 
-      <div className="my-12 m-auto max-w-2xl">
+      <div className="mt-12 m-auto max-w-2xl">
         <h2 className="text-center">{"Projects"}</h2>
         <p>
           {

@@ -4,6 +4,7 @@ import "./css/blockquote.css";
 import "./css/lists.css";
 import "./css/markdown.css";
 import "./css/syntax-highlighting.css";
+import Image from "next/image";
 
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -30,16 +31,19 @@ export default function RootLayout({
       <body className={inter.variable}>
         <div className="mx-auto max-w-4xl">
           <div className="pt-4 xs:pt-6 mx-4 xs:mx-6 main-content pb-8">
-            <nav className="mb-4 xs:mb-8 flex items-center justify-between">
+            <nav className="mb-4 xs:mb-8 flex flex-col sm:flex-row items-center justify-between">
               <h1 className="text-2xl font-extrabold m-0">
                 <a href="/">{"Isaac Mattern"}</a>
               </h1>
-              <div className="font-semibold flex flex-nowrap items-center gap-4 justify-end h-6">
+              <div className="flex flex-nowrap items-center gap-4 justify-end h-6">
                 <Link href="/">
-                  <div className="text-xl blue-link">{"About"}</div>
+                  <div className="text-lg blue-link">{"About"}</div>
+                </Link>
+                <Link href="/friends">
+                  <div className="text-lg blue-link">{"Friends"}</div>
                 </Link>
                 <Link href="/posts">
-                  <div className="text-xl blue-link">{"Blog"}</div>
+                  <div className="text-lg blue-link">{"Blog"}</div>
                 </Link>
               </div>
             </nav>
@@ -50,30 +54,33 @@ export default function RootLayout({
             <div className="opacity-60 text-center mb-2 sm:mb-0">
               &copy;{" Isaac Mattern 2023-present"}
             </div>
-            <div className="opacity-100 flex items-center justify-center gap-4">
+            <div className="opacity-100 flex items-center justify-center">
               <div>
-                <Link
-                  href="https://github.com/isaacmattern"
-                  className="blue-link"
-                >
-                  {"GitHub"}
-                </Link>
+                <Image
+                  draggable={false}
+                  alt="HTML decorative banner"
+                  src={"/gifs/html.gif"}
+                  width={88}
+                  height={31}
+                />
               </div>
               <div>
-                <Link
-                  href="https://www.linkedin.com/in/isaacmattern/"
-                  className="blue-link"
-                >
-                  {"LinkedIn"}
-                </Link>
+                <Image
+                  draggable={false}
+                  alt="He/Him pronouns banner"
+                  src={"/gifs/hehim.png"}
+                  width={88}
+                  height={31}
+                />
               </div>
               <div>
-                <Link
-                  href="mailto:isaac.mattern@gmail.com"
-                  className="blue-link"
-                >
-                  {"Contact"}
-                </Link>
+                <Image
+                  draggable={false}
+                  alt="No cookies banner - this site is cookies free"
+                  src={"/gifs/nocookie.gif"}
+                  width={88}
+                  height={31}
+                />
               </div>
             </div>
           </footer>

@@ -1,7 +1,8 @@
 /* Blockquote */
 
 blockquote {
-  @apply my-4 sm:my-8 p-4 pl-4 sm:pl-8 border-l-2 border-primary-blue
+  border-color: rgba(var(--foreground-rgb), 0.4);
+  @apply my-4 sm:my-8 p-4 pl-4 sm:pl-8 border-l-4
 }
 
 blockquote > *:first-child {
