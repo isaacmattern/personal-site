@@ -22,7 +22,7 @@ export default function Page() {
       </ul>
 
       <div className="mt-8">
-        {"If you link my page on your site, consider using my button :)"}
+        <p>{"If you link my page on your site, consider using my button :)"}</p>
 
         <div className="mt-4">
           <Image
