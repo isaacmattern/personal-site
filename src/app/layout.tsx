@@ -52,12 +52,12 @@ export default function RootLayout({
             <div className="opacity-60 text-center mb-2 sm:mb-0">
               &copy;{" Isaac Mattern 2023-present"}
             </div>
-            <div className="opacity-100 flex items-center justify-center">
+            <div className="opacity-100 flex gap-2 items-center justify-center">
               <div>
                 <Image
                   draggable={false}
                   alt="HTML decorative banner"
-                  src={"/gifs/html.gif"}
+                  src={"/buttons/html.gif"}
                   width={88}
                   height={31}
                 />
@@ -66,7 +66,7 @@ export default function RootLayout({
                 <Image
                   draggable={false}
                   alt="He/Him pronouns banner"
-                  src={"/gifs/hehim.png"}
+                  src={"/buttons/hehim.png"}
                   width={88}
                   height={31}
                 />
@@ -75,7 +75,7 @@ export default function RootLayout({
                 <Image
                   draggable={false}
                   alt="No cookies banner - this site is cookies free"
-                  src={"/gifs/nocookie.gif"}
+                  src={"/buttons/nocookie.gif"}
                   width={88}
                   height={31}
                 />
