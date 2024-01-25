@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Page() {
   return (
@@ -18,7 +19,24 @@ export default function Page() {
       <h1>Friends</h1>
 
       <ul>
-        <li>{"Oops, this list is empty :("}</li>
+        <li>
+          <Link
+            className="blue-link"
+            href="https://peter.digital"
+            target="_blank"
+          >
+            Peter Campanelli
+          </Link>
+        </li>
+        <li>
+          <Link
+            className="blue-link"
+            href="https://josiahmattern.com"
+            target="_blank"
+          >
+            Josiah Mattern
+          </Link>
+        </li>
       </ul>
 
       <div className="mt-8">
