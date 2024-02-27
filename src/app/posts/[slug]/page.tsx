@@ -3,7 +3,9 @@ import { useMDXComponent } from "next-contentlayer/hooks";
 import { notFound } from "next/navigation";
 import { MDXComponents } from "mdx/types";
 import Link from "next/link";
+import Image, { ImageProps } from "next/image";
 import Test from "@/components/Test/Test";
+import CaptionableImage from "@/components/CaptionableImage/CaptionableImage";
 
 export async function generateStaticParams() {
   return allPosts.map((post) => ({
@@ -23,12 +25,14 @@ export const generateMetadata = ({ params }: { params: { slug: string } }) => {
 };
 
 const mdxComponents: MDXComponents = {
+  CaptionableImage,
   Test,
   a: ({ href, children }) => (
     <Link className="blue-link" target="_blank" href={href as string}>
       {children}
     </Link>
   ),
+  img: (props) => <CaptionableImage src={props.src} alt={props.alt} />,
 };
 
 export default function Page({ params }: { params: { slug: string } }) {
@@ -54,7 +58,7 @@ export default function Page({ params }: { params: { slug: string } }) {
           timeZone: "UTC",
         })}
       </time>
-      <h2 className="opacity-70 font-normal text-sm sm:text-base mt-0 mb-4 sm:mb-8">
+      <h2 className="opacity-60 font-normal text-sm sm:text-base mt-0 mb-4 sm:mb-8">
         {post.description}
       </h2>
       <MDXContent components={mdxComponents} />
