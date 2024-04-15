@@ -7,6 +7,12 @@ interface IPersonalProject {
 
 export const personalProjects : IPersonalProject[] = [
   {
+    title: "Nick Hakim Online Store",
+    url: "https://nickhakim.com",
+    date: "2024",
+    description: "Developed a website for artist Nick Hakim, along with <a href='https://peter.digital' target='_blank'>Peter Campanelli</a>"
+  },
+  {
     title: "Baby Keem Online Store",
     url: "https://keem.science",
     date: "2022",
@@ -17,12 +23,6 @@ export const personalProjects : IPersonalProject[] = [
     url: "https://whatareyou.cooking",
     date: "2022",
     description: "Recipe sharing website with Sign-In with Google, profiles, tags, and search by tags. I used React for building the UI, TypeScript to increase type safety, and Tailwind CSS for styling. <a href='https://github.com/isaacmattern/what-are-you-cooking' target='_blank'>View on GitHub</a>"
-  },
-  {
-    title: "Remi Wolf Online Store",
-    url: "https://remiwolf.com",
-    date: "2021",
-    description: "Developed a shopify merchandise store for artist Remi Wolf, along with <a href='https://peter.digital' target='_blank'>Peter Campanelli</a>"
   },
   {
     title: "Wordle Solver Bot",
