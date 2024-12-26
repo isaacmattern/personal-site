@@ -53,7 +53,7 @@ export default function Home() {
         <p>Some other places I exist</p>
         <ul>
           <li>Email: isaac[dot]mattern[at]gmail.com</li>
-          <li>
+          {/* <li>
             <Link
               target="_blank"
               href="https://github.com/isaacmattern"
@@ -61,7 +61,7 @@ export default function Home() {
             >
               {"GitHub"}
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link
               target="_blank"
