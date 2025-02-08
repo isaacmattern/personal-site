@@ -12,3 +12,9 @@ blockquote > *:first-child {
 blockquote > *:last-child {
   @apply mb-0
 }
+
+blockquote > p > cite {
+  margin-top: 16px;
+  display: block;
+  font-style: italic;
+}
