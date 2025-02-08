@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function PostCard(post: Post) {
   return (
     <div className="my-8">
-      <div className="blue-link text-2xl w-fit">
+      <div className="blue-link text-xl w-fit">
         <Link href={post.url}>{post.title}</Link>
       </div>
 
