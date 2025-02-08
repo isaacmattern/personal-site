@@ -20,7 +20,7 @@ export const personalProjects : IPersonalProject[] = [
   },
   {
     title: "What Are You Cooking?",
-    url: "https://whatareyou.cooking",
+    url: "https://what-are-you-cooking.vercel.app",
     date: "2022",
     description: "Recipe sharing website with Sign-In with Google, profiles, tags, and search by tags. I used React for building the UI, TypeScript to increase type safety, and Tailwind CSS for styling. <a href='https://github.com/isaacmattern/what-are-you-cooking' target='_blank'>View on GitHub</a>"
   },
