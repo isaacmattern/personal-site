@@ -34,6 +34,12 @@ export const personalProjects : IPersonalProject[] = [
     title: "Digit Recognition",
     url: "https://github.com/isaacmattern/mnist-digit-recognition",
     date: "2021",
-    description: "A project I completed for coursework with three classmates in an Introduction to Artificial Intelligence course. Uses the MNIST Database "
+    description: "A project I completed for coursework with three classmates in an Introduction to Artificial Intelligence course. Uses the MNIST Database"
   },  
+  {
+    title: "Markdown Blog",
+    url: "/posts/build-a-markdown-blog",
+    date: "2023",
+    description: "This website! Click the link to see my blogpost on how I built it. Blog posts are generated from markdown files, with support for including custom React components."
+  },
 ]

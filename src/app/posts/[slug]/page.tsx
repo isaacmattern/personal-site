@@ -47,7 +47,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 
   return (
     <div>
-      <h1 className="font-medium text-3xl mb-0 mt-8 sm:mt-12 sm:text-4xl">
+      <h1 className="font-medium text-2xl mb-0 mt-8 sm:mt-12 sm:text-3xl">
         {post.title}
       </h1>
       <time dateTime={post.date} className="text-sm sm:text-base w-fit">

@@ -22,6 +22,15 @@ export default function Page() {
         <li>
           <Link
             className="blue-link"
+            href="https://shayfabrizio.com"
+            target="_blank"
+          >
+            Shay Fabrizio
+          </Link>
+        </li>
+        <li>
+          <Link
+            className="blue-link"
             href="https://peter.digital"
             target="_blank"
           >

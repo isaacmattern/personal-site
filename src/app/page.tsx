@@ -25,7 +25,7 @@ export default function Home() {
             {"blog"}
           </Link>
           {
-            ". I enjoy writing code, cooking, weightlifting, coffee brewing, and "
+            ". I enjoy writing code, cooking, weightlifting, running, coffee brewing, and "
           }
           <a
             className="blue-link"
@@ -34,7 +34,7 @@ export default function Home() {
           >
             {"making music"}
           </a>
-          {", among other things."}
+          {"."}
         </p>
       </div>
 
@@ -53,7 +53,7 @@ export default function Home() {
         <p>Some other places I exist</p>
         <ul>
           <li>Email: isaac[dot]mattern[at]gmail.com</li>
-          <li>
+          {/* <li>
             <Link
               target="_blank"
               href="https://github.com/isaacmattern"
@@ -61,7 +61,7 @@ export default function Home() {
             >
               {"GitHub"}
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link
               target="_blank"
