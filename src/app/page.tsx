@@ -25,7 +25,7 @@ export default function Home() {
             {"blog"}
           </Link>
           {
-            ". I enjoy writing code, cooking, weightlifting, coffee brewing, and "
+            ". I enjoy writing code, cooking, weightlifting, running, coffee brewing, and "
           }
           <a
             className="blue-link"
@@ -34,7 +34,7 @@ export default function Home() {
           >
             {"making music"}
           </a>
-          {", among other things."}
+          {"."}
         </p>
       </div>
 
