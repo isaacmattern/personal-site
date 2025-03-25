@@ -1,3 +1,4 @@
+import { use } from "react";
 import { allPosts } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer2/hooks";
 import { notFound } from "next/navigation";
@@ -13,7 +14,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export const generateMetadata = ({ params }: { params: { slug: string } }) => {
+export const generateMetadata = async (props: { params: Promise<{ slug: string }> }) => {
+  const params = await props.params;
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
   if (!post) notFound();
   return {
@@ -34,7 +36,8 @@ const mdxComponents: MDXComponents = {
   img: (props) => <CaptionableImage src={props.src} alt={props.alt} />,
 };
 
-export default function Page({ params }: { params: { slug: string } }) {
+export default function Page(props: { params: Promise<{ slug: string }> }) {
+  const params = use(props.params);
   // Find the post for the current page.
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
 
