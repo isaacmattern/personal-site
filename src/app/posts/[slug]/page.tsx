@@ -19,7 +19,6 @@ export const generateMetadata = ({ params }: { params: { slug: string } }) => {
   return {
     title: post.title,
     description: post.description,
-    keywords: post.keywords,
     authors: [{ name: "Isaac Mattern", url: "https://isaacmattern.com" }],
   };
 };
