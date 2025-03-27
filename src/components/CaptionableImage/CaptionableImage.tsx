@@ -10,7 +10,7 @@ export default function CaptionableImage({
   src,
   alt,
   caption,
-}: CaptionableImagePropsType): JSX.Element {
+}: CaptionableImagePropsType): React.ReactElement {
   return (
     <div className="max-w-lg m-auto">
       <figure>

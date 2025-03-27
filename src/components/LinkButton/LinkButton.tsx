@@ -6,7 +6,10 @@ interface LinkButtonPropsType {
   href: string;
 }
 
-function LinkButton({ buttonText, href }: LinkButtonPropsType): JSX.Element {
+function LinkButton({
+  buttonText,
+  href,
+}: LinkButtonPropsType): React.ReactElement {
   return (
     <Link
       href={href}
