@@ -4,7 +4,7 @@ import "./Tile.css";
 interface ITile {
   title: string;
   url: string;
-  description: string | JSX.Element | JSX.Element[];
+  description: string | React.ReactElement | React.ReactElement[];
 }
 
 export default function Tile({ title, url, description }: ITile) {

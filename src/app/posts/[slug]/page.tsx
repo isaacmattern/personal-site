@@ -2,11 +2,7 @@ import { use } from "react";
 import { allPosts } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer2/hooks";
 import { notFound } from "next/navigation";
-import { MDXComponents } from "mdx/types";
-import Link from "next/link";
-import Image, { ImageProps } from "next/image";
-import Test from "@/components/Test/Test";
-import CaptionableImage from "@/components/CaptionableImage/CaptionableImage";
+import { mdxComponents } from "@/components/MdxComponents";
 
 export async function generateStaticParams() {
   return allPosts.map((post) => ({
@@ -14,7 +10,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export const generateMetadata = async (props: { params: Promise<{ slug: string }> }) => {
+export const generateMetadata = async (props: {
+  params: Promise<{ slug: string }>;
+}) => {
   const params = await props.params;
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
   if (!post) notFound();
@@ -23,17 +21,6 @@ export const generateMetadata = async (props: { params: Promise<{ slug: string }
     description: post.description,
     authors: [{ name: "Isaac Mattern", url: "https://isaacmattern.com" }],
   };
-};
-
-const mdxComponents: MDXComponents = {
-  CaptionableImage,
-  Test,
-  a: ({ href, children }) => (
-    <Link className="blue-link" target="_blank" href={href as string}>
-      {children}
-    </Link>
-  ),
-  img: (props) => <CaptionableImage src={props.src} alt={props.alt} />,
 };
 
 export default function Page(props: { params: Promise<{ slug: string }> }) {
