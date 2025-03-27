@@ -125,6 +125,10 @@ p {
   @apply font-normal text-base sm:text-lg;
 }
 
+blockquote {
+  @apply font-normal text-base sm:text-lg;
+}
+
 hr {
   @apply opacity-20 border-opacity-20 border-foreground;
 }

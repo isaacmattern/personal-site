@@ -1,0 +1,24 @@
+.twitter-tweet {
+  border-left: none;
+  border: 2px solid rgb(var(--primary-blue-rgb));
+  background-color: rgb(var(--tile-background-rgb));
+  border-radius: 8px;
+
+  @apply p-4 sm:p-6
+}
+
+.tweet-author, .tweet-date {
+  display: block;
+}
+
+.tweet-author {
+  margin-bottom: 0;
+}
+
+.tweet-date {
+  opacity: 0.6;
+  margin-top: 0;
+  margin-bottom: 8px;
+
+  @apply text-sm sm:text-base
+}
