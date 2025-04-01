@@ -277,7 +277,7 @@ I've wanted to create a blog for awhile.
 
 Finally, let's update our the `page.tsx` file that renders each of our blog posts
 
-```tsx {2, 21} title="src/app/posts/[slug]/page.tsx"
+```tsx {2, 20} title="src/app/posts/[slug]/page.tsx"
 // Etc...
 import Test from '@/components/Test/Test'
 
@@ -337,7 +337,7 @@ I've wanted to create a blog for awhile.
 
 Currently, MDX transforms our markdown into an `<a>{:html}` tag. Now, let's see how we can transform all of those into [Next.js Link components](https://nextjs.org/learn/basics/navigate-between-pages/link-component) (`<Link>{:tsx}`)
 
-```tsx {2, 23} title="src/app/posts/[slug]/page.tsx"
+```tsx {2, 22} title="src/app/posts/[slug]/page.tsx"
 // Etc...
 import Link from 'next/link'
 import Test from '@/components/Test/Test'
