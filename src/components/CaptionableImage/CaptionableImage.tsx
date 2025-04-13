@@ -1,4 +1,5 @@
 import Image from "next/image";
+import "./CaptionableImage.css";
 
 interface CaptionableImagePropsType {
   src: string;
@@ -12,13 +13,11 @@ export default function CaptionableImage({
   caption,
 }: CaptionableImagePropsType): React.ReactElement {
   return (
-    <div className="max-w-lg m-auto">
+    <div className="captionable-image">
       <figure>
         <Image src={src} alt={alt} width={9999} height={100} />
         {caption && (
-          <figcaption className="text-center mt-2 opacity-60">
-            {caption}
-          </figcaption>
+          <figcaption className="secondary-text">{caption}</figcaption>
         )}
       </figure>
     </div>

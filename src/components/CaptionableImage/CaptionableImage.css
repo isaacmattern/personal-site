@@ -1,0 +1,20 @@
+.captionable-image {
+  margin-top: 24px;
+  margin: auto;
+  max-width: min(480px, 100%);
+}
+
+.captionable-image figure {
+  margin: 24px auto;
+}
+
+.captionable-image figure img {
+  max-width: min(480px, 100%);
+  height: auto;
+  display: block;
+}
+
+.captionable-image figcaption {
+  text-align: center;
+  margin-top: 4px;
+}

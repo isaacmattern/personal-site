@@ -68,7 +68,7 @@ hr {
 /* Sketchy-border */
 .sketchy-border {
   position: relative;
-  border: solid rgba(0, 0, 0, 0.7);
+  border: solid rgba(0, 0, 0, 0.6);
   border-width: 1.5px;
   border-radius: 2px;
   z-index: 0;
@@ -81,7 +81,7 @@ hr {
   left: -4px; /* margin + border */
   right: -4px; /* margin + border */
   display: block;
-  border: solid rgba(0, 0, 0, 0.7);
+  border: solid rgba(0, 0, 0, 0.6);
   border-width: 1.5px;
   border-radius: 2px;
   content: "";
@@ -96,7 +96,7 @@ hr {
   left: -4px; /* margin + border */
   right: -4px; /* margin + border */
   display: block;
-  border: solid rgba(0, 0, 0, 0.7);
+  border: solid rgba(0, 0, 0, 0.6);
   border-width: 1.5px;
   border-radius: 2px;
   content: "";
