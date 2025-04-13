@@ -1,0 +1,8 @@
+h1 {
+  margin-bottom: 0;
+}
+
+time, .description {
+  opacity: 80%;
+  font-size: 85%;
+}

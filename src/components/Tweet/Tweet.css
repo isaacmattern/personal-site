@@ -1,10 +1,17 @@
+.main-tweet-link-container {
+  color: white;
+  text-decoration: none;
+}
+
 .twitter-tweet {
   border-left: none;
-  border: 2px solid rgb(var(--primary-blue-rgb));
-  background-color: rgb(var(--tile-background-rgb));
+  border: 2px solid white;
   border-radius: 8px;
-
-  @apply p-4 sm:p-6
+  padding: 16px;
+  margin: 24px 0;
+  
+  color: white;
+  text-decoration: none;
 }
 
 .tweet-author, .tweet-date {
@@ -19,6 +26,4 @@
   opacity: 0.6;
   margin-top: 0;
   margin-bottom: 8px;
-
-  @apply text-sm sm:text-base
 }

@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <div>
-        <h2>{"About"}</h2>
+        <h1>{"About"}</h1>
         <p>
           {
             "Hi, I'm Isaac, and this is my personal site. I'm still figuring out how I want to use this thing, but for now you can check out the small amount of articles I've posted on my "

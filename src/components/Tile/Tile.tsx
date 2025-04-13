@@ -9,15 +9,13 @@ interface ITile {
 
 export default function Tile({ title, url, description }: ITile) {
   return (
-    <div className="tile-comp block bg-tile-color p-6 rounded-md">
-      <a
-        href={url}
-        target="_blank"
-        className="my-0 font-bold text-lg blue-link"
-      >
-        {title}
-      </a>
-      <p className="my-0 text-sm tile-comp-description">{description}</p>
+    <div className="tile-comp">
+      <h3 className="project-title">
+        <a href={url} target="_blank">
+          {title}
+        </a>
+      </h3>
+      {description}
     </div>
   );
 }

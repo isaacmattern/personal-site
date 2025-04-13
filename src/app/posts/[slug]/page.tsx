@@ -3,6 +3,7 @@ import { allPosts } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer2/hooks";
 import { notFound } from "next/navigation";
 import { mdxComponents } from "@/components/MdxComponents";
+import "./../../css/post.css";
 
 export async function generateStaticParams() {
   return allPosts.map((post) => ({
@@ -45,7 +46,7 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
           timeZone: "UTC",
         })}
       </time>
-      <h2>{post.description}</h2>
+      <div className="description">{post.description}</div>
       <MDXContent components={mdxComponents} />
     </div>
   );

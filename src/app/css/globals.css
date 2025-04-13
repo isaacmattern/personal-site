@@ -1,10 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
 :root {
   --code-bg-color-rgb: 255, 255, 255;
-  margin: 0;
-  padding: 0;
+  /* margin: 0;
+  padding: 0; */
   box-sizing: border-box;
-
-  font-family: 'Terminus', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,13 +14,24 @@
 }
 
 body {
-  background-color: #111419;
-  color: white;
+  background-color: #131517;
+  color: #f0f0f0;
 
   max-width: 740px;
   margin: auto;
+  padding: 16px;
+  font-size: 20px;
+  font-weight: 200;
+
+  font-family: "Winky Rough", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: 500;
 }
 
 a {
-  color: #71aaff;
+  color: rgb(117, 198, 255);
 }

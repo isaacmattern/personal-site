@@ -1,0 +1,28 @@
+.nav {
+  margin: 16px 0 32px 0;
+}
+
+.nav .name {
+  margin-bottom: 0;
+}
+
+.nav-link-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 8px;
+  margin: 0;
+}
+
+.footer {
+  margin-top: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-web-button-container {
+  display: flex;
+  gap: 8px;
+}

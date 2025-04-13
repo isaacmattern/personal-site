@@ -1,4 +1,5 @@
 import "./css/globals.css";
+import "./css/site-layout.css";
 import "./css/blockquote.css";
 import "./css/lists.css";
 import "./css/syntax-highlighting.css";
@@ -29,28 +30,32 @@ export default function RootLayout({
       <body className={inter.variable}>
         <div>
           <div>
-            <nav>
-              <h1>
-                <Link href="/">{"Isaac Mattern"}</Link>
-              </h1>
-              <div>
-                <Link href="/">
-                  <div>{"About"}</div>
-                </Link>
-                <Link href="/friends">
-                  <div>{"Friends"}</div>
-                </Link>
-                <Link href="/posts">
-                  <div>{"Blog"}</div>
-                </Link>
-              </div>
+            <nav className="nav">
+              <div className="name">{"Isaac Mattern"}</div>
+              <ul className="nav-link-list">
+                <li>
+                  <Link href="/">
+                    <span>{"About"}</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/friends">
+                    <span>{"Friends"}</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/posts">
+                    <span>{"Blog"}</span>
+                  </Link>
+                </li>
+              </ul>
             </nav>
             <main id="main-content">{children}</main>
           </div>
 
-          <footer>
+          <footer className="footer">
             <div>&copy;{" Isaac Mattern 2023-present"}</div>
-            <div>
+            <div className="footer-web-button-container">
               <div>
                 <Image
                   draggable={false}

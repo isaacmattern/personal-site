@@ -15,7 +15,8 @@ export default function Tweet({
 }: ITweet) {
   return (
     <a
-      href="https://twitter.com/iamdevloper/status/1902628884278894941?ref_src=twsrc%5Etfw"
+      className="main-tweet-link-container"
+      href={link}
       target="_blank"
       rel="noreferrer"
     >

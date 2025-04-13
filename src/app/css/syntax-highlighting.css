@@ -25,6 +25,12 @@ pre, code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   font-weight: 400;
   line-height: 1.1rem;
+  margin: 0;
+}
+
+span code {
+  padding: 2px 4px;
+  border-radius: 6px;
 }
 
 @media (min-width: 576px) {
@@ -34,6 +40,10 @@ pre, code {
   }
 }
 
+figure {
+  margin: 0;
+}
+
 figure[data-rehype-pretty-code-figure] {
   overflow: hidden;
  
@@ -41,8 +51,6 @@ figure[data-rehype-pretty-code-figure] {
   background-color: rgb(var(--code-bg-color-rgb));
   border-radius: var(--border-radius);
   border: var(--border-style);
-
-  @apply my-6 sm:my-8
 }
  
 figure[data-rehype-pretty-code-figure] pre {
