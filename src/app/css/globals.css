@@ -18,7 +18,7 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
 
-  max-width: 720px;
+  max-width: 780px;
   margin: auto;
   padding: 16px;
   font-size: 16px;
@@ -60,10 +60,14 @@ a {
   font-size: 87.5%;
 }
 
+
+hr {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
 /* Sketchy-border */
 .sketchy-border {
   position: relative;
-  padding: 16px;
   border: solid rgba(0, 0, 0, 0.7);
   border-width: 1.5px;
   border-radius: 2px;
