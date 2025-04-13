@@ -9,7 +9,7 @@ export default function BlogIndex() {
   );
 
   return (
-    <div className="sm:mt-12">
+    <div>
       {posts.map((post, idx) => (
         <PostCard key={idx} {...post} />
       ))}

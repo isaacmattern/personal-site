@@ -1,20 +1,6 @@
 /* Lists */
-
-li {
-  @apply text-base sm:text-lg
-}
-
-ul ul, ol ol {
-  @apply ml-8 sm:ml-12 my-0
-}
-
-ul ul ul, ol ol ol {
-  @apply ml-8 sm:ml-12
-}
-
 ul {
   list-style-type: disc;
-  @apply ml-4
 }
 
 ul ul {
@@ -27,5 +13,4 @@ ul ul ul {
 
 ol {
   list-style-type: decimal;
-  @apply ml-6
 }

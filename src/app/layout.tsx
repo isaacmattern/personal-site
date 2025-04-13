@@ -25,34 +25,32 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="overflow-x-hidden">
+    <html lang="en">
       <body className={inter.variable}>
-        <div className="mx-auto max-w-3xl">
-          <div className="pt-4 xs:pt-6 mx-4 xs:mx-6 main-content pb-8">
-            <nav className="mb-4 xs:mb-8 flex flex-col sm:flex-row items-center justify-between">
-              <h1 className="text-2xl font-extrabold m-0">
+        <div>
+          <div>
+            <nav>
+              <h1>
                 <Link href="/">{"Isaac Mattern"}</Link>
               </h1>
-              <div className="flex flex-nowrap items-center gap-4 justify-end h-6">
+              <div>
                 <Link href="/">
-                  <div className="text-lg blue-link">{"About"}</div>
+                  <div>{"About"}</div>
                 </Link>
                 <Link href="/friends">
-                  <div className="text-lg blue-link">{"Friends"}</div>
+                  <div>{"Friends"}</div>
                 </Link>
                 <Link href="/posts">
-                  <div className="text-lg blue-link">{"Blog"}</div>
+                  <div>{"Blog"}</div>
                 </Link>
               </div>
             </nav>
             <main id="main-content">{children}</main>
           </div>
 
-          <footer className="mx-4 xs:mx-6 text-sm block sm:flex items-center justify-between footer">
-            <div className="opacity-60 text-center mb-2 sm:mb-0">
-              &copy;{" Isaac Mattern 2023-present"}
-            </div>
-            <div className="opacity-100 flex gap-2 items-center justify-center">
+          <footer>
+            <div>&copy;{" Isaac Mattern 2023-present"}</div>
+            <div>
               <div>
                 <Image
                   draggable={false}

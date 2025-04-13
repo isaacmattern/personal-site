@@ -1,147 +1,26 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 255, 255, 255;
-  --tile-background-rgb: 244, 244, 244;
-  --primary-blue-rgb: 0, 70, 230;
-  --primary-blue-on-code-rgb: 82, 157, 250;
   --code-bg-color-rgb: 255, 255, 255;
-  --link-hover-rgb: 114, 114, 130;
-
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  font-family: 'Terminus', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-rgb: 12, 16, 20;
-    --tile-background-rgb: 25, 36, 44;
-    --primary-blue-rgb: 107, 181, 255;
-    --primary-blue-on-code-rgb: 7, 104, 223;
     --code-bg-color-rgb: 33, 33, 33;
-    --link-hover-rgb: 190, 190, 190;
   }
-}
-
-:root * {
-  transition: opacity 0.12s ease-in-out, color 0.12s ease-in-out;
-  -webkit-transition: opacity 0.12s ease-in-out, color 0.12s ease-in-out;
-  -moz-transition: opacity 0.12s ease-in-out, color 0.12s ease-in-out;
-  -o-transition: opacity 0.12s ease-in-out, color 0.12s ease-in-out;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
-  font-family: "Times New Roman", Times, serif;
-  font-family: var(--font-inter);
+  background-color: #111419;
+  color: white;
+
+  max-width: 740px;
+  margin: auto;
 }
 
-.main-content {
-  min-height: calc(100vh - 72px);
-}
-
-.footer {
-  height: 72px;
-}
-
-/* Utility */
-.blue-link {
-  @apply text-primary-blue underline font-semibold /* hover:text-foreground */;
-}
-
-/* Padding for links within posts */
-/* p .blue-link, li .blue-link {
-  padding: 1px 4px;
-  @apply bg-tile-color rounded-md
-} */
-
-/* Markdown styles */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: bold;
-  @apply leading-9;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol,
-.formatted-code-block {
-  @apply my-4 sm:my-8;
-}
-
-li {
-  @apply my-1 sm:my-2;
-}
-
-h1,
-h2,
-h3 {
-  @apply mt-6 sm:mt-12;
-}
-
-h1 {
-  @apply text-3xl sm:text-4xl;
-}
-
-h1,
-h2 {
-  @apply text-2xl sm:text-3xl;
-}
-
-h3 {
-  @apply text-xl sm:text-2xl;
-}
-
-h4 {
-  @apply text-lg sm:text-xl;
-}
-
-h5 {
-  @apply text-base sm:text-lg;
-}
-
-h6 {
-  @apply text-sm sm:text-base;
-}
-
-p {
-  @apply font-normal text-base sm:text-lg;
-}
-
-blockquote {
-  @apply font-normal text-base sm:text-lg;
-}
-
-hr {
-  @apply opacity-20 border-opacity-20 border-foreground;
-}
-
-/* Important - must not be moved upwards */
-/* TODO - Create custom tailwind style to increase line-height on text-sm and text-lg*/
-p,
-li {
-  line-height: 26px;
-}
-@media (min-width: 376px) {
-  p,
-  li {
-    line-height: 30px;
-  }
+a {
+  color: #71aaff;
 }

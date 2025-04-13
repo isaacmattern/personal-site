@@ -36,10 +36,8 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
 
   return (
     <div>
-      <h1 className="font-medium text-2xl mb-0 mt-8 sm:mt-12 sm:text-3xl">
-        {post.title}
-      </h1>
-      <time dateTime={post.date} className="text-sm sm:text-base w-fit">
+      <h1>{post.title}</h1>
+      <time dateTime={post.date}>
         {new Date(post.date).toLocaleDateString("en-US", {
           month: "long",
           day: "numeric",
@@ -47,9 +45,7 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
           timeZone: "UTC",
         })}
       </time>
-      <h2 className="opacity-60 font-normal text-sm sm:text-base mt-0 mb-4 sm:mb-8">
-        {post.description}
-      </h2>
+      <h2>{post.description}</h2>
       <MDXContent components={mdxComponents} />
     </div>
   );

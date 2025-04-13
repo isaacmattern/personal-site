@@ -1,10 +1,11 @@
 import { Post } from "contentlayer/generated";
 import Link from "next/link";
+import "./PostCard.css";
 
 export default function PostCard(post: Post) {
   return (
-    <div className="my-8">
-      <div className="blue-link text-xl w-fit">
+    <div className="postcard">
+      <div>
         <Link href={post.url}>{post.title}</Link>
       </div>
 
