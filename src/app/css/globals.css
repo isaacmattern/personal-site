@@ -2,25 +2,26 @@
 
 :root {
   --code-bg-color-rgb: 255, 255, 255;
-  /* margin: 0;
-  padding: 0; */
+  --background-color: #f4f0e8;
+  --text-color: #000000;
+  --link-color: rgb(2, 86, 213);
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --code-bg-color-rgb: 33, 33, 33;
   }
-}
+} */
 
 body {
-  background-color: #131517;
-  color: #f0f0f0;
+  background-color: var(--background-color);
+  color: var(--text-color);
 
   max-width: 740px;
   margin: auto;
   padding: 16px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 200;
 
   font-family: "Winky Rough", sans-serif;
@@ -28,10 +29,18 @@ body {
   font-style: normal;
 }
 
-h1, h2, h3, h4, h5, h6, strong {
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+code {
+  display: inline-block;
+}
+
+strong {
   font-weight: 500;
 }
 
 a {
-  color: rgb(117, 198, 255);
+  color: var(--link-color);
 }

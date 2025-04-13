@@ -1,8 +1,13 @@
 .nav {
   margin: 16px 0 32px 0;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
 }
 
 .nav .name {
+  font-size: 120%;
+  font-weight: 500;
   margin-bottom: 0;
 }
 
@@ -19,7 +24,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: rgba(255, 255, 255, 0.8);
 }
 
 .footer-web-button-container {

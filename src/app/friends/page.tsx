@@ -4,6 +4,7 @@ import Link from "next/link";
 export default function Page() {
   return (
     <div>
+      <h1>Friends</h1>
       <p>
         {"If you know me in "}
         <a
@@ -14,8 +15,6 @@ export default function Page() {
         </a>
         {", just ask and I'll add a link of your choice to this page :)"}
       </p>
-
-      <h1>Friends</h1>
 
       <ul>
         <li>

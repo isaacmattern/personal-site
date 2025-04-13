@@ -3,16 +3,16 @@
 [data-theme*='light'],
 [data-theme*='light'] span {
   color: var(--shiki-light);
-  background-color: var(--shiki-light-bg);
+  /* background-color: var(--shiki-light-bg); */
 }
  
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   [data-theme*='dark'],
   [data-theme*='dark'] span {
     color: var(--shiki-dark);
     background-color: var(--shiki-dark-bg);
   }
-}
+} */
 
 /* */
 
@@ -26,11 +26,6 @@ pre, code {
   font-weight: 400;
   line-height: 1.1rem;
   margin: 0;
-}
-
-span code {
-  padding: 2px 4px;
-  border-radius: 6px;
 }
 
 @media (min-width: 576px) {
@@ -124,5 +119,7 @@ span[data-rehype-pretty-code-figure] code {
   background-color: rgb(var(--code-bg-color-rgb));
   border: var(--border-style);
   font-size: 0.85rem;
-  @apply py-1 px-2 mx-0 leading-none rounded-md inline-block
+
+  padding: 0px 6px;
+  border-radius: 6px;
 }
