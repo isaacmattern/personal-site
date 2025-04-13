@@ -12,7 +12,7 @@ export const mdxComponents: MDXComponents = {
   Tweet,
   Test,
   a: ({ href, children }) => (
-    <Link className="blue-link" target="_blank" href={href as string}>
+    <Link target="_blank" href={href as string}>
       {children}
     </Link>
   ),

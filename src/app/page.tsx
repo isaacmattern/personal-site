@@ -21,9 +21,7 @@ export default function Home() {
           {
             "Hi, I'm Isaac, and this is my personal site. I'm still figuring out how I want to use this thing, but for now you can check out the small amount of articles I've posted on my "
           }
-          <Link href="/posts" className="blue-link">
-            {"blog"}
-          </Link>
+          <Link href="/posts">{"blog"}</Link>
           {
             ". I enjoy writing code, cooking, weightlifting, running, coffee brewing, and "
           }
@@ -53,7 +51,6 @@ export default function Home() {
             <Link
               target="_blank"
               href="https://github.com/isaacmattern"
-              className="blue-link"
             >
               {"GitHub"}
             </Link>

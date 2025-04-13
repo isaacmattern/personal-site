@@ -8,7 +8,6 @@ export default function Page() {
         {"If you know me in "}
         <a
           target="_blank"
-          className="blue-link"
           href="https://en.wikipedia.org/wiki/Real_life#As_distinct_from_the_Internet"
         >
           real life
@@ -20,29 +19,17 @@ export default function Page() {
 
       <ul>
         <li>
-          <Link
-            className="blue-link"
-            href="https://shayfabrizio.com"
-            target="_blank"
-          >
+          <Link href="https://shayfabrizio.com" target="_blank">
             Shay Fabrizio
           </Link>
         </li>
         <li>
-          <Link
-            className="blue-link"
-            href="https://peter.digital"
-            target="_blank"
-          >
+          <Link href="https://peter.digital" target="_blank">
             Peter Campanelli
           </Link>
         </li>
         <li>
-          <Link
-            className="blue-link"
-            href="https://josiahmattern.com"
-            target="_blank"
-          >
+          <Link href="https://josiahmattern.com" target="_blank">
             Josiah Mattern
           </Link>
         </li>
