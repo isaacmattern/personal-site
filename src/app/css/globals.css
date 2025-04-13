@@ -44,3 +44,43 @@ strong {
 a {
   color: var(--link-color);
 }
+
+/* Sketchy-border */
+.sketchy-border {
+  position: relative;
+  padding: 16px;
+  border: solid rgba(0, 0, 0, 0.7);
+  border-width: 1.5px;
+  border-radius: 2px;
+  z-index: 0;
+}
+
+.sketchy-border:before {
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  left: -4px; /* margin + border */
+  right: -4px; /* margin + border */
+  display: block;
+  border: solid rgba(0, 0, 0, 0.7);
+  border-width: 1.5px;
+  border-radius: 2px;
+  content: "";
+  transform: rotate(.2deg);
+  z-index: -1;
+}
+
+.sketchy-border:after {
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  left: -4px; /* margin + border */
+  right: -4px; /* margin + border */
+  display: block;
+  border: solid rgba(0, 0, 0, 0.7);
+  border-width: 1.5px;
+  border-radius: 2px;
+  content: "";
+  transform: rotate(-.4deg);
+  z-index: -1;
+}

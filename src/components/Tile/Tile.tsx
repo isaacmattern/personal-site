@@ -9,7 +9,7 @@ interface ITile {
 
 export default function Tile({ title, url, description }: ITile) {
   return (
-    <div className="tile-comp">
+    <div className="tile-comp sketchy-border">
       <h3 className="project-title">
         <a href={url} target="_blank">
           {title}
