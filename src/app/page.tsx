@@ -15,31 +15,25 @@ export default function Home() {
 
   return (
     <>
-      <div className="my-12">
-        <h2 className="text-center">{"About"}</h2>
+      <div>
+        <h1>{"About"}</h1>
         <p>
           {
             "Hi, I'm Isaac, and this is my personal site. I'm still figuring out how I want to use this thing, but for now you can check out the small amount of articles I've posted on my "
           }
-          <Link href="/posts" className="blue-link">
-            {"blog"}
-          </Link>
+          <Link href="/posts">{"blog"}</Link>
           {
             ". I enjoy writing code, cooking, weightlifting, running, coffee brewing, and "
           }
-          <a
-            className="blue-link"
-            href="https://music.isaacmattern.com"
-            target="_blank"
-          >
+          <a href="https://music.isaacmattern.com" target="_blank">
             {"making music"}
           </a>
           {"."}
         </p>
       </div>
 
-      {/* <div className="my-12">
-        <h2 className="text-center">{"Recent Posts"}</h2>
+      {/* <div>
+        <h2>{"Recent Posts"}</h2>
         <>
           {lastThreePosts.map((post, idx) => (
             <PostCard key={idx} {...post} />
@@ -48,8 +42,8 @@ export default function Home() {
         <LinkButton href="/posts" buttonText="View all posts" />
       </div> */}
 
-      <div className="my-12">
-        <h2 className="text-center">Contact Me</h2>
+      <div>
+        <h2>Contact Me</h2>
         <p>Some other places I exist</p>
         <ul>
           <li>Email: isaac[dot]mattern[at]gmail.com</li>
@@ -57,7 +51,6 @@ export default function Home() {
             <Link
               target="_blank"
               href="https://github.com/isaacmattern"
-              className="blue-link"
             >
               {"GitHub"}
             </Link>
@@ -66,7 +59,6 @@ export default function Home() {
             <Link
               target="_blank"
               href="https://www.goodreads.com/user/show/30791276-isaac"
-              className="blue-link"
             >
               {"Goodreads"}
             </Link>
@@ -74,14 +66,14 @@ export default function Home() {
         </ul>
       </div>
 
-      <div className="mt-12 m-auto max-w-2xl">
-        <h2 className="text-center">{"Projects"}</h2>
+      <div>
+        <h2>{"Projects"}</h2>
         <p>
           {
             "Here are some cool projects that I've either done for fun in my free time or have completed for other people."
           }
         </p>
-        <div className="sm:flex flex-wrap gap-4 flex-auto">
+        <div>
           {personalProjects.map((project, key) => {
             return (
               <Tile

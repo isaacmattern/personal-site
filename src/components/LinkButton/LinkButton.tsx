@@ -11,11 +11,8 @@ function LinkButton({
   href,
 }: LinkButtonPropsType): React.ReactElement {
   return (
-    <Link
-      href={href}
-      className="block text-xl max-w-fit m-auto blue-link bg-tile-color py-2 px-4 rounded-md"
-    >
-      <div className="flex items-center justify-center">
+    <Link href={href}>
+      <div>
         <div>{buttonText}</div>
       </div>
     </Link>

@@ -1,15 +1,9 @@
 .tile-comp {
-  width: calc(100%);
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+  padding: 16px;
 }
 
-@media (min-width: 576px) {
-  .tile-comp {
-    width: calc(50% - 8px);
-    margin-bottom: 0;
-  }
-}
-
-.tile-comp-description > a {
-  @apply underline font-normal text-primary-blue
+.project-title {
+  margin-top: 0px;
+  margin-bottom: 4px;
 }

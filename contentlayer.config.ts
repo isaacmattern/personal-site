@@ -27,7 +27,7 @@ export default makeSource({
         {
           theme: {
             dark: 'dark-plus',
-            light: 'github-light',
+            light: 'github-light-high-contrast',
           },
           keepBackground: false,
           defaultLang: {

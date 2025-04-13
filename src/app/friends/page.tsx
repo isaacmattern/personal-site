@@ -4,11 +4,11 @@ import Link from "next/link";
 export default function Page() {
   return (
     <div>
+      <h1>Friends</h1>
       <p>
         {"If you know me in "}
         <a
           target="_blank"
-          className="blue-link"
           href="https://en.wikipedia.org/wiki/Real_life#As_distinct_from_the_Internet"
         >
           real life
@@ -16,33 +16,19 @@ export default function Page() {
         {", just ask and I'll add a link of your choice to this page :)"}
       </p>
 
-      <h1>Friends</h1>
-
       <ul>
         <li>
-          <Link
-            className="blue-link"
-            href="https://shayfabrizio.com"
-            target="_blank"
-          >
+          <Link href="https://shayfabrizio.com" target="_blank">
             Shay Fabrizio
           </Link>
         </li>
         <li>
-          <Link
-            className="blue-link"
-            href="https://peter.digital"
-            target="_blank"
-          >
+          <Link href="https://peter.digital" target="_blank">
             Peter Campanelli
           </Link>
         </li>
         <li>
-          <Link
-            className="blue-link"
-            href="https://josiahmattern.com"
-            target="_blank"
-          >
+          <Link href="https://josiahmattern.com" target="_blank">
             Josiah Mattern
           </Link>
         </li>
