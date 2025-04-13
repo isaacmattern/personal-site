@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
 
 :root {
-  --code-bg-color-rgb: 255, 255, 255;
+  --code-bg-color-rgb: 249, 247, 242;
   --background-color: #f4f0e8;
   --text-color: #000000;
   --link-color: rgb(2, 86, 213);
@@ -18,15 +18,25 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
 
-  max-width: 740px;
+  max-width: 720px;
   margin: auto;
   padding: 16px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 200;
 
   font-family: "Winky Rough", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+
+  min-height: calc(100vh - 32px);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 576px) {
+  body {
+    font-size: 18px;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -43,6 +53,11 @@ strong {
 
 a {
   color: var(--link-color);
+}
+
+.secondary-text {
+  opacity: 70%;
+  font-size: 87.5%;
 }
 
 /* Sketchy-border */

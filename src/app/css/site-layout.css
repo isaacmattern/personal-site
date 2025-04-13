@@ -2,6 +2,7 @@
   margin: 16px 0 32px 0;
   display: flex;
   justify-content: space-between;
+  gap: 16px;
   align-content: center;
 }
 
@@ -15,15 +16,26 @@
   list-style-type: none;
   padding: 0;
   display: flex;
-  gap: 8px;
+  gap: 12px;
   margin: 0;
 }
 
+.nav-and-main-container {
+  flex: 1;
+}
+
 .footer {
-  margin-top: 64px;
+  margin-top: 32px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  gap: 8px;
+}
+
+.footer .text {
+  opacity: 70%;
+  margin-bottom: 6px;
 }
 
 .footer-web-button-container {
