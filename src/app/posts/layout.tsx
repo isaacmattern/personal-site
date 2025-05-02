@@ -1,14 +1,5 @@
-import BackgroundSetter from "@/components/BackgroundSetter/BackgroundSetter";
+import Background from "@/components/Background/Background";
 
-export default function BlogLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <>
-      <BackgroundSetter src={"/bg-images/default.gif"} />
-      {children}
-    </>
-  );
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return <Background image={"/bg-images/default.gif"}>{children}</Background>;
 }

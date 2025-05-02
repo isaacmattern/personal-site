@@ -1,5 +1,4 @@
 // app/page.tsx
-"use client";
 import "./css/home.css";
 import HomepageLink from "@/components/HomepageLinks/HomepageLink";
 

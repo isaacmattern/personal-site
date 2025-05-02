@@ -11,7 +11,7 @@
   width: calc(2 * var(--link-circle-radius));
   height: calc(2 * var(--link-circle-radius));
   margin: auto;
-  margin-top: 200px;
+  margin-top: 240px;
 
   position: relative;
   border-radius: 50%;
