@@ -5,7 +5,7 @@ import HomepageLink from "@/components/HomepageLinks/HomepageLink";
 export default function Home() {
   return (
     <>
-      <div className="home-container">
+      <nav className="home-container">
         <div className="homepage-link-wrapper">
           <HomepageLink
             href={"/portfolio"}
@@ -33,7 +33,7 @@ export default function Home() {
             label={"Music"}
           />
         </div>
-      </div>
+      </nav>
     </>
   );
 }
