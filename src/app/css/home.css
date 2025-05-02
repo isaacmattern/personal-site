@@ -1,0 +1,45 @@
+.home-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.homepage-link-container {
+  font-size: 160%;
+
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Sprite itself */
+.sprite {
+  width: 100px; /* Frame width */
+  height: 100px; /* Frame height */
+  background-image: url('/animations/rotating-computer.png'); /* Path to your sprite sheet */
+  background-repeat: no-repeat;
+  background-position: 0 0; /* Starting position */
+}
+
+/* Hover to trigger the animation */
+.sprite-container .sprite {
+  animation: play 2s steps(20) infinite;
+  animation-timing-function: steps(20, end);
+  animation-play-state: paused; /* Pauses the animation on hover */
+}
+
+/* Ensure animation runs normally when not hovered */
+.sprite-container:hover .sprite {
+  animation-play-state: running; /* Starts or continues the animation when not hovered */
+}
+
+
+/* No need for keyframes, steps will handle it */
+@keyframes play {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -2000px; /* Total height of the sprite sheet (25 frames * 100px height) */
+  }
+}
