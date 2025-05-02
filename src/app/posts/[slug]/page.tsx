@@ -4,6 +4,7 @@ import { useMDXComponent } from "next-contentlayer2/hooks";
 import { notFound } from "next/navigation";
 import { mdxComponents } from "@/components/MdxComponents";
 import "./../../css/post.css";
+import BackgroundSetter from "@/components/BackgroundSetter/BackgroundSetter";
 
 export async function generateStaticParams() {
   return allPosts.map((post) => ({
@@ -36,18 +37,20 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
   const MDXContent = useMDXComponent(post.body.code);
 
   return (
-    <div className="blog-post-container">
-      <h1>{post.title}</h1>
-      <time className="secondary-text" dateTime={post.date}>
-        {new Date(post.date).toLocaleDateString("en-US", {
-          month: "long",
-          day: "numeric",
-          year: "numeric",
-          timeZone: "UTC",
-        })}
-      </time>
-      <div className="secondary-text">{post.description}</div>
-      <MDXContent components={mdxComponents} />
-    </div>
+    <>
+      <div className="blog-post-container">
+        <h1>{post.title}</h1>
+        <time className="secondary-text" dateTime={post.date}>
+          {new Date(post.date).toLocaleDateString("en-US", {
+            month: "long",
+            day: "numeric",
+            year: "numeric",
+            timeZone: "UTC",
+          })}
+        </time>
+        <div className="secondary-text">{post.description}</div>
+        <MDXContent components={mdxComponents} />
+      </div>
+    </>
   );
 }
