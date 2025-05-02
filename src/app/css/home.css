@@ -3,43 +3,47 @@
   margin: auto;
 }
 
-.homepage-link-container {
-  font-size: 160%;
-
-  display: flex;
-  gap: 24px;
-  justify-content: center;
-  align-items: center;
+:root {
+  --link-circle-radius: 190px;
 }
 
-/* Sprite itself */
-.sprite {
-  width: 100px; /* Frame width */
-  height: 100px; /* Frame height */
-  background-image: url('/animations/rotating-computer.png'); /* Path to your sprite sheet */
-  background-repeat: no-repeat;
-  background-position: 0 0; /* Starting position */
+.homepage-link-wrapper {
+  width: calc(2 * var(--link-circle-radius));
+  height: calc(2 * var(--link-circle-radius));
+  margin: auto;
+  margin-top: 200px;
+
+  position: relative;
+  border-radius: 50%;
+  /* border: 1px solid black; */
 }
 
-/* Hover to trigger the animation */
-.sprite-container .sprite {
-  animation: play 2s steps(20) infinite;
-  animation-timing-function: steps(20, end);
-  animation-play-state: paused; /* Pauses the animation on hover */
+.homepage-link-wrapper>* {
+  position: absolute;
+  width: 200px;
+  left: calc(50% - 100px);
+  height: 200px;
+  top: calc(50% - 100px);
+  /* border: 2px dotted #000000; */
+  border-radius: 30%;
 }
 
-/* Ensure animation runs normally when not hovered */
-.sprite-container:hover .sprite {
-  animation-play-state: running; /* Starts or continues the animation when not hovered */
+.homepage-link-wrapper>*:nth-child(1) {
+  transform: rotate(277deg) translateX(var(--link-circle-radius)) rotate(-277deg);
 }
 
+.homepage-link-wrapper>*:nth-child(2) {
+  transform: rotate(351deg) translateX(var(--link-circle-radius)) rotate(-351deg) ;
+}
 
-/* No need for keyframes, steps will handle it */
-@keyframes play {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 0 -2000px; /* Total height of the sprite sheet (25 frames * 100px height) */
-  }
+.homepage-link-wrapper>*:nth-child(3) {
+  transform: rotate(63deg) translateX(var(--link-circle-radius)) rotate(-63deg);
+}
+
+.homepage-link-wrapper>*:nth-child(4) {
+  transform: rotate(136deg) translateX(var(--link-circle-radius)) rotate(-136deg);
+}
+
+.homepage-link-wrapper>*:nth-child(5) {
+  transform: rotate(200deg) translateX(var(--link-circle-radius)) rotate(-200deg);
 }

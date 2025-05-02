@@ -1,44 +1,39 @@
 // app/page.tsx
 "use client";
-import Link from "next/link";
 import "./css/home.css";
-
-function HomepageLink({
-  description,
-  src,
-  destination,
-}: {
-  description: string;
-  src: string;
-  destination: string;
-}) {
-  return (
-    <Link href={destination}>
-      <div className="homepage-link-container">
-        <div className="sprite-container">
-          <div
-            className="sprite"
-            // style={{
-            //   backgroundImage: src,
-            // }}
-          ></div>
-        </div>
-
-        <div>{description}</div>
-      </div>
-    </Link>
-  );
-}
+import HomepageLink from "@/components/HomepageLinks/HomepageLink";
 
 export default function Home() {
   return (
     <>
       <div className="home-container">
-        <HomepageLink
-          description="Portfolio"
-          src="/animations/rotating-computer.png"
-          destination="/portfolio"
-        />
+        <div className="homepage-link-wrapper">
+          <HomepageLink
+            href={"/portfolio"}
+            spriteIdentifier={"portfolio"}
+            label={"Portfolio"}
+          />
+          <HomepageLink
+            href={"/about"}
+            spriteIdentifier={"about"}
+            label={"About"}
+          />
+          <HomepageLink
+            href={"/posts"}
+            spriteIdentifier={"blog"}
+            label={"Blog"}
+          />
+          <HomepageLink
+            href={"/recipes"}
+            spriteIdentifier={"recipes"}
+            label={"Recipes"}
+          />
+          <HomepageLink
+            href={"https://music.isaacmattern.com"}
+            spriteIdentifier={"music"}
+            label={"Music"}
+          />
+        </div>
       </div>
     </>
   );

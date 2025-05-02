@@ -36,7 +36,7 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
   const MDXContent = useMDXComponent(post.body.code);
 
   return (
-    <div>
+    <div className="blog-post-container">
       <h1>{post.title}</h1>
       <time className="secondary-text" dateTime={post.date}>
         {new Date(post.date).toLocaleDateString("en-US", {

@@ -3,7 +3,25 @@
 html, body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+}
+
+body {
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 200;
+
+  /* font-family: "Winky Rough", sans-serif; */
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  background-image: url("/bg-images/bright-blue-water.gif");
+  background-repeat: repeat;
+  background-position: top left;
+  background-attachment: scroll;
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 16px;
 }
 
 code {
