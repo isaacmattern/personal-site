@@ -16,7 +16,7 @@ export default function Background({
         backgroundColor: color,
         backgroundRepeat: "repeat",
         backgroundPosition: "top left",
-        backgroundAttachment: "scroll",
+        backgroundAttachment: "fixed",
         minHeight: "100vh",
 
         margin: 0,
