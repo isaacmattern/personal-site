@@ -1,0 +1,85 @@
+.portfolio-page-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.header-card {
+  background-color: white;
+  border: 4px solid black;
+  text-align: center;
+  padding: 12px;
+  margin: 48px auto 0;
+  max-width: 520px;
+}
+
+.header-card > * {
+  margin: 0;
+}
+
+.sticky-note-container {
+  font-family: "Winky Rough", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  margin-top: 72px;
+}
+
+.sticky-note-container h2 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.sticky-note-container p {
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.sticky-note-container > * {
+  text-decoration: none;
+  color: #000;
+  background: #ffc;
+  display: block;
+  height: 244px;
+  width: 244px;
+  padding: 16px;
+  box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+  transition: transform 0.15s linear, box-shadow 0.15s linear;
+  position: relative;
+}
+
+/* Color and rotation variations */
+.sticky-note-container > *:nth-child(odd) {
+  transform: rotate(-6deg);
+}
+
+.sticky-note-container > *:nth-child(even) {
+  transform: rotate(4deg);
+  top: 5px;
+  background: #cfc;
+}
+
+.sticky-note-container > *:nth-child(3n) {
+  transform: rotate(-3deg);
+  top: -5px;
+  background: #ccf;
+}
+
+.sticky-note-container > *:nth-child(5n) {
+  transform: rotate(5deg);
+  top: -10px;
+}
+
+/* Hover/focus styling */
+.sticky-note-container > *:hover,
+.sticky-note-container > *:focus {
+  transform: scale(1.25) rotate(0deg);
+  box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+  z-index: 5;
+}
+
+/* Reset inner spacing */
+.sticky-note-container > * > * {
+  margin: 0;
+}

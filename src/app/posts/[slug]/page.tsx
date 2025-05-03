@@ -3,8 +3,6 @@ import { allPosts } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer2/hooks";
 import { notFound } from "next/navigation";
 import { mdxComponents } from "@/components/MdxComponents";
-import "./../../css/post.css";
-import BackgroundSetter from "@/components/Background/Background";
 
 export async function generateStaticParams() {
   return allPosts.map((post) => ({
@@ -38,7 +36,7 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
 
   return (
     <>
-      <div className="blog-post-container">
+      <div className="post-wrapper">
         <h1>{post.title}</h1>
         <time className="secondary-text" dateTime={post.date}>
           {new Date(post.date).toLocaleDateString("en-US", {
