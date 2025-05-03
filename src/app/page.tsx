@@ -1,6 +1,7 @@
 // app/page.tsx
 import "./css/home.css";
 import HomepageLink from "@/components/HomepageLinks/HomepageLink";
+import NoAIWebring from "@/components/NoAIWebring/NoAIWebring";
 import Image from "next/image";
 
 export default function Home() {
@@ -46,6 +47,11 @@ export default function Home() {
               spriteIdentifier={"music"}
               label={"Music"}
             />
+          </div>
+          <div className="webring-container">
+            <div>
+              <NoAIWebring />
+            </div>
           </div>
         </main>
         <footer>
