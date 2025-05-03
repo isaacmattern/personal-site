@@ -11,6 +11,13 @@
   align-items: center;
 }
 
+@media screen and (max-width: 500px) {
+  .homepage-single-link-container {
+    gap: 16px;
+    flex-direction: row;
+  }
+}
+
 .homepage-single-link-container:hover .label {
   -webkit-filter: drop-shadow(1px 1px 0 white)
   drop-shadow(-1px 1px 0 white)

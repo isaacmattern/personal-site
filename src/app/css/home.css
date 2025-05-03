@@ -8,7 +8,7 @@
 }
 
 .homepage-link-wrapper {
-  width: calc(2 * var(--link-circle-radius));
+  max-width: calc(2 * var(--link-circle-radius));
   height: calc(2 * var(--link-circle-radius));
   margin: auto;
   margin-top: 240px;
@@ -46,4 +46,36 @@
 
 .homepage-link-wrapper>*:nth-child(5) {
   transform: rotate(200deg) translateX(var(--link-circle-radius)) rotate(-200deg);
+}
+
+@media screen and (max-width: 500px) {
+
+  .homepage-link-wrapper {
+    margin-top: 0px;
+  }
+
+  .homepage-link-wrapper>* {
+    position: relative;
+    height: 140px;
+  }
+
+  .homepage-link-wrapper>*:nth-child(1) {
+    transform: none;
+  }
+  
+  .homepage-link-wrapper>*:nth-child(2) {
+    transform: none;
+  }
+  
+  .homepage-link-wrapper>*:nth-child(3) {
+    transform: none;
+  }
+  
+  .homepage-link-wrapper>*:nth-child(4) {
+    transform: none;
+  }
+  
+  .homepage-link-wrapper>*:nth-child(5) {
+    transform: none;
+  }
 }
