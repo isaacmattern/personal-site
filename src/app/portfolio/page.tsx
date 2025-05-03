@@ -1,11 +1,7 @@
 import Background from "@/components/Background/Background";
-import PortfolioProject from "@/components/PortfolioProject/PortfolioProject";
 import { personalProjects } from "@/lib/personalProjects";
-import parse from "html-react-parser";
 import "./portfolio.css";
-import { url } from "inspector";
 import Link from "next/link";
-import { title } from "process";
 
 export default function Page() {
   return (
