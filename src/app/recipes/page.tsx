@@ -10,6 +10,7 @@ export default function RecipesIndex() {
 
   return (
     <div className="paper-effect recipe-list">
+      <h1>All Recipes</h1>
       {recipes.map((recipe, idx) => (
         <div key={idx} className="recipe-link">
           <Link className="" href={recipe.url}>

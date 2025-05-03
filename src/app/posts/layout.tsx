@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <Background image={null} color={"#f4f0e8"}>
+    <Background image={null} color={"#fff"}>
       <div className="blog-layout-container">
         <nav>
           <ul className="nav-links">

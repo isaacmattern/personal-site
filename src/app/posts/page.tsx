@@ -10,6 +10,7 @@ export default function BlogIndex() {
 
   return (
     <div>
+      <h1>All Posts</h1>
       {posts.map((post, idx) => (
         <PostCard key={idx} {...post} />
       ))}

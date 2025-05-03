@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Page() {
   return (
     <Background image="/bg-images/clouds.gif">
-      <div className="portfolio-page-container">
+      <main className="portfolio-page-container">
         <div className="header-card">
           <h1>{"Portfolio"}</h1>
           <p>
@@ -26,7 +26,7 @@ export default function Page() {
             );
           })}
         </div>
-      </div>
+      </main>
     </Background>
   );
 }
