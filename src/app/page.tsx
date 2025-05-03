@@ -79,15 +79,6 @@ export default function Home() {
           <div>
             <Image
               draggable={false}
-              alt="This user is man door hand hook car door"
-              src={"/buttons/hook-car-door.png"}
-              width={225}
-              height={45}
-            />
-          </div>
-          <div>
-            <Image
-              draggable={false}
               alt="I love Wi-Fi"
               src={"/buttons/i-love-wifi.jpg"}
               width={104}
