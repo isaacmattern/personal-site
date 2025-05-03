@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="bg-blog">
+    <body className="bg-blog">
       <div className="blog-layout-container">
         <nav>
           <ul className="nav-links">
@@ -17,6 +17,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </nav>
         <main>{children}</main>
       </div>
-    </div>
+    </body>
   );
 }

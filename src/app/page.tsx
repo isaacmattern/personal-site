@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="bg-homepage">
+    <body className="bg-homepage">
       <div className="page-container">
         <main className="home-main-container">
           <div className="main-site-header">
@@ -156,6 +156,6 @@ export default function Home() {
           </div>
         </footer>
       </div>
-    </div>
+    </body>
   );
 }
