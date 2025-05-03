@@ -5,7 +5,7 @@ import "./about.css";
 export default function Page() {
   return (
     <Background image="/bg-images/waving-water.gif">
-      <div className="about-me-container">
+      <main className="about-me-container">
         <h1>About Me</h1>
         <p>
           {
@@ -25,7 +25,7 @@ export default function Page() {
         <ul>
           <li>{"Email: isaac[dot]mattern[at]gmail.com"}</li>
         </ul>
-      </div>
+      </main>
     </Background>
   );
 }
