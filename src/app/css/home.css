@@ -16,12 +16,19 @@
   align-items: center;
 }
 
+.webring-container {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
 footer {
   display: flex;
   flex-wrap: wrap;
   margin: auto;
   max-width: 700px;
-  margin-top: 96px;
+  margin-top: 64px;
   margin-bottom: 24px;
   gap: 6px;
   justify-content: center;
@@ -35,9 +42,9 @@ footer {
 
 .homepage-link-wrapper {
   max-width: calc(2 * var(--link-circle-radius));
-  height: calc(2 * var(--link-circle-radius));
+  height: calc(3 * var(--link-circle-radius));
   margin: auto;
-  margin-top: 124px;
+  margin-top: 0px;
 
   position: relative;
   border-radius: 50%;
