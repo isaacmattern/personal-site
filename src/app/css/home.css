@@ -1,6 +1,31 @@
-.home-container {
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
   max-width: 1000px;
   margin: auto;
+}
+
+.main-site-header {
+  margin-top: 24px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  max-width: 900px;
+  margin-top: 96px;
+  margin-bottom: 24px;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
 }
 
 :root {
@@ -11,7 +36,7 @@
   max-width: calc(2 * var(--link-circle-radius));
   height: calc(2 * var(--link-circle-radius));
   margin: auto;
-  margin-top: 180px;
+  margin-top: 124px;
 
   position: relative;
   border-radius: 50%;
@@ -52,6 +77,7 @@
 
   .homepage-link-wrapper {
     margin-top: 0px;
+    height:fit-content;
   }
 
   .homepage-link-wrapper>* {
