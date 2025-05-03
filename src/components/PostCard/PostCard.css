@@ -3,12 +3,11 @@
   display: flex;
   align-items: start;
   justify-content: start;
-  background-color: #f4f4f4;
 }
 
 .postcard time {
-  min-width: 100px;
-  margin-right: 50px;
+  min-width: 120px;
+  margin-right: 24px;
   padding-top: 2px;
 }
 

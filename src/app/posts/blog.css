@@ -1,17 +1,25 @@
 .blog-layout-container {
   font-family: "Winky Rough", sans-serif;
   font-weight: 200;
-  font-size: 22px;
+  font-size: 20px;
   max-width: 680px;
   margin: 32px auto 64px;
+  padding: 0 12px;
 }
 
-ul.nav-links {
+@media screen and (min-width: 600px) {
+  .blog-layout-container {
+    font-size: 22px;
+  }
+}
+
+.blog-layout-container ul.nav-links {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 48px;
+  gap: 12px 48px;
 }
 
 .post-wrapper {

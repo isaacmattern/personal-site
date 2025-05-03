@@ -1,0 +1,65 @@
+.recipe-layout-container {
+  font-family: "IM Fell Double Pica", sans-serif;
+  font-weight: 200;
+  font-size: 18px;
+  max-width: 680px;
+  margin: 32px auto 64px;
+  padding: 0 16px;
+}
+
+.recipe-layout-container nav {
+  max-width: 440px;
+  margin: auto;
+  margin-bottom: 48px;
+}
+
+.recipe-layout-container ul.nav-links {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px 48px;
+}
+
+.secondary-text {
+  opacity: 70%;
+}
+
+.paper-effect {
+  background-color: white;
+  color: black;
+  box-shadow: 8px 8px 8px white,
+    8px -8px 8px white,
+    -8px 8px 8px white,
+    -8px -8px 8px white;
+}
+
+.recipe-wrapper {
+  margin-top: 48px;
+  padding: 16px;
+}
+
+.recipe-layout-container h1 {
+  margin: 0;
+}
+
+/* todo - should probably start using sass tbh */
+.recipe-layout-container h1,
+.recipe-layout-container h2, 
+.recipe-layout-container h3, 
+.recipe-layout-container h4, 
+.recipe-layout-container h5, 
+.recipe-layout-container h6 {
+  font-weight: 400;
+}
+
+@media screen and (min-width: 600px) {
+  .recipe-layout-container {
+    font-size: 20px;
+  }
+  .recipe-wrapper {
+    padding: 24px;
+  }
+}

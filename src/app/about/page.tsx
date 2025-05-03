@@ -4,7 +4,7 @@ import "./about.css";
 
 export default function Page() {
   return (
-    <Background image="/bg-images/trees.gif">
+    <Background image="/bg-images/waving-water.gif">
       <div className="about-me-container">
         <h1>About Me</h1>
         <p>
