@@ -3,6 +3,9 @@ import PortfolioProject from "@/components/PortfolioProject/PortfolioProject";
 import { personalProjects } from "@/lib/personalProjects";
 import parse from "html-react-parser";
 import "./portfolio.css";
+import { url } from "inspector";
+import Link from "next/link";
+import { title } from "process";
 
 export default function Page() {
   return (
@@ -20,12 +23,15 @@ export default function Page() {
         <div className="sticky-note-container">
           {personalProjects.map((project, key) => {
             return (
-              <PortfolioProject
+              <Link
                 key={key}
-                title={project.title}
-                url={project.url}
-                description={parse(project.description)}
-              />
+                target="_blank"
+                href={project.url}
+                className="sticky-note"
+              >
+                <h2>{project.title}</h2>
+                <p>{project.description}</p>
+              </Link>
             );
           })}
         </div>
