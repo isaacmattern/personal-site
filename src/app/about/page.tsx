@@ -3,7 +3,7 @@ import "./about.css";
 
 export default function Page() {
   return (
-    <div className="bg-about">
+    <body className="bg-about">
       <main className="about-me-container">
         <h1>About Me</h1>
         <p>
@@ -25,6 +25,6 @@ export default function Page() {
           <li>{"Email: isaac[dot]mattern[at]gmail.com"}</li>
         </ul>
       </main>
-    </div>
+    </body>
   );
 }
