@@ -11,8 +11,8 @@ export default function RecipesIndex() {
   return (
     <div className="paper-effect">
       {recipes.map((recipe, idx) => (
-        <div className="paper-effect">
-          <PostCard key={idx} {...recipe} />
+        <div key={idx} className="paper-effect">
+          <PostCard {...recipe} />
         </div>
       ))}
     </div>
