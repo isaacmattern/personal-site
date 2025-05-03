@@ -1,0 +1,13 @@
+.about-me-container {
+  background: white;
+  color: black;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  border: 8px solid rgb(36, 140, 214);
+  max-width: 500px;
+  margin: 96px auto;
+  padding: 24px;
+}
+
+.about-me-container h1 {
+  margin-top: 0px;
+}

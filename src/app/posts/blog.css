@@ -1,0 +1,57 @@
+.blog-layout-container {
+  font-family: "Winky Rough", sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+  max-width: 680px;
+  margin: 32px auto 64px;
+  padding: 0 12px;
+}
+
+@media screen and (min-width: 600px) {
+  .blog-layout-container {
+    font-size: 22px;
+  }
+}
+
+.blog-layout-container ul.nav-links {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px 48px;
+}
+
+.post-wrapper {
+  color: black;
+  padding: 0 16px;
+}
+
+.secondary-text {
+  opacity: 70%;
+}
+
+/* TODO - use for recipes */
+/* .recipe-wrapper {
+  background-color: #fff8ee;
+  color: black;
+  box-shadow: 8px 8px 8px #fff8ee,
+    8px -8px 8px #fff8ee,
+    -8px 8px 8px #fff8ee,
+    -8px -8px 8px #fff8ee;
+  padding: 24px;
+} */
+
+.blog-layout-container h1 {
+  margin: 0;
+}
+
+/* todo - should probably start using sass tbh */
+.blog-layout-container h1,
+.blog-layout-container h2, 
+.blog-layout-container h3, 
+.blog-layout-container h4, 
+.blog-layout-container h5, 
+.blog-layout-container h6 {
+  font-weight: 400;
+}

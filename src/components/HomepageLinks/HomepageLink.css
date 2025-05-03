@@ -1,0 +1,225 @@
+/* Global */
+.homepage-single-link-container {
+  font-size: 160%;
+  color: black;
+  text-decoration: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+  .homepage-single-link-container {
+    gap: 16px;
+    flex-direction: row;
+  }
+}
+
+.homepage-single-link-container .label {
+  font-size: 28px;
+  margin: 0;
+  font-weight: normal;
+}
+
+.homepage-single-link-container:hover .label {
+  font-size: 28px;
+  font-weight: normal;
+
+  -webkit-filter: drop-shadow(1px 1px 0 white)
+  drop-shadow(-1px 1px 0 white)
+  drop-shadow(1px -1px 0 white)
+  drop-shadow(-1px -1px 0 white);
+
+  filter: drop-shadow(1px 1px 0 white)
+  drop-shadow(-1px 1px 0 white)
+  drop-shadow(1px -1px 0 white)
+  drop-shadow(-1px -1px 0 white);
+}
+
+.homepage-single-link-container:hover {
+  /* text-decoration: underline; */
+}
+
+/* Portfolio */
+.portfolio-sprite {
+  width: 100px; 
+  height: 98px; 
+  background-image: url('/animations/rotating-computer.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.portfolio-sprite-container .portfolio-sprite {
+  animation: play-portfolio 2.2s steps(20) infinite;
+  animation-timing-function: steps(20, end);
+  animation-play-state: paused; 
+}
+
+.portfolio-sprite-container:hover .portfolio-sprite {
+  animation-play-state: running;
+  -webkit-filter: drop-shadow(1px 1px 0 black)
+  drop-shadow(-1px 1px 0 black)
+  drop-shadow(1px -1px 0 black)
+  drop-shadow(-1px -1px 0 black);
+  filter: drop-shadow(1px 1px 0 black)
+  drop-shadow(-1px 1px 0 black)
+  drop-shadow(1px -1px 0 black)
+  drop-shadow(-1px -1px 0 black);
+}
+
+@keyframes play-portfolio {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -1960px;
+  }
+}
+
+/* About */
+.about-sprite {
+  width: 54px; 
+  height: 112px; 
+  background-image: url('/animations/man-walking.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.about-sprite-container .about-sprite {
+  animation: play-about 2.5s steps(30) infinite;
+  animation-timing-function: steps(30, end);
+  animation-play-state: paused; 
+}
+
+.about-sprite-container:hover .about-sprite {
+  animation-play-state: running;
+  -webkit-filter: drop-shadow(1px 1px 0 white)
+  drop-shadow(-1px 1px 0 white)
+  drop-shadow(1px -1px 0 white)
+  drop-shadow(-1px -1px 0 white);
+  filter: drop-shadow(1px 1px 0 white)
+  drop-shadow(-1px 1px 0 white)
+  drop-shadow(1px -1px 0 white)
+  drop-shadow(-1px -1px 0 white);
+}
+
+@keyframes play-about {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -3360px;
+  }
+}
+
+
+/* Blog */
+.blog-sprite {
+  width: 105px; 
+  height: 93px; 
+  background-image: url('/animations/open-journal.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.blog-sprite-container .blog-sprite {
+  animation: play-blog 1.0s steps(8) infinite;
+  animation-timing-function: steps(8, end);
+  animation-play-state: paused; 
+}
+
+.blog-sprite-container:hover .blog-sprite {
+  animation-play-state: running;
+  -webkit-filter: drop-shadow(1px 1px 0 black)
+  drop-shadow(-1px 1px 0 black)
+  drop-shadow(1px -1px 0 black)
+  drop-shadow(-1px -1px 0 black);
+  filter: drop-shadow(1px 1px 0 black)
+  drop-shadow(-1px 1px 0 black)
+  drop-shadow(1px -1px 0 black)
+  drop-shadow(-1px -1px 0 black);
+}
+
+@keyframes play-blog {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -744px;
+  }
+}
+
+/* Recipes */
+.recipes-sprite {
+  width: 87px; 
+  height: 124px; 
+  background-image: url('/animations/milk-cookies.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.recipes-sprite-container .recipes-sprite {
+  animation: play-recipes 1.0s steps(5) infinite;
+  animation-timing-function: steps(5, end);
+  animation-play-state: paused; 
+}
+
+.recipes-sprite-container:hover .recipes-sprite {
+  animation-play-state: running;
+  -webkit-filter: drop-shadow(1px 1px 0 black)
+  drop-shadow(-1px 1px 0 black)
+  drop-shadow(1px -1px 0 black)
+  drop-shadow(-1px -1px 0 black);
+  filter: drop-shadow(1px 1px 0 black)
+  drop-shadow(-1px 1px 0 black)
+  drop-shadow(1px -1px 0 black)
+  drop-shadow(-1px -1px 0 black);
+}
+
+@keyframes play-recipes {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -620px;
+  }
+}
+
+/* Music */
+.music-sprite {
+  width: 99px; 
+  height: 81px;
+  background-image: url('/animations/speakers.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.music-sprite-container .music-sprite {
+  animation: play-music 1.0s steps(8) infinite;
+  animation-timing-function: steps(8, end);
+  animation-play-state: paused; 
+}
+
+.music-sprite-container:hover .music-sprite {
+  animation-play-state: running;
+  -webkit-filter: drop-shadow(1px 1px 0 black)
+  drop-shadow(-1px 1px 0 black)
+  drop-shadow(1px -1px 0 black)
+  drop-shadow(-1px -1px 0 black);
+  filter: drop-shadow(1px 1px 0 black)
+  drop-shadow(-1px 1px 0 black)
+  drop-shadow(1px -1px 0 black)
+  drop-shadow(-1px -1px 0 black);
+}
+
+@keyframes play-music {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -648px;
+  }
+}

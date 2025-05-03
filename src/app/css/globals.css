@@ -1,106 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica:ital@0;1&display=swap');
 
-:root {
-  --code-bg-color-rgb: 249, 247, 242;
-  --background-color: #f4f0e8;
-  --text-color: #000000;
-  --link-color: rgb(2, 86, 213);
-  box-sizing: border-box;
+html, body {
+  margin: 0;
+  padding: 0;
 }
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --code-bg-color-rgb: 33, 33, 33;
-  }
-} */
 
 body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-
-  max-width: 700px;
-  margin: auto;
-  padding: 16px;
   font-size: 18px;
   line-height: 1.4;
-  font-weight: 200;
 
-  font-family: "Winky Rough", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+  font-family: 'Times New Roman', Times, serif;
+  background-image: url("/bg-images/bright-blue-water.gif");
+  background-repeat: repeat;
+  background-position: top left;
+  background-attachment: scroll;
 
-  min-height: calc(100vh - 32px);
-  display: flex;
-  flex-direction: column;
-}
-
-@media (min-width: 576px) {
-  body {
-    font-size: 20px;
-  }
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
+  margin: 0;
+  padding: 0;
 }
 
 code {
   display: inline-block;
-}
-
-strong {
-  font-weight: 500;
-}
-
-a {
-  color: var(--link-color);
-}
-
-.secondary-text {
-  opacity: 70%;
-  font-size: 87.5%;
-}
-
-
-hr {
-  border: 1px solid rgba(0, 0, 0, 0.3);
-}
-
-/* Sketchy-border */
-.sketchy-border {
-  position: relative;
-  border: solid rgba(0, 0, 0, 0.6);
-  border-width: 1.5px;
-  border-radius: 2px;
-  z-index: 0;
-}
-
-.sketchy-border:before {
-  position: absolute;
-  top: 1px;
-  bottom: 1px;
-  left: -4px; /* margin + border */
-  right: -4px; /* margin + border */
-  display: block;
-  border: solid rgba(0, 0, 0, 0.6);
-  border-width: 1.5px;
-  border-radius: 2px;
-  content: "";
-  transform: rotate(.2deg);
-  z-index: -1;
-}
-
-.sketchy-border:after {
-  position: absolute;
-  top: 1px;
-  bottom: 1px;
-  left: -4px; /* margin + border */
-  right: -4px; /* margin + border */
-  display: block;
-  border: solid rgba(0, 0, 0, 0.6);
-  border-width: 1.5px;
-  border-radius: 2px;
-  content: "";
-  transform: rotate(-.4deg);
-  z-index: -1;
 }
