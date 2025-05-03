@@ -2,11 +2,10 @@
 import "./css/home.css";
 import HomepageLink from "@/components/HomepageLinks/HomepageLink";
 import Image from "next/image";
-import Background from "@/components/Background/Background";
 
 export default function Home() {
   return (
-    <Background image={"bg-images/bright-blue-water.gif"}>
+    <div className="bg-homepage">
       <div className="page-container">
         <main className="home-main-container">
           <div className="main-site-header">
@@ -73,15 +72,6 @@ export default function Home() {
               draggable={false}
               alt="This user eated glass"
               src={"/buttons/eated-glass.jpg"}
-              width={225}
-              height={45}
-            />
-          </div>
-          <div>
-            <Image
-              draggable={false}
-              alt="This user is man door hand hook car door"
-              src={"/buttons/hook-car-door.png"}
               width={225}
               height={45}
             />
@@ -160,6 +150,6 @@ export default function Home() {
           </div>
         </footer>
       </div>
-    </Background>
+    </div>
   );
 }

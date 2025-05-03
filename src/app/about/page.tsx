@@ -1,10 +1,9 @@
-import Background from "@/components/Background/Background";
 import Link from "next/link";
 import "./about.css";
 
 export default function Page() {
   return (
-    <Background image="/bg-images/waving-water.gif">
+    <div className="bg-about">
       <main className="about-me-container">
         <h1>About Me</h1>
         <p>
@@ -26,6 +25,6 @@ export default function Page() {
           <li>{"Email: isaac[dot]mattern[at]gmail.com"}</li>
         </ul>
       </main>
-    </Background>
+    </div>
   );
 }

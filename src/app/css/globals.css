@@ -21,6 +21,42 @@ body {
   padding: 0;
 }
 
+.bg-homepage {
+  background-image: url('/bg-images/bright-blue-water.gif');
+  min-height: 100vh;
+  padding-top: 0.01px;
+}
+
+.bg-portfolio {
+  background-image: url('/bg-images/clouds.gif');
+  min-height: 100vh;
+  padding-top: 0.01px;
+}
+
+.bg-blog {
+  background-color: white;
+  min-height: 100vh;
+  padding-top: 0.01px;
+}
+
+.bg-recipes {
+  background-image: url('/bg-images/sun-face.gif');
+  min-height: 100vh;
+  padding-top: 0.01px;
+}
+
+.bg-about {
+  background-image: url('/bg-images/waving-water.gif');
+  min-height: 100vh;
+  padding-top: 0.01px;
+}
+
+.bg-not-found {
+  background-color: #3b1e00;
+  min-height: 100vh;
+  padding-top: 0.01px;
+}
+
 code {
   display: inline-block;
 }
