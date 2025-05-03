@@ -2,14 +2,15 @@
 import "./css/home.css";
 import HomepageLink from "@/components/HomepageLinks/HomepageLink";
 import Image from "next/image";
+import Background from "@/components/Background/Background";
 
 export default function Home() {
   return (
-    <>
+    <Background image={"bg-images/bright-blue-water.gif"}>
       <div className="page-container">
         <main className="home-main-container">
           <div className="main-site-header">
-            <h1>Isaac's Website</h1>
+            <h1>{"Isaac's Website"}</h1>
             <div>
               <Image
                 draggable={false}
@@ -159,6 +160,6 @@ export default function Home() {
           </div>
         </footer>
       </div>
-    </>
+    </Background>
   );
 }
