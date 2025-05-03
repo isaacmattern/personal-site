@@ -2,11 +2,10 @@
 import "./css/home.css";
 import HomepageLink from "@/components/HomepageLinks/HomepageLink";
 import Image from "next/image";
-import Background from "@/components/Background/Background";
 
 export default function Home() {
   return (
-    <Background image={"bg-images/bright-blue-water.gif"}>
+    <div className="bg-homepage">
       <div className="page-container">
         <main className="home-main-container">
           <div className="main-site-header">
@@ -160,6 +159,6 @@ export default function Home() {
           </div>
         </footer>
       </div>
-    </Background>
+    </div>
   );
 }

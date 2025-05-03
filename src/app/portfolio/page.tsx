@@ -1,11 +1,10 @@
-import Background from "@/components/Background/Background";
 import { personalProjects } from "@/lib/personalProjects";
 import "./portfolio.css";
 import Link from "next/link";
 
 export default function Page() {
   return (
-    <Background image="/bg-images/clouds.gif">
+    <div className="bg-portfolio">
       <main className="portfolio-page-container">
         <div className="header-card">
           <h1>{"Portfolio"}</h1>
@@ -27,6 +26,6 @@ export default function Page() {
           })}
         </div>
       </main>
-    </Background>
+    </div>
   );
 }
