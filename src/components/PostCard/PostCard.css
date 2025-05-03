@@ -8,7 +8,7 @@
 .postcard time {
   min-width: 120px;
   margin-right: 24px;
-  padding-top: 2px;
+  padding-top: 5px;
 }
 
 .postcard > * {

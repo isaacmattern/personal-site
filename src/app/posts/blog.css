@@ -1,7 +1,8 @@
 .blog-layout-container {
-  font-family: "Winky Rough", sans-serif;
-  font-weight: 200;
-  font-size: 20px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  /* font-weight: 200; */
+  font-size: 17px;
+  line-height: 1.5;
   max-width: 680px;
   margin: 32px auto 64px;
   padding: 0 12px;
@@ -9,7 +10,7 @@
 
 @media screen and (min-width: 600px) {
   .blog-layout-container {
-    font-size: 22px;
+    font-size: 19px;
   }
 }
 
@@ -29,6 +30,7 @@
 
 .secondary-text {
   opacity: 70%;
+  font-size: 75%;
 }
 
 /* TODO - use for recipes */
@@ -47,11 +49,11 @@
 }
 
 /* todo - should probably start using sass tbh */
-.blog-layout-container h1,
+/* .blog-layout-container h1,
 .blog-layout-container h2, 
 .blog-layout-container h3, 
 .blog-layout-container h4, 
 .blog-layout-container h5, 
 .blog-layout-container h6 {
   font-weight: 400;
-}
+} */
