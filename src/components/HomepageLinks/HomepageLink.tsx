@@ -16,7 +16,7 @@ export default function HomepageLink({
       className={`${spriteIdentifier}-sprite-container homepage-single-link-container`}
     >
       <div className={`${spriteIdentifier}-sprite`}></div>
-      <div className="label">{label}</div>
+      <h1 className="label">{label}</h1>
     </Link>
   );
 }

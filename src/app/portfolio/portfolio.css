@@ -44,7 +44,8 @@
   height: 244px;
   width: 244px;
   padding: 16px;
-  box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+  border: 1.5px solid rgba(33, 33, 33, 0.3);
+  box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.72);
   transition: transform 0.15s linear, box-shadow 0.15s linear;
   position: relative;
 }
@@ -75,7 +76,7 @@
 .sticky-note-container > *:hover,
 .sticky-note-container > *:focus {
   transform: scale(1.25) rotate(0deg);
-  box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+  box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.72);
   z-index: 5;
 }
 

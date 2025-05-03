@@ -1,7 +1,7 @@
 // app/page.tsx
 import { compareDesc } from "date-fns";
 import { allRecipes } from "contentlayer/generated";
-import PostCard from "@/components/PostCard/PostCard";
+import Link from "next/link";
 
 export default function RecipesIndex() {
   const recipes = allRecipes.sort((a, b) =>
@@ -9,10 +9,12 @@ export default function RecipesIndex() {
   );
 
   return (
-    <div className="paper-effect">
+    <div className="paper-effect recipe-list">
       {recipes.map((recipe, idx) => (
-        <div key={idx} className="paper-effect">
-          <PostCard {...recipe} />
+        <div key={idx} className="recipe-link">
+          <Link className="" href={recipe.url}>
+            {recipe.title}
+          </Link>
         </div>
       ))}
     </div>
