@@ -94,15 +94,6 @@ export default function Home() {
           <div>
             <Image
               draggable={false}
-              alt="Support mental health or I'll kill you"
-              src={"/buttons/mental-health.png"}
-              width={100}
-              height={100}
-            />
-          </div>
-          <div>
-            <Image
-              draggable={false}
               alt="My birthstone is a coffee bean"
               src={"/buttons/birthstone_coffeebean.png"}
               width={225}
