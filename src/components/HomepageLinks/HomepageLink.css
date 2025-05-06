@@ -45,8 +45,8 @@
 
 /* Portfolio */
 .portfolio-sprite {
-  width: 100px; 
-  height: 98px; 
+  min-width: 100px; 
+  min-height: 98px; 
   background-image: url('/animations/rotating-computer.png');
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -81,8 +81,8 @@
 
 /* About */
 .about-sprite {
-  width: 54px; 
-  height: 112px; 
+  min-width: 54px; 
+  min-height: 112px; 
   background-image: url('/animations/man-walking.png');
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -118,8 +118,8 @@
 
 /* Blog */
 .blog-sprite {
-  width: 105px; 
-  height: 93px; 
+  min-width: 105px; 
+  min-height: 93px; 
   background-image: url('/animations/open-journal.png');
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -154,8 +154,8 @@
 
 /* Recipes */
 .recipes-sprite {
-  width: 87px; 
-  height: 124px; 
+  min-width: 87px; 
+  min-height: 124px; 
   background-image: url('/animations/milk-cookies.png');
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -190,8 +190,8 @@
 
 /* Music */
 .music-sprite {
-  width: 99px; 
-  height: 81px;
+  min-width: 99px; 
+  min-height: 81px;
   background-image: url('/animations/speakers.png');
   background-repeat: no-repeat;
   background-position: 0 0;

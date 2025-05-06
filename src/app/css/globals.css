@@ -22,12 +22,14 @@ body {
 }
 
 .bg-homepage {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-image: url('/bg-images/bright-blue-water.gif');
   min-height: 100vh;
   padding-top: 0.01px;
 }
 
 .bg-portfolio {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-image: url('/bg-images/clouds.gif');
   min-height: 100vh;
   padding-top: 0.01px;
@@ -46,6 +48,7 @@ body {
 }
 
 .bg-about {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-image: url('/bg-images/waving-water.gif');
   min-height: 100vh;
   padding-top: 0.01px;
