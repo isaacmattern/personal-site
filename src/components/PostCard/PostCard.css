@@ -6,9 +6,10 @@
 }
 
 .postcard time {
-  min-width: 120px;
+  min-width: 100px;
   margin-right: 24px;
-  padding-top: 5px;
+  padding-top: 4px;
+  text-align: right;
 }
 
 .postcard > * {

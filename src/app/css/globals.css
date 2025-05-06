@@ -1,27 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica:ital@0;1&display=swap');
-
-@font-face {
-  font-family: 'basiic';
-  src: url('/fonts/basiic.ttf');
-}
-/* @font-face {
-  font-family: 'cherry-bomb';
-  src: url('/fonts/cherry-bomb.ttf');
-}
-@font-face {
-  font-family: 'bubble-club';
-  src: url('/fonts/bubble-club.ttf');
-} */
-/* @font-face {
-  font-family: 'yoster';
-  src: url('/fonts/yoster.ttf');
-} */
-@font-face {
-  font-family: 'romance-a';
-  src: url('/fonts/romance-a.ttf');
-}
+@import url('./fonts.css');
 
 html, body {
   margin: 0;
