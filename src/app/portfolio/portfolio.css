@@ -27,12 +27,12 @@
 }
 
 .sticky-note-container h2 {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 500;
 }
 
 .sticky-note-container p {
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 200;
 }
 
@@ -41,8 +41,8 @@
   color: #000;
   background: #ffc;
   display: block;
-  height: 244px;
-  width: 244px;
+  height: 230px;
+  width: 230px;
   padding: 16px;
   border: 1.5px solid rgba(33, 33, 33, 0.3);
   box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.72);
@@ -73,8 +73,7 @@
 }
 
 /* Hover/focus styling */
-.sticky-note-container > *:hover,
-.sticky-note-container > *:focus {
+.sticky-note-container > *:hover {
   transform: scale(1.25) rotate(0deg);
   box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.72);
   z-index: 5;

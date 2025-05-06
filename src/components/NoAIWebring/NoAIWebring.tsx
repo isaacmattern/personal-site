@@ -40,7 +40,7 @@ export default function NoAIWebring() {
       <img
         style={{ width: "176px", imageRendering: "pixelated" }}
         useMap="#noaimini9b"
-        src="https://baccyflap.com/noai/miniwidget9.gif"
+        src="/gifs/no-ai-webring.gif"
         alt="in big red letters is the word PREVIOUS, in big green letters is the word RANDOM and in big aquamarine letters is the words NEXT. beside these big words, in smaller print, it says THE / NO AI / W E B R I N G in black letters outlined in pink"
       />
     </>

@@ -60,8 +60,8 @@ export default function Home() {
               draggable={false}
               alt="This site contains 100% recycled material"
               src={"/buttons/recycled.png"}
-              width={225}
-              height={45}
+              width={210}
+              height={42}
             />
           </div>
           <div>
@@ -69,8 +69,8 @@ export default function Home() {
               draggable={false}
               alt="This user really enjoys dark and stormy nights"
               src={"/buttons/darkandstormy.png"}
-              width={225}
-              height={45}
+              width={210}
+              height={42}
             />
           </div>
           <div>
@@ -78,8 +78,8 @@ export default function Home() {
               draggable={false}
               alt="This user eated glass"
               src={"/buttons/eated-glass.jpg"}
-              width={225}
-              height={45}
+              width={210}
+              height={42}
             />
           </div>
           <div>
@@ -96,8 +96,8 @@ export default function Home() {
               draggable={false}
               alt="My birthstone is a coffee bean"
               src={"/buttons/birthstone_coffeebean.png"}
-              width={225}
-              height={45}
+              width={210}
+              height={42}
             />
           </div>
           <div>
@@ -105,8 +105,8 @@ export default function Home() {
               draggable={false}
               alt="I put the toast in toaster, then I take it out and eat it"
               src={"/buttons/toast.png"}
-              width={225}
-              height={45}
+              width={210}
+              height={42}
             />
           </div>
           <div>
