@@ -20,14 +20,14 @@ body {
 }
 
 .bg-homepage {
-  font-family: 'romance-a', sans-serif;
+  font-family: 'ms-dos-ank24', sans-serif;
   background-image: url('/bg-images/bright-blue-water.gif');
   min-height: 100vh;
   padding-top: 0.01px;
 }
 
 .bg-portfolio {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'ms-dos-ank24', 'Times New Roman', Times, serif;
   background-image: url('/bg-images/clouds.gif');
   min-height: 100vh;
   padding-top: 0.01px;
@@ -46,8 +46,8 @@ body {
 }
 
 .bg-about {
-  font-family: 'basiic', sans-serif;
-  background-image: url('/bg-images/waving-water.gif');
+  font-family: 'ms-dos-ank24', sans-serif;
+  background-image: url('/bg-images/bluegreen-fabric.gif');
   min-height: 100vh;
   padding-top: 0.01px;
 }

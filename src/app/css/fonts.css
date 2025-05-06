@@ -1,3 +1,5 @@
+/* Comment out fonts that aren't being used so they don't get loaded! */
+
 /* Winky Rough */
 @font-face {
   font-display: swap;
@@ -84,7 +86,12 @@
   font-family: 'yoster';
   src: url('/fonts/yoster.woff');
 } */
-@font-face {
+/* @font-face {
   font-family: 'romance-a';
   src: url('/fonts/romance-a.woff');
+} */
+
+@font-face {
+  font-family: 'ms-dos-ank24';
+  src: url('/fonts/ms-dos-ank24.woff');
 }
