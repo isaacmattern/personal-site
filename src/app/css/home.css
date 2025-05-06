@@ -5,6 +5,7 @@
   justify-content: space-between;
   max-width: 1000px;
   margin: auto;
+  image-rendering: pixelated;
 }
 
 .main-site-header {
