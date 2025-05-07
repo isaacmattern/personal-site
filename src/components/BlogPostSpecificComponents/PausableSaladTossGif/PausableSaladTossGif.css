@@ -7,7 +7,7 @@
   background-repeat: no-repeat;
   background-position: 0 0;
 
-  animation: play-blog 1.0s steps(8) infinite;
+  animation: play-salad 1.0s steps(8) infinite;
   animation-timing-function: steps(8, end);
   animation-play-state: paused; 
 }
@@ -25,7 +25,7 @@
   background-repeat: no-repeat;
   background-position: 0 0;
 
-  animation: play-blog 1.0s steps(8) infinite;
+  animation: play-salad 1.0s steps(8) infinite;
   animation-timing-function: steps(8, end);
   animation-play-state: paused; 
 }
@@ -51,7 +51,7 @@
   background-repeat: no-repeat;
   background-position: 0 0;
 
-  animation: play-blog 1.0s steps(8) infinite;
+  animation: play-salad 1.0s steps(8) infinite;
   animation-timing-function: steps(8, end);
   animation-play-state: paused; 
 
@@ -69,7 +69,7 @@
   animation-play-state: running;
 }
 
-@keyframes play-blog {
+@keyframes play-salad {
   from {
     background-position: 0 0;
   }
