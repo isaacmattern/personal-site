@@ -1,0 +1,79 @@
+.salad-toss-sprite {
+  margin: auto;
+  width: 120px; 
+  height: 120px; 
+  /* Note - the URL path to your png might be different! */
+  background-image: url('/animations/salad-toss.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  animation: play-blog 1.0s steps(8) infinite;
+  animation-timing-function: steps(8, end);
+  animation-play-state: paused; 
+}
+
+.salad-toss-sprite:hover {
+  animation-play-state: running;
+}
+
+.salad-toss-sprite-with-outline {
+  margin: auto;
+  width: 120px; 
+  height: 120px; 
+  /* Note - the URL path to your png might be different! */
+  background-image: url('/animations/salad-toss.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  animation: play-blog 1.0s steps(8) infinite;
+  animation-timing-function: steps(8, end);
+  animation-play-state: paused; 
+}
+
+.salad-toss-sprite-with-outline:hover {
+  animation-play-state: running;
+  -webkit-filter: drop-shadow(1px 1px 0 black)
+  drop-shadow(-1px 1px 0 black)
+  drop-shadow(1px -1px 0 black)
+  drop-shadow(-1px -1px 0 black);
+  filter: drop-shadow(1px 1px 0 black)
+  drop-shadow(-1px 1px 0 black)
+  drop-shadow(1px -1px 0 black)
+  drop-shadow(-1px -1px 0 black);
+}
+
+.salad-toss-sprite-with-permanent-outline {
+  margin: auto;
+  width: 120px; 
+  height: 120px; 
+  /* Note - the URL path to your png might be different! */
+  background-image: url('/animations/salad-toss.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  animation: play-blog 1.0s steps(8) infinite;
+  animation-timing-function: steps(8, end);
+  animation-play-state: paused; 
+
+  -webkit-filter: drop-shadow(1px 1px 0 black)
+  drop-shadow(-1px 1px 0 black)
+  drop-shadow(1px -1px 0 black)
+  drop-shadow(-1px -1px 0 black);
+  filter: drop-shadow(1px 1px 0 black)
+  drop-shadow(-1px 1px 0 black)
+  drop-shadow(1px -1px 0 black)
+  drop-shadow(-1px -1px 0 black);
+}
+
+.salad-toss-sprite-with-permanent-outline:hover {
+  animation-play-state: running;
+}
+
+@keyframes play-blog {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -960px;
+  }
+}
