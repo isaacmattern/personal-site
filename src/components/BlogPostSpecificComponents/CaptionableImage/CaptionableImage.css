@@ -10,6 +10,7 @@
 
 .captionable-image figure img {
   max-width: min(480px, 100%);
+  margin: auto;
   height: auto;
   display: block;
 }

@@ -24,11 +24,11 @@
   justify-content: center;
 }
 
-footer {
+.homepage-footer {
   display: flex;
   flex-wrap: wrap;
   margin: auto;
-  max-width: 820px;
+  max-width: 720px;
   margin-top: 32px;
   margin-bottom: 24px;
   gap: 6px;

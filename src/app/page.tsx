@@ -54,7 +54,7 @@ export default function Home() {
             </div>
           </div>
         </main>
-        <footer>
+        <footer className="homepage-footer">
           <div>
             <Image
               draggable={false}
@@ -62,33 +62,6 @@ export default function Home() {
               src={"/buttons/recycled.png"}
               width={210}
               height={42}
-            />
-          </div>
-          <div>
-            <Image
-              draggable={false}
-              alt="This user really enjoys dark and stormy nights"
-              src={"/buttons/darkandstormy.png"}
-              width={210}
-              height={42}
-            />
-          </div>
-          <div>
-            <Image
-              draggable={false}
-              alt="This user eated glass"
-              src={"/buttons/eated-glass.jpg"}
-              width={210}
-              height={42}
-            />
-          </div>
-          <div>
-            <Image
-              draggable={false}
-              alt="I love Wi-Fi"
-              src={"/buttons/i-love-wifi.jpg"}
-              width={104}
-              height={65}
             />
           </div>
           <div>
@@ -141,6 +114,24 @@ export default function Home() {
               draggable={false}
               alt="No cookies banner - this site is cookies free"
               src={"/buttons/nocookie.gif"}
+              width={88}
+              height={31}
+            />
+          </div>
+          <div>
+            <Image
+              draggable={false}
+              alt="Make a website"
+              src={"/buttons/makeawebsite.png"}
+              width={88}
+              height={31}
+            />
+          </div>
+          <div>
+            <Image
+              draggable={false}
+              alt="Web Design"
+              src={"/buttons/webdesign.png"}
               width={88}
               height={31}
             />

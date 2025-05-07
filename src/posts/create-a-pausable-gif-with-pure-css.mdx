@@ -1,0 +1,140 @@
+---
+title: Create a Pausable GIF With Pure CSS
+date: 2025-5-6
+description: Maybe the real .gif was the friends we made along the way
+---
+
+On my homepage (as of writing this article), the main navigation component contains several links, each of which have an icon which starts playing once you hover over the link. As an example, one of them looks like this. Hover your mouse over the top to see it play. Move your mouse away, and you'll see that the gif with automatically stop playing on the frame that your mouse left. Hover again to see it "resume". 
+
+<HomepageLink
+  href={"/portfolio"}
+  spriteIdentifier={"portfolio"}
+/>
+
+This was harder to figure out than you might think, so here's a step-by-step process to build a similar component for your site!
+
+## Step 1: Choose a gif
+
+For this example, I'll choose this gif [salad-toss.gif](/gifs/salad-toss.gif):
+
+<CaptionableImage maxWidth={100} src="/gifs/salad-toss.gif" alt="Tossing a salad "/>
+
+Feel free to save this gif locally to follow along with this tutorial.
+
+## Step 2: Convert the gif to a PNG
+
+Using a site like [ezgif.com](https://ezgif.com), we can turn the gif into a sprite sheet. I'm setting the number of columns to **1** to make our css easier to write later. Make sure there's no space between each "frame" of the sprite sheet.
+
+Here, I'll save the png as `salad-toss.png`. The saved image should look something like this.
+
+<CaptionableImage maxWidth={100} src="/animations/salad-toss.png" alt="Tossing a salad, converted to PNG sprite sheet"/>
+
+## Step 3: Create the HTML Element
+
+Our HTML here is going to be deceptively small:
+
+```html title="salad-toss.html"
+<div class="salad-toss-sprite"></div>
+```
+
+## Step 4: Write the CSS
+
+If we take a look at our original gif, we can see the dimensions of the gif are a 120px width and a 120px height. We also see that there are 8 frames in this gif. This means that the total height of our png is 960px.
+
+Now the way that we animate this is pretty simple. We set the background image of the `<div>` we created to be `salad-toss.png`. Only, we only want to see a portion of the png at any given moment - a single *frame* of the gif. 
+
+Here's a basic overview of what we'll do:
+- Set the div height and width to be the height and width of your original GIF
+- Set the background image to the sprite sheet png you created, and make sure you correctly set the `background-repeat` and   `background-position` css properties
+- Create a named css animation sequence using the `@keyframes` annotation.
+  - have the animation start at coordinate `(0, 0)` and end at `(0, gifHeight * numberOfGifFrames)`
+  - set the css property of `animation` on your `<div>` to `animation-name totalAnimationTime steps(numFrames) infinite`
+
+In my case, I'll have the `animation-play-state` property paused by default, and have it run when the user hovers over the `<div>`, but you could reverse it. You could even start using JavaScript and have it linked to the user taking some other action, like clicking a pause/play button!
+
+```css title="salad-toss.css"
+.salad-toss-sprite {
+  width: 120px; 
+  height: 120px; 
+  /* Note - the URL path to your png might be different! */
+  background-image: url('/animations/salad-toss.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  animation: play-blog 1.0s steps(8) infinite;
+  animation-timing-function: steps(8, end);
+  animation-play-state: paused; 
+}
+
+.salad-toss-sprite {
+  animation-play-state: running;
+}
+
+@keyframes play-blog {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -960px;
+  }
+}
+```
+
+Now, we should have this:
+
+<PausableSaladTossGif/>
+
+Nice!
+
+## Step 5 (Bonus): Add an outline
+
+If we want to add an outline to the portion of our gif, we can add a drop shadow using the `filter` property. 
+
+Note that this will only work for gifs/pngs with a transparent background. You should be able to use [ezgif.com](https://ezgif.com) or another site to remove a solid background from whatever gif you're working with.
+
+Our updated css looks like this:
+```css title="salad-toss.css"
+.salad-toss-sprite {
+  width: 120px; 
+  height: 120px; 
+  /* Note - the URL path to your png might be different! */
+  background-image: url('/animations/salad-toss.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  animation: play-blog 1.0s steps(8) infinite;
+  animation-timing-function: steps(8, end);
+  animation-play-state: paused; 
+}
+
+.salad-toss-sprite:hover {
+  animation-play-state: running;
+  -webkit-filter: drop-shadow(1px 1px 0 black)
+  drop-shadow(-1px 1px 0 black)
+  drop-shadow(1px -1px 0 black)
+  drop-shadow(-1px -1px 0 black);
+  filter: drop-shadow(1px 1px 0 black)
+  drop-shadow(-1px 1px 0 black)
+  drop-shadow(1px -1px 0 black)
+  drop-shadow(-1px -1px 0 black);
+}
+
+@keyframes play-blog {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -960px;
+  }
+}
+```
+
+We'll use the `filter` and `-webkit-filter` properties to make sure it also works on Safari. You might find that you need other properties as well, but as far as I've seen, this works on Chrome, Firefox, and Safari. 
+
+Here's our end product:
+
+<PausableSaladTossGifWithOutline/>
+
+Pretty cool! Lastly, here's a final example where the outline is always present:
+
+<PausableSaladTossGifWithPermanentOutline/>

@@ -1,0 +1,97 @@
+/* Comment out fonts that aren't being used so they don't get loaded! */
+
+/* Winky Rough */
+@font-face {
+  font-display: swap;
+  font-family: 'Winky Rough';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/winky-rough/winky-rough-v1-latin-300.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Winky Rough';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/winky-rough/winky-rough-v1-latin-regular.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Winky Rough';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/winky-rough/winky-rough-v1-latin-500.woff2') format('woff2');
+}
+
+/* IM Fell Double Pica */
+@font-face {
+  font-display: swap; 
+  font-family: 'IM Fell Double Pica';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/im-fell-double-pica/im-fell-double-pica-v14-latin-regular.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap; 
+  font-family: 'IM Fell Double Pica';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/fonts/im-fell-double-pica/im-fell-double-pica-v14-latin-italic.woff2') format('woff2');
+}
+
+/* Plus Jakarta Sans */
+@font-face {
+  font-display: swap;
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/plus-jakarta-sans/plus-jakarta-sans-v8-latin-regular.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Plus Jakarta Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/fonts/plus-jakarta-sans/plus-jakarta-sans-v8-latin-italic.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/plus-jakarta-sans/plus-jakarta-sans-v8-latin-700.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Plus Jakarta Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: url('/fonts/plus-jakarta-sans/plus-jakarta-sans-v8-latin-700italic.woff2') format('woff2');
+}
+
+/* Fun little fonts */ 
+@font-face {
+  font-family: 'basiic';
+  src: url('/fonts/basiic.woff');
+}
+/* @font-face {
+  font-family: 'cherry-bomb';
+  src: url('/fonts/cherry-bomb.woff');
+}
+@font-face {
+  font-family: 'bubble-club';
+  src: url('/fonts/bubble-club.woff');
+} */
+/* @font-face {
+  font-family: 'yoster';
+  src: url('/fonts/yoster.woff');
+} */
+/* @font-face {
+  font-family: 'romance-a';
+  src: url('/fonts/romance-a.woff');
+} */
+
+@font-face {
+  font-family: 'ms-dos-ank24';
+  src: url('/fonts/ms-dos-ank24.woff');
+}
