@@ -11,13 +11,8 @@
   color: #0058d3;
 }
 
-@media screen and (min-width: 600px) {
-  .blog-layout-container {
-    font-size: 19px;
-  }
-}
-
 .blog-layout-container ul.nav-links {
+  font-size: 15px;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -38,4 +33,13 @@
 
 .blog-layout-container h1 {
   margin: 0;
+}
+
+@media screen and (min-width: 600px) {
+  .blog-layout-container {
+    font-size: 19px;
+  }
+  .blog-layout-container ul.nav-links {
+    font-size: 17px
+  }
 }
