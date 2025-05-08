@@ -29,6 +29,7 @@ allPosts
       id: `${siteUrl}${post.url}`,
       link: `${siteUrl}${post.url}`,
       description: post.description,
+      guid: `${siteUrl}${post.url}`,
       date: formatDateWithoutTime(post.date),
     });
   });
