@@ -13,6 +13,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <li>
               <Link href="/posts">View All Posts</Link>
             </li>
+            <li>
+              <Link href="/rss.xml">Subscribe via RSS</Link>
+            </li>
           </ul>
         </nav>
         <main>{children}</main>
