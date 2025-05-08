@@ -1,62 +1,44 @@
 import fs from "fs";
 import path from "path";
-import { allPosts } from "./.contentlayer/generated/index.mjs";
-import RSS from "rss";
+import { allPosts } from "./.contentlayer/generated/index.mjs"; // Adjust the path as needed
+import RSS from "rss"; // Make sure to install this package
 
+// Constants
 const siteUrl = "https://isaacmattern.com";
 
-// Function to format the date to 'YYYY-MM-DD' (without time)
-function formatDateWithoutTime(date) {
+// Function to format the date to RFC-822 format for <pubDate>
+function formatPubDate(date) {
   const d = new Date(date);
-  return d.toISOString().split("T")[0]; // Extracts 'YYYY-MM-DD'
+  return d.toUTCString(); // Formats date to RFC-822 format
 }
 
-// Create an RSS feed object
+// Initialize the RSS feed
 const feed = new RSS({
   title: "Isaac Mattern's Blog Posts",
   description: "Blog posts written by Isaac Mattern",
   feed_url: `${siteUrl}/rss.xml`,
   site_url: siteUrl,
-  image_url: `${siteUrl}/favicon.ico`,
   language: "en",
   copyright: `All rights reserved ${new Date().getFullYear()}`,
+  managingEditor: "Isaac Mattern <isaac@mattern.com>",
+  webMaster: "Isaac Mattern <isaac@mattern.com>",
+  lastBuildDate: new Date(),
 });
 
-// Manually build each item (post)
-let xmlItems = allPosts
+// Add each post to the feed
+allPosts
   .sort((a, b) => new Date(b.date) - new Date(a.date))
-  .map((post) => {
-    return `
-      <item>
-        <title>${post.title}</title>
-        <link>${siteUrl}${post.url}</link>
-        <description>${post.description}</description>
-        <guid isPermaLink="true">${siteUrl}${post.url}</guid>
-        <pubDate>${new Date(post.date).toUTCString()}</pubDate>
-      </item>
-    `;
-  })
-  .join("\n");
+  .forEach((post) => {
+    feed.item({
+      title: post.title,
+      description: post.description,
+      url: `${siteUrl}${post.url}`,
+      date: formatPubDate(post.date), // Correct date format for <pubDate>
+    });
+  });
 
-// Manually wrap the items inside the RSS structure
-const rssXml = `
-<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0">
-  <channel>
-    <title>${feed.title}</title>
-    <description>${feed.description}</description>
-    <link>${feed.site_url}</link>
-    <image>
-      <url>${feed.image_url}</url>
-      <title>${feed.title}</title>
-      <link>${feed.site_url}</link>
-    </image>
-    <language>${feed.language}</language>
-    <copyright>${feed.copyright}</copyright>
-    ${xmlItems}
-  </channel>
-</rss>
-`;
+// Generate the RSS XML
+const rssXml = feed.xml();
 
 // Write the RSS feed to a file
 fs.writeFileSync(path.join(process.cwd(), "public", "rss.xml"), rssXml);
