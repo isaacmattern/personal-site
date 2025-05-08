@@ -29,7 +29,10 @@ allPosts
       id: `${siteUrl}${post.url}`,
       link: `${siteUrl}${post.url}`,
       description: post.description,
-      guid: `${siteUrl}${post.url}`,
+      guid: {
+        _content: `${siteUrl}${post.url}`,
+        isPermaLink: true,
+      },
       date: formatDateWithoutTime(post.date),
     });
   });
