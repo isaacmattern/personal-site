@@ -28,12 +28,12 @@ pre, code {
   margin: 0;
 }
 
-@media (min-width: 576px) {
+/* @media (min-width: 576px) {
   pre, code {
     font-size: inherit;
     line-height: 1.35rem;
   }
-}
+} */
 
 figure {
   margin: 0;
@@ -54,7 +54,7 @@ figure[data-rehype-pretty-code-figure] pre {
   /* stylist preferences */
   padding-top: 0.4rem;
   padding-bottom: 0.4rem;
-  font-size: 0.75rem;
+  font-size: 13px;
   line-height: 1.1rem;
 
 
@@ -62,12 +62,12 @@ figure[data-rehype-pretty-code-figure] pre {
   border-bottom-right-radius: var(--border-radius);
 }
 
-@media (min-width: 576px) {
+/* @media (min-width: 576px) {
   figure[data-rehype-pretty-code-figure] pre {
     font-size: 0.875rem;
     line-height: 1.5rem;
   }
-}
+} */
 
 figure[data-rehype-pretty-code-figure] figcaption {
   /* stylistic preferences */
@@ -75,8 +75,8 @@ figure[data-rehype-pretty-code-figure] figcaption {
   font-weight: 400;
   border-bottom: var(--border-style);
   background-color: rgb(var(--code-bg-color-rgb));
-  padding: 0.5rem 0.6rem;
-  font-size: 0.9rem;
+  padding: 6px 8px;
+  font-size: 13px;
   line-height: 1rem;
 }
 
@@ -118,9 +118,9 @@ code[data-line-numbers] .line::before {
 span[data-rehype-pretty-code-figure] code {
   background-color: rgb(var(--code-bg-color-rgb));
   border: var(--border-style);
-  font-size: 0.95rem;
+  font-size: 13px;
 
-  padding: 0px 6px;
+  padding: 1.5px 5px;
   border-radius: 6px;
 
   margin: 0px 4px;
