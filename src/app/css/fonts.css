@@ -2,21 +2,21 @@
 
 /* Winky Rough */
 @font-face {
-  font-display: swap;
+  font-display: block;
   font-family: 'Winky Rough';
   font-style: normal;
   font-weight: 300;
   src: url('/fonts/winky-rough/winky-rough-v1-latin-300.woff2') format('woff2');
 }
 @font-face {
-  font-display: swap;
+  font-display: block;
   font-family: 'Winky Rough';
   font-style: normal;
   font-weight: 400;
   src: url('/fonts/winky-rough/winky-rough-v1-latin-regular.woff2') format('woff2');
 }
 @font-face {
-  font-display: swap;
+  font-display: block;
   font-family: 'Winky Rough';
   font-style: normal;
   font-weight: 500;
@@ -25,14 +25,14 @@
 
 /* IM Fell Double Pica */
 @font-face {
-  font-display: swap; 
+  font-display: block; 
   font-family: 'IM Fell Double Pica';
   font-style: normal;
   font-weight: 400;
   src: url('/fonts/im-fell-double-pica/im-fell-double-pica-v14-latin-regular.woff2') format('woff2');
 }
 @font-face {
-  font-display: swap; 
+  font-display: block; 
   font-family: 'IM Fell Double Pica';
   font-style: italic;
   font-weight: 400;
@@ -41,42 +41,42 @@
 
 /* Libertinus Serif */
 @font-face {
-  font-display: swap;
+  font-display: block;
   font-family: 'Libertinus Serif';
   font-style: normal;
   font-weight: 400;
   src: url('/fonts/Libertinus_Serif/LibertinusSerif-Regular.ttf')
 }
 @font-face {
-  font-display: swap;
+  font-display: block;
   font-family: 'Libertinus Serif';
   font-style: italic;
   font-weight: 400;
   src: url('/fonts/Libertinus_Serif/LibertinusSerif-Italic.ttf')
 }
 @font-face {
-  font-display: swap;
+  font-display: block;
   font-family: 'Libertinus Serif';
   font-style: normal;
   font-weight: 600;
   src: url('/fonts/Libertinus_Serif/LibertinusSerif-SemiBold.ttf')
 }
 @font-face {
-  font-display: swap;
+  font-display: block;
   font-family: 'Libertinus Serif';
   font-style: italic;
   font-weight: 600;
   src: url('/fonts/Libertinus_Serif/LibertinusSerif-SemiBoldItalic.ttf')
 }
 @font-face {
-  font-display: swap;
+  font-display: block;
   font-family: 'Libertinus Serif';
   font-style: normal;
   font-weight: 700;
   src: url('/fonts/Libertinus_Serif/LibertinusSerif-Bold.ttf')
 }
 @font-face {
-  font-display: swap;
+  font-display: block;
   font-family: 'Libertinus Serif';
   font-style: italic;
   font-weight: 700;
@@ -87,6 +87,7 @@
 
 /* Fun little fonts */ 
 @font-face {
+  font-display: block;
   font-family: 'basiic';
   src: url('/fonts/basiic.woff');
 }
@@ -108,6 +109,7 @@
 } */
 
 @font-face {
+  font-display: block;
   font-family: 'ms-dos-ank24';
   src: url('/fonts/ms-dos-ank24.woff');
 }
