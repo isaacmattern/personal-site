@@ -21,7 +21,7 @@ body {
 
 .bg-homepage {
   font-family: 'ms-dos-ank24', sans-serif;
-  background-image: url('/bg-images/bright-blue-water.gif');
+  background-image: url('/bg-images/hearts-and-squares.gif');
   min-height: 100vh;
   padding-top: 0.01px;
 }
@@ -54,6 +54,7 @@ body {
 
 .bg-not-found {
   background-color: #3b1e00;
+  background-image: url('/bg-images/dirt.gif');
   min-height: 100vh;
   padding-top: 0.01px;
 }
