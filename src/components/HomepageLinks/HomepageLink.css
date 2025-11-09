@@ -1,7 +1,7 @@
 /* Global */
 .homepage-single-link-container {
   font-size: 160%;
-  color: black;
+  color: inherit;
   text-decoration: none;
 
   display: flex;
@@ -28,19 +28,15 @@
   font-size: 28px;
   font-weight: normal;
 
-  -webkit-filter: drop-shadow(1px 1px 0 white)
-  drop-shadow(-1px 1px 0 white)
-  drop-shadow(1px -1px 0 white)
-  drop-shadow(-1px -1px 0 white);
+  -webkit-filter: drop-shadow(1px 1px 0 var(--homepage-link-text-hover-outline-color))
+  drop-shadow(-1px 1px 0 var(--homepage-link-text-hover-outline-color))
+  drop-shadow(1px -1px 0 var(--homepage-link-text-hover-outline-color))
+  drop-shadow(-1px -1px 0 var(--homepage-link-text-hover-outline-color));
 
-  filter: drop-shadow(1px 1px 0 white)
-  drop-shadow(-1px 1px 0 white)
-  drop-shadow(1px -1px 0 white)
-  drop-shadow(-1px -1px 0 white);
-}
-
-.homepage-single-link-container:hover {
-  /* text-decoration: underline; */
+  filter: drop-shadow(1px 1px 0 var(--homepage-link-text-hover-outline-color))
+  drop-shadow(-1px 1px 0 var(--homepage-link-text-hover-outline-color))
+  drop-shadow(1px -1px 0 var(--homepage-link-text-hover-outline-color))
+  drop-shadow(-1px -1px 0 var(--homepage-link-text-hover-outline-color));
 }
 
 /* Portfolio */
@@ -60,14 +56,14 @@
 
 .portfolio-sprite-container:hover .portfolio-sprite {
   animation-play-state: running;
-  -webkit-filter: drop-shadow(1px 1px 0 black)
-  drop-shadow(-1px 1px 0 black)
-  drop-shadow(1px -1px 0 black)
-  drop-shadow(-1px -1px 0 black);
-  filter: drop-shadow(1px 1px 0 black)
-  drop-shadow(-1px 1px 0 black)
-  drop-shadow(1px -1px 0 black)
-  drop-shadow(-1px -1px 0 black);
+  -webkit-filter: drop-shadow(1px 1px 0 var(--homepage-text-color))
+  drop-shadow(-1px 1px 0 var(--homepage-text-color))
+  drop-shadow(1px -1px 0 var(--homepage-text-color))
+  drop-shadow(-1px -1px 0 var(--homepage-text-color));
+  filter: drop-shadow(1px 1px 0 var(--homepage-text-color))
+  drop-shadow(-1px 1px 0 var(--homepage-text-color))
+  drop-shadow(1px -1px 0 var(--homepage-text-color))
+  drop-shadow(-1px -1px 0 var(--homepage-text-color));
 }
 
 @keyframes play-portfolio {
@@ -133,14 +129,14 @@
 
 .blog-sprite-container:hover .blog-sprite {
   animation-play-state: running;
-  -webkit-filter: drop-shadow(1px 1px 0 black)
-  drop-shadow(-1px 1px 0 black)
-  drop-shadow(1px -1px 0 black)
-  drop-shadow(-1px -1px 0 black);
-  filter: drop-shadow(1px 1px 0 black)
-  drop-shadow(-1px 1px 0 black)
-  drop-shadow(1px -1px 0 black)
-  drop-shadow(-1px -1px 0 black);
+  -webkit-filter: drop-shadow(1px 1px 0 var(--homepage-text-color))
+  drop-shadow(-1px 1px 0 var(--homepage-text-color))
+  drop-shadow(1px -1px 0 var(--homepage-text-color))
+  drop-shadow(-1px -1px 0 var(--homepage-text-color));
+  filter: drop-shadow(1px 1px 0 var(--homepage-text-color))
+  drop-shadow(-1px 1px 0 var(--homepage-text-color))
+  drop-shadow(1px -1px 0 var(--homepage-text-color))
+  drop-shadow(-1px -1px 0 var(--homepage-text-color));
 }
 
 @keyframes play-blog {
@@ -169,14 +165,14 @@
 
 .recipes-sprite-container:hover .recipes-sprite {
   animation-play-state: running;
-  -webkit-filter: drop-shadow(1px 1px 0 black)
-  drop-shadow(-1px 1px 0 black)
-  drop-shadow(1px -1px 0 black)
-  drop-shadow(-1px -1px 0 black);
-  filter: drop-shadow(1px 1px 0 black)
-  drop-shadow(-1px 1px 0 black)
-  drop-shadow(1px -1px 0 black)
-  drop-shadow(-1px -1px 0 black);
+  -webkit-filter: drop-shadow(1px 1px 0 var(--homepage-text-color))
+  drop-shadow(-1px 1px 0 var(--homepage-text-color))
+  drop-shadow(1px -1px 0 var(--homepage-text-color))
+  drop-shadow(-1px -1px 0 var(--homepage-text-color));
+  filter: drop-shadow(1px 1px 0 var(--homepage-text-color))
+  drop-shadow(-1px 1px 0 var(--homepage-text-color))
+  drop-shadow(1px -1px 0 var(--homepage-text-color))
+  drop-shadow(-1px -1px 0 var(--homepage-text-color));
 }
 
 @keyframes play-recipes {
@@ -205,14 +201,14 @@
 
 .music-sprite-container:hover .music-sprite {
   animation-play-state: running;
-  -webkit-filter: drop-shadow(1px 1px 0 black)
-  drop-shadow(-1px 1px 0 black)
-  drop-shadow(1px -1px 0 black)
-  drop-shadow(-1px -1px 0 black);
-  filter: drop-shadow(1px 1px 0 black)
-  drop-shadow(-1px 1px 0 black)
-  drop-shadow(1px -1px 0 black)
-  drop-shadow(-1px -1px 0 black);
+  -webkit-filter: drop-shadow(1px 1px 0 var(--homepage-text-color))
+  drop-shadow(-1px 1px 0 var(--homepage-text-color))
+  drop-shadow(1px -1px 0 var(--homepage-text-color))
+  drop-shadow(-1px -1px 0 var(--homepage-text-color));
+  filter: drop-shadow(1px 1px 0 var(--homepage-text-color))
+  drop-shadow(-1px 1px 0 var(--homepage-text-color))
+  drop-shadow(1px -1px 0 var(--homepage-text-color))
+  drop-shadow(-1px -1px 0 var(--homepage-text-color));
 }
 
 @keyframes play-music {

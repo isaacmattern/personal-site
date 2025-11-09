@@ -21,6 +21,7 @@ export default function Home() {
               />
             </div>
           </div>
+          <p className="welcome-message">Happy Holidays!</p>
           <div className="homepage-link-wrapper">
             <HomepageLink
               href={"/portfolio"}
