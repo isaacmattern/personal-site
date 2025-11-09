@@ -260,7 +260,7 @@ export default function Test() {
 }
 ```
 
-Next, let's add this `<Test>{:tsx}` component to our MDX file
+Next, let's add this `<Test>` component to our MDX file
 
 ```mdx title="your-first-post.mdx" {11}
 ---
@@ -311,13 +311,13 @@ export default function Page({ params }: { params: { slug: string } }) {
 }
 ```
 
-Now if we load our app and select our post, we should see the button! If you open up a console in developer tools and click the button, you'll see the message logged. If you want to understand the purpose of the `'use client'{:tsx}` directive we included at the top of our `<Test>{:tsx}` component, check out [this page](https://nextjs.org/docs/app/building-your-application/rendering/client-components) from the Next.js docs.
+Now if we load our app and select our post, we should see the button! If you open up a console in developer tools and click the button, you'll see the message logged. If you want to understand the purpose of the `'use client'` directive we included at the top of our `<Test>` component, check out [this page](https://nextjs.org/docs/app/building-your-application/rendering/client-components) from the Next.js docs.
 
 At this point, everything should be set up for you to start writing new blog posts
 
 ## Bells and Whistles
 
-One of the cool features of MDX is that we can easily transform any HTML component that would be produced by MDX into something different. As an example, let's transform all of the `<a>{:html}` tags on our site. 
+One of the cool features of MDX is that we can easily transform any HTML component that would be produced by MDX into something different. As an example, let's transform all of the `<a>` tags on our site. 
 
 First, let's understand what's going on right now. In our markdown, we can insert a link with the following syntax
 
@@ -335,7 +335,7 @@ I've wanted to create a blog for awhile.
 [This is a link to example.com](https://example.com)
 ```
 
-Currently, MDX transforms our markdown into an `<a>{:html}` tag. Now, let's see how we can transform all of those into [Next.js Link components](https://nextjs.org/learn/basics/navigate-between-pages/link-component) (`<Link>{:tsx}`)
+Currently, MDX transforms our markdown into an `<a>` tag. Now, let's see how we can transform all of those into [Next.js Link components](https://nextjs.org/learn/basics/navigate-between-pages/link-component) (`<Link>`)
 
 ```tsx {2, 22} title="src/app/posts/[slug]/page.tsx"
 // Etc...
@@ -373,9 +373,9 @@ export default function Page({ params }: { params: { slug: string } }) {
 }
 ```
 
-That's it! Adding this line to our mdxComponents Object, which gets passed into our call to `<MDXContent>{:tsx}`, tells MDX to transform all of the `<a>{:html}` tags to `<Link>{:tsx}` React components.
+That's it! Adding this line to our mdxComponents Object, which gets passed into our call to `<MDXContent>`, tells MDX to transform all of the `<a>` tags to `<Link>` React components.
 
-Using the same method with an `<img>{:html}` tag, we could easily format all of our images the exact same way. 
+Using the same method with an `<img>` tag, we could easily format all of our images the exact same way. 
 
 ## Hosting
 
