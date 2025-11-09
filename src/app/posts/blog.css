@@ -13,7 +13,7 @@
 }
 
 .blog-layout-container ul.nav-links {
-  font-size: 16px;
+  font-size: 18px;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -30,9 +30,39 @@
 
 .secondary-text {
   opacity: 70%;
-  font-size: 90%;
 }
 
 .blog-layout-container h1 {
   margin: 0;
+}
+
+/* Code formatting */
+.blog-layout-container code, .blog-layout-container pre {
+  font-family: Courier, monospace;
+  font-size: 15px;
+  max-width: 100%;
+  overflow: auto;
+  background-color: #f0f0f0;
+}
+
+.blog-layout-container code {
+  padding: 2px 4px;
+  margin: 0px 2px;
+  border-radius: 3px;
+  display: inline;
+  line-break: break-word;
+  line-height: inherit;
+}
+
+.blog-layout-container pre {
+  padding: 12px;
+  border-radius: 6px;
+  line-height: 1.2;
+}
+
+.blog-layout-container pre code {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  font-size: 13px;
 }

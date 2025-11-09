@@ -28,8 +28,6 @@
     "next-contentlayer2": "^0.5.8",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "rehype": "^13.0.2",
-    "rehype-pretty-code": "0.14.1",
     "rss": "^1.2.2",
     "shiki": "^3.3.0",
     "typescript": "5.8.3"
