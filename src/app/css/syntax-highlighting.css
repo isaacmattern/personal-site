@@ -3,22 +3,14 @@
 [data-theme*='light'],
 [data-theme*='light'] span {
   color: var(--shiki-light);
-  /* background-color: var(--shiki-light-bg); */
 }
- 
-/* @media (prefers-color-scheme: dark) {
-  [data-theme*='dark'],
-  [data-theme*='dark'] span {
-    color: var(--shiki-dark);
-    background-color: var(--shiki-dark-bg);
-  }
-} */
-
-/* */
 
 :root {
   --border-radius: 0.5rem;
-  --border-style: 1px solid rgb(64, 64, 64);
+  --border-style: 1px solid rgb(110, 110, 110);
+  --font-color: rgb(66, 65, 65);
+
+  --primary-blue-on-code-rgb: 0, 140, 255;
 }
 
 pre, code {
@@ -28,13 +20,6 @@ pre, code {
   margin: 0;
 }
 
-/* @media (min-width: 576px) {
-  pre, code {
-    font-size: inherit;
-    line-height: 1.35rem;
-  }
-} */
-
 figure {
   margin: 0;
 }
@@ -42,7 +27,6 @@ figure {
 figure[data-rehype-pretty-code-figure] {
   overflow: hidden;
  
-  /* stylist preferences */
   background-color: rgb(var(--code-bg-color-rgb));
   border-radius: var(--border-radius);
   border: var(--border-style);
@@ -51,7 +35,6 @@ figure[data-rehype-pretty-code-figure] {
 figure[data-rehype-pretty-code-figure] pre {
   overflow-x: auto;
  
-  /* stylist preferences */
   padding-top: 0.4rem;
   padding-bottom: 0.4rem;
   font-size: 13px;
@@ -62,13 +45,6 @@ figure[data-rehype-pretty-code-figure] pre {
   border-bottom-right-radius: var(--border-radius);
 }
 
-/* @media (min-width: 576px) {
-  figure[data-rehype-pretty-code-figure] pre {
-    font-size: 0.875rem;
-    line-height: 1.5rem;
-  }
-} */
-
 figure[data-rehype-pretty-code-figure] figcaption {
   /* stylistic preferences */
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
@@ -78,6 +54,7 @@ figure[data-rehype-pretty-code-figure] figcaption {
   padding: 6px 8px;
   font-size: 13px;
   line-height: 1rem;
+  color: var(--font-color);
 }
 
 figure[data-rehype-pretty-code-figure] > pre > code > span {
@@ -91,7 +68,7 @@ figure[data-rehype-pretty-code-figure] > pre > code > span {
  
 figure[data-rehype-pretty-code-figure] .line--highlighted {
   border-left-color: rgb(var(--primary-blue-on-code-rgb));
-  background-color: rgba(var(--primary-blue-on-code-rgb), 0.16);
+  background-color: rgba(var(--primary-blue-on-code-rgb), 0.13);
 }
 
 figure[data-rehype-pretty-code-figure] code {
@@ -115,13 +92,27 @@ code[data-line-numbers] .line::before {
 }
 
 /* Inline code */
-span[data-rehype-pretty-code-figure] code {
+span[data-rehype-pretty-code-figure] code > span {
+  height: min-content;
   background-color: rgb(var(--code-bg-color-rgb));
   border: var(--border-style);
   font-size: 13px;
+  line-height: 2;
+  color: var(--font-color);
 
   padding: 1.5px 5px;
   border-radius: 6px;
 
-  margin: 0px 4px;
+  margin: 8px 0px;
+}
+
+span[data-rehype-pretty-code-figure] code::before {
+  content: " ";
+  width: 2px;
+  display: inline-block;
+}
+span[data-rehype-pretty-code-figure] code::after {
+  content: " ";
+  width: 2px;
+  display: inline-block;
 }

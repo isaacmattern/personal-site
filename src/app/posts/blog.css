@@ -1,9 +1,9 @@
 .blog-layout-container {
-  font-family: 'Georgia', Times, serif;
+  font-family: 'Libertinus Serif', serif;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 1.6;
-  max-width: 600px;
+  font-size: 18px;
+  line-height: 1.5;
+  max-width: 548px;
   margin: 32px auto 64px;
   padding: 0 16px;
 }
