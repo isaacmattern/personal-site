@@ -1,4 +1,4 @@
-import "./PausableSaladTossGif.css";
+import "./PausableSaladTossGif.scss";
 
 export function PausableSaladTossGif() {
   return <div className="salad-toss-sprite"></div>;

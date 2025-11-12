@@ -1,5 +1,5 @@
 import Link from "next/link";
-import "./HomepageLink.css";
+import "./HomepageLink.scss";
 
 export default function HomepageLink({
   href,

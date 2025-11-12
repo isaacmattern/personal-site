@@ -1,5 +1,5 @@
 import Image from "next/image";
-import "./CaptionableImage.css";
+import "./CaptionableImage.scss";
 
 interface CaptionableImagePropsType {
   src: string;

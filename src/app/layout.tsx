@@ -1,5 +1,5 @@
-import "./css/globals.css";
-import "./css/lists.css";
+import "./css/globals.scss";
+import "./css/lists.scss";
 
 import type { Metadata } from "next";
 

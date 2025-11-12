@@ -1,4 +1,4 @@
-import "./css/not-found.css";
+import "./css/not-found.scss";
 import Image from "next/image";
 
 export default function NotFound() {

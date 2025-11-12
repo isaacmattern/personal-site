@@ -1,5 +1,5 @@
 import { personalProjects } from "@/lib/personalProjects";
-import "./portfolio.css";
+import "./portfolio.scss";
 import Link from "next/link";
 import parse from "html-react-parser";
 

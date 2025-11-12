@@ -1,6 +1,6 @@
 import { Post, Recipe } from "contentlayer/generated";
 import Link from "next/link";
-import "./PostCard.css";
+import "./PostCard.scss";
 
 export default function PostCard(content: Post | Recipe) {
   return (

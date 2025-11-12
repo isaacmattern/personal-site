@@ -1,4 +1,4 @@
-import "./recipe.css";
+import "./recipe.scss";
 import Link from "next/link";
 
 export default function Layout({ children }: { children: React.ReactNode }) {

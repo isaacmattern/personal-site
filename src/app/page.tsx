@@ -1,5 +1,5 @@
 // app/page.tsx
-import "./css/home.css";
+import "./css/home.scss";
 import HomepageLink from "@/components/HomepageLinks/HomepageLink";
 import NoAIWebring from "@/components/NoAIWebring/NoAIWebring";
 import Image from "next/image";
