@@ -1,12 +1,17 @@
 // app/page.tsx
-import { compareDesc } from "date-fns";
-import { allPosts } from "contentlayer/generated";
-import PostCard from "@/components/PostCard/PostCard";
+import { compareDesc } from 'date-fns'
+import { allPosts } from 'contentlayer/generated'
+import PostCard from '@/components/PostCard/PostCard'
+
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Posts | Isaac Mattern',
+  description: "Isaac Mattern's Blog",
+}
 
 export default function BlogIndex() {
-  const posts = allPosts.sort((a, b) =>
-    compareDesc(new Date(a.date), new Date(b.date))
-  );
+  const posts = allPosts.sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)))
 
   return (
     <div>
@@ -15,5 +20,5 @@ export default function BlogIndex() {
         <PostCard key={idx} {...post} />
       ))}
     </div>
-  );
+  )
 }

@@ -1,22 +1,23 @@
-@import url('./fonts.css');
+@use './fonts.scss';
 
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
+html,
 body {
-  font-size: 18px;
-  line-height: 1.4;
-
-  font-family: 'Times New Roman', Times, serif;
-  background-color: white;
-  background-repeat: repeat;
-  background-position: top left;
-  background-attachment: scroll;
-
   margin: 0;
   padding: 0;
+
+  body {
+    font-size: 18px;
+    line-height: 1.4;
+
+    font-family: 'Times New Roman', Times, serif;
+    background-color: white;
+    background-repeat: repeat;
+    background-position: top left;
+    background-attachment: scroll;
+
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .bg-homepage {
@@ -27,7 +28,7 @@ body {
   padding-top: 0.01px;
 }
 
-.bg-portfolio {
+.bg-projects {
   font-family: 'ms-dos-ank24', 'Times New Roman', Times, serif;
   background-image: url('/bg-images/clouds.gif');
   min-height: 100vh;
@@ -49,6 +50,12 @@ body {
 .bg-about {
   font-family: 'ms-dos-ank24', sans-serif;
   background-image: url('/bg-images/bluegreen-fabric.gif');
+  min-height: 100vh;
+  padding-top: 0.01px;
+}
+
+.bg-friends {
+  background-image: url('/bg-images/orange-textured.gif');
   min-height: 100vh;
   padding-top: 0.01px;
 }

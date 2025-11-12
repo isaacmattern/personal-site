@@ -1,0 +1,246 @@
+/* Global */
+.homepage-single-link-container {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+
+  .label {
+    font-size: 26px;
+    margin: 0;
+    font-weight: normal;
+  }
+
+  &:hover {
+    .label {
+      -webkit-filter: drop-shadow(1px 1px 0 var(--homepage-link-text-hover-outline-color))
+        drop-shadow(-1px 1px 0 var(--homepage-link-text-hover-outline-color))
+        drop-shadow(1px -1px 0 var(--homepage-link-text-hover-outline-color))
+        drop-shadow(-1px -1px 0 var(--homepage-link-text-hover-outline-color));
+      filter: drop-shadow(1px 1px 0 var(--homepage-link-text-hover-outline-color))
+        drop-shadow(-1px 1px 0 var(--homepage-link-text-hover-outline-color))
+        drop-shadow(1px -1px 0 var(--homepage-link-text-hover-outline-color))
+        drop-shadow(-1px -1px 0 var(--homepage-link-text-hover-outline-color));
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    gap: 20px;
+    flex-direction: row;
+  }
+}
+
+/* Projects */
+.projects-sprite {
+  min-width: 100px;
+  min-height: 98px;
+  background-image: url('/animations/rotating-computer.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.projects-sprite-container .projects-sprite {
+  animation: play-projects 2.2s steps(20) infinite;
+  animation-timing-function: steps(20, end);
+  animation-play-state: paused;
+}
+
+.projects-sprite-container:hover .projects-sprite {
+  animation-play-state: running;
+  -webkit-filter: drop-shadow(1px 1px 0 var(--homepage-text-color))
+    drop-shadow(-1px 1px 0 var(--homepage-text-color))
+    drop-shadow(1px -1px 0 var(--homepage-text-color))
+    drop-shadow(-1px -1px 0 var(--homepage-text-color));
+  filter: drop-shadow(1px 1px 0 var(--homepage-text-color))
+    drop-shadow(-1px 1px 0 var(--homepage-text-color))
+    drop-shadow(1px -1px 0 var(--homepage-text-color))
+    drop-shadow(-1px -1px 0 var(--homepage-text-color));
+}
+
+@keyframes play-projects {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -1960px;
+  }
+}
+
+/* About */
+.about-sprite {
+  min-width: 54px;
+  min-height: 112px;
+  background-image: url('/animations/man-walking.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.about-sprite-container .about-sprite {
+  animation: play-about 2.5s steps(30) infinite;
+  animation-timing-function: steps(30, end);
+  animation-play-state: paused;
+}
+
+.about-sprite-container:hover .about-sprite {
+  animation-play-state: running;
+  -webkit-filter: drop-shadow(1px 1px 0 white) drop-shadow(-1px 1px 0 white)
+    drop-shadow(1px -1px 0 white) drop-shadow(-1px -1px 0 white);
+  filter: drop-shadow(1px 1px 0 white) drop-shadow(-1px 1px 0 white) drop-shadow(1px -1px 0 white)
+    drop-shadow(-1px -1px 0 white);
+}
+
+@keyframes play-about {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -3360px;
+  }
+}
+
+/* Blog */
+.blog-sprite {
+  min-width: 105px;
+  min-height: 93px;
+  background-image: url('/animations/open-journal.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.blog-sprite-container .blog-sprite {
+  animation: play-blog 1s steps(8) infinite;
+  animation-timing-function: steps(8, end);
+  animation-play-state: paused;
+}
+
+.blog-sprite-container:hover .blog-sprite {
+  animation-play-state: running;
+  -webkit-filter: drop-shadow(1px 1px 0 var(--homepage-text-color))
+    drop-shadow(-1px 1px 0 var(--homepage-text-color))
+    drop-shadow(1px -1px 0 var(--homepage-text-color))
+    drop-shadow(-1px -1px 0 var(--homepage-text-color));
+  filter: drop-shadow(1px 1px 0 var(--homepage-text-color))
+    drop-shadow(-1px 1px 0 var(--homepage-text-color))
+    drop-shadow(1px -1px 0 var(--homepage-text-color))
+    drop-shadow(-1px -1px 0 var(--homepage-text-color));
+}
+
+@keyframes play-blog {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -744px;
+  }
+}
+
+/* Recipes */
+.recipes-sprite {
+  min-width: 87px;
+  min-height: 124px;
+  background-image: url('/animations/milk-cookies.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.recipes-sprite-container .recipes-sprite {
+  animation: play-recipes 1s steps(5) infinite;
+  animation-timing-function: steps(5, end);
+  animation-play-state: paused;
+}
+
+.recipes-sprite-container:hover .recipes-sprite {
+  animation-play-state: running;
+  -webkit-filter: drop-shadow(1px 1px 0 var(--homepage-text-color))
+    drop-shadow(-1px 1px 0 var(--homepage-text-color))
+    drop-shadow(1px -1px 0 var(--homepage-text-color))
+    drop-shadow(-1px -1px 0 var(--homepage-text-color));
+  filter: drop-shadow(1px 1px 0 var(--homepage-text-color))
+    drop-shadow(-1px 1px 0 var(--homepage-text-color))
+    drop-shadow(1px -1px 0 var(--homepage-text-color))
+    drop-shadow(-1px -1px 0 var(--homepage-text-color));
+}
+
+@keyframes play-recipes {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -620px;
+  }
+}
+
+/* Music */
+.music-sprite {
+  min-width: 99px;
+  min-height: 81px;
+  background-image: url('/animations/speakers.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.music-sprite-container .music-sprite {
+  animation: play-music 1s steps(8) infinite;
+  animation-timing-function: steps(8, end);
+  animation-play-state: paused;
+}
+
+.music-sprite-container:hover .music-sprite {
+  animation-play-state: running;
+  -webkit-filter: drop-shadow(1px 1px 0 var(--homepage-text-color))
+    drop-shadow(-1px 1px 0 var(--homepage-text-color))
+    drop-shadow(1px -1px 0 var(--homepage-text-color))
+    drop-shadow(-1px -1px 0 var(--homepage-text-color));
+  filter: drop-shadow(1px 1px 0 var(--homepage-text-color))
+    drop-shadow(-1px 1px 0 var(--homepage-text-color))
+    drop-shadow(1px -1px 0 var(--homepage-text-color))
+    drop-shadow(-1px -1px 0 var(--homepage-text-color));
+}
+
+@keyframes play-music {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -648px;
+  }
+}
+
+/* Wizard (Friends) */
+.wizard-sprite {
+  min-width: 81px;
+  min-height: 105px;
+  background-image: url('/animations/wizard.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.wizard-sprite-container .wizard-sprite {
+  animation: play-wizard 2s steps(14) infinite;
+  animation-timing-function: steps(14, end);
+  animation-play-state: paused;
+}
+
+.wizard-sprite-container:hover .wizard-sprite {
+  animation-play-state: running;
+  -webkit-filter: drop-shadow(1px 1px 0 var(--homepage-text-color))
+    drop-shadow(-1px 1px 0 var(--homepage-text-color))
+    drop-shadow(1px -1px 0 var(--homepage-text-color))
+    drop-shadow(-1px -1px 0 var(--homepage-text-color));
+  filter: drop-shadow(1px 1px 0 var(--homepage-text-color))
+    drop-shadow(-1px 1px 0 var(--homepage-text-color))
+    drop-shadow(1px -1px 0 var(--homepage-text-color))
+    drop-shadow(-1px -1px 0 var(--homepage-text-color));
+}
+
+@keyframes play-wizard {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -1470px;
+  }
+}

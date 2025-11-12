@@ -1,8 +1,8 @@
 // app/page.tsx
-import "./css/home.css";
-import HomepageLink from "@/components/HomepageLinks/HomepageLink";
-import NoAIWebring from "@/components/NoAIWebring/NoAIWebring";
-import Image from "next/image";
+import './css/home.scss'
+import HomepageLink from '@/components/HomepageLinks/HomepageLink'
+import NoAIWebring from '@/components/NoAIWebring/NoAIWebring'
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -10,44 +10,40 @@ export default function Home() {
       <div className="page-container">
         <main className="home-main-container">
           <div className="main-site-header">
+            {/* <div>
+              <Image
+                draggable={false}
+                alt="Surfing computer"
+                src={'/gifs/smoking-heart.gif'}
+                width={58}
+                height={68}
+                unoptimized
+              />
+              </div> */}
             <h1>{"Isaac's Website"}</h1>
             <div>
               <Image
                 draggable={false}
                 alt="Surfing computer"
-                src={"/gifs/surfing-computer.gif"}
+                src={'/gifs/surfing-computer.gif'}
                 width={84}
                 height={68}
+                unoptimized
               />
             </div>
           </div>
           <p className="welcome-message">Happy Holidays!</p>
           <div className="homepage-link-wrapper">
+            <HomepageLink href={'/projects'} spriteIdentifier={'projects'} label={'Projects'} />
+            <HomepageLink href={'/about'} spriteIdentifier={'about'} label={'About'} />
+            <HomepageLink href={'/posts'} spriteIdentifier={'blog'} label={'Blog'} />
+            <HomepageLink href={'/recipes'} spriteIdentifier={'recipes'} label={'Recipes'} />
             <HomepageLink
-              href={"/portfolio"}
-              spriteIdentifier={"portfolio"}
-              label={"Portfolio"}
+              href={'https://music.isaacmattern.com'}
+              spriteIdentifier={'music'}
+              label={'Music'}
             />
-            <HomepageLink
-              href={"/about"}
-              spriteIdentifier={"about"}
-              label={"About"}
-            />
-            <HomepageLink
-              href={"/posts"}
-              spriteIdentifier={"blog"}
-              label={"Blog"}
-            />
-            <HomepageLink
-              href={"/recipes"}
-              spriteIdentifier={"recipes"}
-              label={"Recipes"}
-            />
-            <HomepageLink
-              href={"https://music.isaacmattern.com"}
-              spriteIdentifier={"music"}
-              label={"Music"}
-            />
+            <HomepageLink href="/friends" spriteIdentifier="wizard" label="Friends" />
           </div>
           <div className="webring-container">
             <div>
@@ -60,7 +56,7 @@ export default function Home() {
             <Image
               draggable={false}
               alt="This site contains 100% recycled material"
-              src={"/buttons/recycled.png"}
+              src={'/buttons/recycled.png'}
               width={210}
               height={42}
             />
@@ -69,7 +65,7 @@ export default function Home() {
             <Image
               draggable={false}
               alt="My birthstone is a coffee bean"
-              src={"/buttons/birthstone_coffeebean.png"}
+              src={'/buttons/birthstone_coffeebean.png'}
               width={210}
               height={42}
             />
@@ -78,7 +74,7 @@ export default function Home() {
             <Image
               draggable={false}
               alt="I put the toast in toaster, then I take it out and eat it"
-              src={"/buttons/toast.png"}
+              src={'/buttons/toast.png'}
               width={210}
               height={42}
             />
@@ -87,7 +83,8 @@ export default function Home() {
             <Image
               draggable={false}
               alt="I miss using pictochat"
-              src={"/buttons/pictochat.gif"}
+              src={'/buttons/pictochat.gif'}
+              unoptimized
               width={88}
               height={31}
             />
@@ -96,7 +93,7 @@ export default function Home() {
             <Image
               draggable={false}
               alt="HTML decorative banner"
-              src={"/buttons/html.gif"}
+              src={'/buttons/html.gif'}
               width={88}
               height={31}
             />
@@ -105,7 +102,7 @@ export default function Home() {
             <Image
               draggable={false}
               alt="He/Him pronouns banner"
-              src={"/buttons/hehim.png"}
+              src={'/buttons/hehim.png'}
               width={88}
               height={31}
             />
@@ -114,7 +111,7 @@ export default function Home() {
             <Image
               draggable={false}
               alt="No cookies banner - this site is cookies free"
-              src={"/buttons/nocookie.gif"}
+              src={'/buttons/nocookie.gif'}
               width={88}
               height={31}
             />
@@ -123,7 +120,7 @@ export default function Home() {
             <Image
               draggable={false}
               alt="Make a website"
-              src={"/buttons/makeawebsite.png"}
+              src={'/buttons/makeawebsite.png'}
               width={88}
               height={31}
             />
@@ -132,7 +129,7 @@ export default function Home() {
             <Image
               draggable={false}
               alt="Web Design"
-              src={"/buttons/webdesign.png"}
+              src={'/buttons/webdesign.png'}
               width={88}
               height={31}
             />
@@ -140,5 +137,5 @@ export default function Home() {
         </footer>
       </div>
     </body>
-  );
+  )
 }

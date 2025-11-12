@@ -1,5 +1,5 @@
-import "./blog.css";
-import Link from "next/link";
+import './blog.scss'
+import Link from 'next/link'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -21,5 +21,5 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <main>{children}</main>
       </div>
     </body>
-  );
+  )
 }

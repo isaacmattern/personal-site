@@ -29,9 +29,8 @@ export const Recipe = defineDocumentType(() => ({
   },
 }))
 
-export default makeSource({ 
+export default makeSource({
   contentDirPath: 'src',
   documentTypes: [Post, Recipe],
-  mdx: {
-  },
+  mdx: {},
 })
