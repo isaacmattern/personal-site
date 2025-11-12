@@ -5,22 +5,42 @@
   max-width: 680px;
   margin: 32px auto 64px;
   padding: 0;
-}
 
-.recipe-layout-container nav {
-  max-width: 440px;
-  margin: auto;
-  margin-bottom: 48px;
-}
+  nav {
+    max-width: 440px;
+    margin: auto;
+    margin-bottom: 48px;
+  }
 
-.recipe-layout-container ul.nav-links {
-  padding: 0;
-  list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 12px 48px;
+  ul.nav-links {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px 48px;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  h1,
+  h2, 
+  h3, 
+  h4, 
+  h5, 
+  h6 {
+    font-weight: 400;
+  }
+
+  @media screen and (min-width: 600px) {
+    font-size: 20px;
+    .recipe-wrapper {
+      padding: 24px;
+    }
+  }
 }
 
 .recipe-list {
@@ -52,27 +72,4 @@
   margin-top: 48px;
   padding: 16px;
   margin-bottom: 32px;
-}
-
-.recipe-layout-container h1 {
-  margin: 0;
-}
-
-/* todo - should probably start using sass tbh */
-.recipe-layout-container h1,
-.recipe-layout-container h2, 
-.recipe-layout-container h3, 
-.recipe-layout-container h4, 
-.recipe-layout-container h5, 
-.recipe-layout-container h6 {
-  font-weight: 400;
-}
-
-@media screen and (min-width: 600px) {
-  .recipe-layout-container {
-    font-size: 20px;
-  }
-  .recipe-wrapper {
-    padding: 24px;
-  }
 }

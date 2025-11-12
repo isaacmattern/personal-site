@@ -2,20 +2,20 @@
   margin-top: 24px;
   margin: auto;
   max-width: min(480px, 100%);
-}
 
-.captionable-image figure {
-  margin: 24px auto;
-}
+  figure {
+    margin: 24px auto;
 
-.captionable-image figure img {
-  max-width: min(480px, 100%);
-  margin: auto;
-  height: auto;
-  display: block;
-}
+    img {
+      max-width: min(480px, 100%);
+      margin: auto;
+      height: auto;
+      display: block;
+    }
+  }
 
-.captionable-image figcaption {
-  text-align: center;
-  margin-top: 4px;
+  figcaption {
+    text-align: center;
+    margin-top: 4px;
+  }
 }

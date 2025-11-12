@@ -1,3 +1,4 @@
+// ...existing code...
 .salad-toss-sprite {
   margin: auto;
   width: 120px; 
@@ -10,10 +11,10 @@
   animation: play-salad 1.0s steps(8) infinite;
   animation-timing-function: steps(8, end);
   animation-play-state: paused; 
-}
 
-.salad-toss-sprite:hover {
-  animation-play-state: running;
+  &:hover {
+    animation-play-state: running;
+  }
 }
 
 .salad-toss-sprite-with-outline {
@@ -28,18 +29,18 @@
   animation: play-salad 1.0s steps(8) infinite;
   animation-timing-function: steps(8, end);
   animation-play-state: paused; 
-}
 
-.salad-toss-sprite-with-outline:hover {
-  animation-play-state: running;
-  -webkit-filter: drop-shadow(1px 1px 0 black)
-  drop-shadow(-1px 1px 0 black)
-  drop-shadow(1px -1px 0 black)
-  drop-shadow(-1px -1px 0 black);
-  filter: drop-shadow(1px 1px 0 black)
-  drop-shadow(-1px 1px 0 black)
-  drop-shadow(1px -1px 0 black)
-  drop-shadow(-1px -1px 0 black);
+  &:hover {
+    animation-play-state: running;
+    -webkit-filter: drop-shadow(1px 1px 0 black)
+      drop-shadow(-1px 1px 0 black)
+      drop-shadow(1px -1px 0 black)
+      drop-shadow(-1px -1px 0 black);
+    filter: drop-shadow(1px 1px 0 black)
+      drop-shadow(-1px 1px 0 black)
+      drop-shadow(1px -1px 0 black)
+      drop-shadow(-1px -1px 0 black);
+  }
 }
 
 .salad-toss-sprite-with-permanent-outline {

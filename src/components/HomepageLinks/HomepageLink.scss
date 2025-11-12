@@ -1,42 +1,40 @@
+
 /* Global */
 .homepage-single-link-container {
   font-size: 160%;
   color: inherit;
   text-decoration: none;
-
   display: flex;
   flex-direction: column;
   gap: 16px;
   justify-content: center;
   align-items: center;
-}
 
-@media screen and (max-width: 500px) {
-  .homepage-single-link-container {
+  .label {
+    font-size: 28px;
+    margin: 0;
+    font-weight: normal;
+  }
+
+  &:hover {
+    .label {
+      font-size: 28px;
+      font-weight: normal;
+      -webkit-filter: drop-shadow(1px 1px 0 var(--homepage-link-text-hover-outline-color))
+        drop-shadow(-1px 1px 0 var(--homepage-link-text-hover-outline-color))
+        drop-shadow(1px -1px 0 var(--homepage-link-text-hover-outline-color))
+        drop-shadow(-1px -1px 0 var(--homepage-link-text-hover-outline-color));
+      filter: drop-shadow(1px 1px 0 var(--homepage-link-text-hover-outline-color))
+        drop-shadow(-1px 1px 0 var(--homepage-link-text-hover-outline-color))
+        drop-shadow(1px -1px 0 var(--homepage-link-text-hover-outline-color))
+        drop-shadow(-1px -1px 0 var(--homepage-link-text-hover-outline-color));
+    }
+  }
+
+  @media screen and (max-width: 500px) {
     gap: 16px;
     flex-direction: row;
   }
-}
-
-.homepage-single-link-container .label {
-  font-size: 28px;
-  margin: 0;
-  font-weight: normal;
-}
-
-.homepage-single-link-container:hover .label {
-  font-size: 28px;
-  font-weight: normal;
-
-  -webkit-filter: drop-shadow(1px 1px 0 var(--homepage-link-text-hover-outline-color))
-  drop-shadow(-1px 1px 0 var(--homepage-link-text-hover-outline-color))
-  drop-shadow(1px -1px 0 var(--homepage-link-text-hover-outline-color))
-  drop-shadow(-1px -1px 0 var(--homepage-link-text-hover-outline-color));
-
-  filter: drop-shadow(1px 1px 0 var(--homepage-link-text-hover-outline-color))
-  drop-shadow(-1px 1px 0 var(--homepage-link-text-hover-outline-color))
-  drop-shadow(1px -1px 0 var(--homepage-link-text-hover-outline-color))
-  drop-shadow(-1px -1px 0 var(--homepage-link-text-hover-outline-color));
 }
 
 /* Portfolio */

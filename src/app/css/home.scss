@@ -3,6 +3,7 @@
   --homepage-link-text-hover-outline-color: black;
 }
 
+
 .page-container {
   display: flex;
   flex-direction: column;
@@ -21,10 +22,10 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-}
 
-.main-site-header h1 {
-  margin: 0;
+  h1 {
+    margin: 0;
+  }
 }
 
 .welcome-message {

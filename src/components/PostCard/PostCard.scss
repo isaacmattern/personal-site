@@ -3,14 +3,14 @@
   display: flex;
   align-items: start;
   justify-content: start;
-}
 
-.postcard time {
-  min-width: 100px;
-  margin-right: 24px;
-  text-align: right;
-}
+  time {
+    min-width: 100px;
+    margin-right: 24px;
+    text-align: right;
+  }
 
-.postcard > * {
-  display: inline-block;
+  > * {
+    display: inline-block;
+  }
 }
