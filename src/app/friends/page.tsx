@@ -14,9 +14,9 @@ export default function Page() {
       <div className="friends-container">
         <h1>Friends</h1>
         <p>
-          As the internet grows full of fake and AI-generated content, it's important to verify
-          things made by real people! This page is a list of verified real people I know. They all
-          have cool websites - so check them out!
+          {
+            "As the internet grows full of fake and AI-generated content, it's important to visit sites made by real people, not tech companies! This page is a list of verified real people I know. They all have cool websites - so check them out!"
+          }
         </p>
         <p>
           {'If you know me in '}
