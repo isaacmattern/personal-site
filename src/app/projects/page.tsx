@@ -1,22 +1,22 @@
 import { personalProjects } from '@/lib/personalProjects'
-import './portfolio.scss'
+import './projects.scss'
 import Link from 'next/link'
 import parse from 'html-react-parser'
 
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Portfolio | Isaac Mattern',
-  description: "Isaac Mattern's Portfolio",
+  title: 'Projects | Isaac Mattern',
+  description: "Isaac Mattern's Projects",
 }
 
 export default function Page() {
   return (
-    <body className="bg-portfolio">
-      <main className="portfolio-page-container">
+    <body className="bg-projects">
+      <main className="projects-page-container">
         <div className="header-card">
           <div>
-            <h1>{'Portfolio'}</h1>
+            <h1>{'Projects'}</h1>
             <p>
               {
                 "Here are some cool projects that I've either done for fun in my free time or have completed for other people."

@@ -1,6 +1,5 @@
 /* Global */
 .homepage-single-link-container {
-  font-size: 160%;
   color: inherit;
   text-decoration: none;
   display: flex;
@@ -10,15 +9,13 @@
   align-items: center;
 
   .label {
-    font-size: 28px;
+    font-size: 26px;
     margin: 0;
     font-weight: normal;
   }
 
   &:hover {
     .label {
-      font-size: 28px;
-      font-weight: normal;
       -webkit-filter: drop-shadow(1px 1px 0 var(--homepage-link-text-hover-outline-color))
         drop-shadow(-1px 1px 0 var(--homepage-link-text-hover-outline-color))
         drop-shadow(1px -1px 0 var(--homepage-link-text-hover-outline-color))
@@ -31,13 +28,13 @@
   }
 
   @media screen and (max-width: 500px) {
-    gap: 16px;
+    gap: 20px;
     flex-direction: row;
   }
 }
 
-/* Portfolio */
-.portfolio-sprite {
+/* Projects */
+.projects-sprite {
   min-width: 100px;
   min-height: 98px;
   background-image: url('/animations/rotating-computer.png');
@@ -45,13 +42,13 @@
   background-position: 0 0;
 }
 
-.portfolio-sprite-container .portfolio-sprite {
-  animation: play-portfolio 2.2s steps(20) infinite;
+.projects-sprite-container .projects-sprite {
+  animation: play-projects 2.2s steps(20) infinite;
   animation-timing-function: steps(20, end);
   animation-play-state: paused;
 }
 
-.portfolio-sprite-container:hover .portfolio-sprite {
+.projects-sprite-container:hover .projects-sprite {
   animation-play-state: running;
   -webkit-filter: drop-shadow(1px 1px 0 var(--homepage-text-color))
     drop-shadow(-1px 1px 0 var(--homepage-text-color))
@@ -63,7 +60,7 @@
     drop-shadow(-1px -1px 0 var(--homepage-text-color));
 }
 
-@keyframes play-portfolio {
+@keyframes play-projects {
   from {
     background-position: 0 0;
   }
@@ -209,5 +206,41 @@
   }
   to {
     background-position: 0 -648px;
+  }
+}
+
+/* Wizard (Friends) */
+.wizard-sprite {
+  min-width: 81px;
+  min-height: 105px;
+  background-image: url('/animations/wizard.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.wizard-sprite-container .wizard-sprite {
+  animation: play-wizard 2s steps(14) infinite;
+  animation-timing-function: steps(14, end);
+  animation-play-state: paused;
+}
+
+.wizard-sprite-container:hover .wizard-sprite {
+  animation-play-state: running;
+  -webkit-filter: drop-shadow(1px 1px 0 var(--homepage-text-color))
+    drop-shadow(-1px 1px 0 var(--homepage-text-color))
+    drop-shadow(1px -1px 0 var(--homepage-text-color))
+    drop-shadow(-1px -1px 0 var(--homepage-text-color));
+  filter: drop-shadow(1px 1px 0 var(--homepage-text-color))
+    drop-shadow(-1px 1px 0 var(--homepage-text-color))
+    drop-shadow(1px -1px 0 var(--homepage-text-color))
+    drop-shadow(-1px -1px 0 var(--homepage-text-color));
+}
+
+@keyframes play-wizard {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -1470px;
   }
 }

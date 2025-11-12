@@ -10,7 +10,6 @@ export default function Home() {
       <div className="page-container">
         <main className="home-main-container">
           <div className="main-site-header">
-            <h1>{"Isaac's Website"}</h1>
             <div>
               <Image
                 draggable={false}
@@ -21,10 +20,21 @@ export default function Home() {
                 unoptimized
               />
             </div>
+            <h1>{"Isaac's Website"}</h1>
+            <div>
+              <Image
+                draggable={false}
+                alt="Surfing computer"
+                src={'/gifs/smoking-heart.gif'}
+                width={58}
+                height={68}
+                unoptimized
+              />
+            </div>
           </div>
           <p className="welcome-message">Happy Holidays!</p>
           <div className="homepage-link-wrapper">
-            <HomepageLink href={'/portfolio'} spriteIdentifier={'portfolio'} label={'Portfolio'} />
+            <HomepageLink href={'/projects'} spriteIdentifier={'projects'} label={'Projects'} />
             <HomepageLink href={'/about'} spriteIdentifier={'about'} label={'About'} />
             <HomepageLink href={'/posts'} spriteIdentifier={'blog'} label={'Blog'} />
             <HomepageLink href={'/recipes'} spriteIdentifier={'recipes'} label={'Recipes'} />
@@ -33,6 +43,7 @@ export default function Home() {
               spriteIdentifier={'music'}
               label={'Music'}
             />
+            <HomepageLink href="/friends" spriteIdentifier="wizard" label="Friends" />
           </div>
           <div className="webring-container">
             <div>
