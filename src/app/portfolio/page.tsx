@@ -3,6 +3,13 @@ import './portfolio.scss'
 import Link from 'next/link'
 import parse from 'html-react-parser'
 
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Portfolio | Isaac Mattern',
+  description: "Isaac Mattern's Portfolio",
+}
+
 export default function Page() {
   return (
     <body className="bg-portfolio">

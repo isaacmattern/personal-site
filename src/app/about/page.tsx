@@ -1,6 +1,13 @@
 import Link from 'next/link'
 import './about.scss'
 
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'About | Isaac Mattern',
+  description: "Isaac Mattern's About Page",
+}
+
 export default function Page() {
   return (
     <body className="bg-about">
