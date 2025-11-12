@@ -46,7 +46,7 @@ export default function Page() {
             </Link>
           </li>
           <li>
-            <Link href="https://radicaledward101.com" target="_blank">
+            <Link href="https://www.radicaledward101.com" target="_blank">
               Edward Modecki-Mellett
             </Link>
           </li>
