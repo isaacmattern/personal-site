@@ -1,4 +1,3 @@
-
 /* Global */
 .homepage-single-link-container {
   font-size: 160%;
@@ -39,8 +38,8 @@
 
 /* Portfolio */
 .portfolio-sprite {
-  min-width: 100px; 
-  min-height: 98px; 
+  min-width: 100px;
+  min-height: 98px;
   background-image: url('/animations/rotating-computer.png');
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -49,19 +48,19 @@
 .portfolio-sprite-container .portfolio-sprite {
   animation: play-portfolio 2.2s steps(20) infinite;
   animation-timing-function: steps(20, end);
-  animation-play-state: paused; 
+  animation-play-state: paused;
 }
 
 .portfolio-sprite-container:hover .portfolio-sprite {
   animation-play-state: running;
   -webkit-filter: drop-shadow(1px 1px 0 var(--homepage-text-color))
-  drop-shadow(-1px 1px 0 var(--homepage-text-color))
-  drop-shadow(1px -1px 0 var(--homepage-text-color))
-  drop-shadow(-1px -1px 0 var(--homepage-text-color));
+    drop-shadow(-1px 1px 0 var(--homepage-text-color))
+    drop-shadow(1px -1px 0 var(--homepage-text-color))
+    drop-shadow(-1px -1px 0 var(--homepage-text-color));
   filter: drop-shadow(1px 1px 0 var(--homepage-text-color))
-  drop-shadow(-1px 1px 0 var(--homepage-text-color))
-  drop-shadow(1px -1px 0 var(--homepage-text-color))
-  drop-shadow(-1px -1px 0 var(--homepage-text-color));
+    drop-shadow(-1px 1px 0 var(--homepage-text-color))
+    drop-shadow(1px -1px 0 var(--homepage-text-color))
+    drop-shadow(-1px -1px 0 var(--homepage-text-color));
 }
 
 @keyframes play-portfolio {
@@ -75,8 +74,8 @@
 
 /* About */
 .about-sprite {
-  min-width: 54px; 
-  min-height: 112px; 
+  min-width: 54px;
+  min-height: 112px;
   background-image: url('/animations/man-walking.png');
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -85,19 +84,15 @@
 .about-sprite-container .about-sprite {
   animation: play-about 2.5s steps(30) infinite;
   animation-timing-function: steps(30, end);
-  animation-play-state: paused; 
+  animation-play-state: paused;
 }
 
 .about-sprite-container:hover .about-sprite {
   animation-play-state: running;
-  -webkit-filter: drop-shadow(1px 1px 0 white)
-  drop-shadow(-1px 1px 0 white)
-  drop-shadow(1px -1px 0 white)
-  drop-shadow(-1px -1px 0 white);
-  filter: drop-shadow(1px 1px 0 white)
-  drop-shadow(-1px 1px 0 white)
-  drop-shadow(1px -1px 0 white)
-  drop-shadow(-1px -1px 0 white);
+  -webkit-filter: drop-shadow(1px 1px 0 white) drop-shadow(-1px 1px 0 white)
+    drop-shadow(1px -1px 0 white) drop-shadow(-1px -1px 0 white);
+  filter: drop-shadow(1px 1px 0 white) drop-shadow(-1px 1px 0 white) drop-shadow(1px -1px 0 white)
+    drop-shadow(-1px -1px 0 white);
 }
 
 @keyframes play-about {
@@ -109,32 +104,31 @@
   }
 }
 
-
 /* Blog */
 .blog-sprite {
-  min-width: 105px; 
-  min-height: 93px; 
+  min-width: 105px;
+  min-height: 93px;
   background-image: url('/animations/open-journal.png');
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
 .blog-sprite-container .blog-sprite {
-  animation: play-blog 1.0s steps(8) infinite;
+  animation: play-blog 1s steps(8) infinite;
   animation-timing-function: steps(8, end);
-  animation-play-state: paused; 
+  animation-play-state: paused;
 }
 
 .blog-sprite-container:hover .blog-sprite {
   animation-play-state: running;
   -webkit-filter: drop-shadow(1px 1px 0 var(--homepage-text-color))
-  drop-shadow(-1px 1px 0 var(--homepage-text-color))
-  drop-shadow(1px -1px 0 var(--homepage-text-color))
-  drop-shadow(-1px -1px 0 var(--homepage-text-color));
+    drop-shadow(-1px 1px 0 var(--homepage-text-color))
+    drop-shadow(1px -1px 0 var(--homepage-text-color))
+    drop-shadow(-1px -1px 0 var(--homepage-text-color));
   filter: drop-shadow(1px 1px 0 var(--homepage-text-color))
-  drop-shadow(-1px 1px 0 var(--homepage-text-color))
-  drop-shadow(1px -1px 0 var(--homepage-text-color))
-  drop-shadow(-1px -1px 0 var(--homepage-text-color));
+    drop-shadow(-1px 1px 0 var(--homepage-text-color))
+    drop-shadow(1px -1px 0 var(--homepage-text-color))
+    drop-shadow(-1px -1px 0 var(--homepage-text-color));
 }
 
 @keyframes play-blog {
@@ -148,29 +142,29 @@
 
 /* Recipes */
 .recipes-sprite {
-  min-width: 87px; 
-  min-height: 124px; 
+  min-width: 87px;
+  min-height: 124px;
   background-image: url('/animations/milk-cookies.png');
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
 .recipes-sprite-container .recipes-sprite {
-  animation: play-recipes 1.0s steps(5) infinite;
+  animation: play-recipes 1s steps(5) infinite;
   animation-timing-function: steps(5, end);
-  animation-play-state: paused; 
+  animation-play-state: paused;
 }
 
 .recipes-sprite-container:hover .recipes-sprite {
   animation-play-state: running;
   -webkit-filter: drop-shadow(1px 1px 0 var(--homepage-text-color))
-  drop-shadow(-1px 1px 0 var(--homepage-text-color))
-  drop-shadow(1px -1px 0 var(--homepage-text-color))
-  drop-shadow(-1px -1px 0 var(--homepage-text-color));
+    drop-shadow(-1px 1px 0 var(--homepage-text-color))
+    drop-shadow(1px -1px 0 var(--homepage-text-color))
+    drop-shadow(-1px -1px 0 var(--homepage-text-color));
   filter: drop-shadow(1px 1px 0 var(--homepage-text-color))
-  drop-shadow(-1px 1px 0 var(--homepage-text-color))
-  drop-shadow(1px -1px 0 var(--homepage-text-color))
-  drop-shadow(-1px -1px 0 var(--homepage-text-color));
+    drop-shadow(-1px 1px 0 var(--homepage-text-color))
+    drop-shadow(1px -1px 0 var(--homepage-text-color))
+    drop-shadow(-1px -1px 0 var(--homepage-text-color));
 }
 
 @keyframes play-recipes {
@@ -184,7 +178,7 @@
 
 /* Music */
 .music-sprite {
-  min-width: 99px; 
+  min-width: 99px;
   min-height: 81px;
   background-image: url('/animations/speakers.png');
   background-repeat: no-repeat;
@@ -192,21 +186,21 @@
 }
 
 .music-sprite-container .music-sprite {
-  animation: play-music 1.0s steps(8) infinite;
+  animation: play-music 1s steps(8) infinite;
   animation-timing-function: steps(8, end);
-  animation-play-state: paused; 
+  animation-play-state: paused;
 }
 
 .music-sprite-container:hover .music-sprite {
   animation-play-state: running;
   -webkit-filter: drop-shadow(1px 1px 0 var(--homepage-text-color))
-  drop-shadow(-1px 1px 0 var(--homepage-text-color))
-  drop-shadow(1px -1px 0 var(--homepage-text-color))
-  drop-shadow(-1px -1px 0 var(--homepage-text-color));
+    drop-shadow(-1px 1px 0 var(--homepage-text-color))
+    drop-shadow(1px -1px 0 var(--homepage-text-color))
+    drop-shadow(-1px -1px 0 var(--homepage-text-color));
   filter: drop-shadow(1px 1px 0 var(--homepage-text-color))
-  drop-shadow(-1px 1px 0 var(--homepage-text-color))
-  drop-shadow(1px -1px 0 var(--homepage-text-color))
-  drop-shadow(-1px -1px 0 var(--homepage-text-color));
+    drop-shadow(-1px 1px 0 var(--homepage-text-color))
+    drop-shadow(1px -1px 0 var(--homepage-text-color))
+    drop-shadow(-1px -1px 0 var(--homepage-text-color));
 }
 
 @keyframes play-music {

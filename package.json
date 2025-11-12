@@ -6,7 +6,8 @@
     "dev": "contentlayer2 dev & next dev",
     "build": "contentlayer2 build && next build && node ./generate-rss.mjs",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier": "prettier --write ."
   },
   "dependencies": {
     "@mdx-js/esbuild": "^3.1.0",
@@ -33,6 +34,7 @@
   },
   "devDependencies": {
     "eslint-plugin-mdx": "^3.4.1",
+    "prettier": "^3.6.2",
     "sass": "^1.94.0"
   }
 }

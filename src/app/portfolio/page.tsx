@@ -1,7 +1,7 @@
-import { personalProjects } from "@/lib/personalProjects";
-import "./portfolio.scss";
-import Link from "next/link";
-import parse from "html-react-parser";
+import { personalProjects } from '@/lib/personalProjects'
+import './portfolio.scss'
+import Link from 'next/link'
+import parse from 'html-react-parser'
 
 export default function Page() {
   return (
@@ -9,7 +9,7 @@ export default function Page() {
       <main className="portfolio-page-container">
         <div className="header-card">
           <div>
-            <h1>{"Portfolio"}</h1>
+            <h1>{'Portfolio'}</h1>
             <p>
               {
                 "Here are some cool projects that I've either done for fun in my free time or have completed for other people."
@@ -29,10 +29,10 @@ export default function Page() {
                 </h2>
                 <p>{parse(project.description)}</p>
               </div>
-            );
+            )
           })}
         </div>
       </main>
     </body>
-  );
+  )
 }

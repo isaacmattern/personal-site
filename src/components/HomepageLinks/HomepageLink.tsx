@@ -1,14 +1,14 @@
-import Link from "next/link";
-import "./HomepageLink.scss";
+import Link from 'next/link'
+import './HomepageLink.scss'
 
 export default function HomepageLink({
   href,
   spriteIdentifier,
   label,
 }: {
-  href: string;
-  spriteIdentifier: string;
-  label: string;
+  href: string
+  spriteIdentifier: string
+  label: string
 }) {
   return (
     <Link
@@ -18,5 +18,5 @@ export default function HomepageLink({
       <div className={`${spriteIdentifier}-sprite`}></div>
       <h1 className="label">{label}</h1>
     </Link>
-  );
+  )
 }
