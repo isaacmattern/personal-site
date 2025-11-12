@@ -18,6 +18,7 @@ export default function Home() {
                 src={"/gifs/surfing-computer.gif"}
                 width={84}
                 height={68}
+                unoptimized
               />
             </div>
           </div>
@@ -88,6 +89,7 @@ export default function Home() {
               draggable={false}
               alt="I miss using pictochat"
               src={"/buttons/pictochat.gif"}
+              unoptimized
               width={88}
               height={31}
             />
