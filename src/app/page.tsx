@@ -10,23 +10,23 @@ export default function Home() {
       <div className="page-container">
         <main className="home-main-container">
           <div className="main-site-header">
+            {/* <div>
+              <Image
+                draggable={false}
+                alt="Surfing computer"
+                src={'/gifs/smoking-heart.gif'}
+                width={58}
+                height={68}
+                unoptimized
+              />
+              </div> */}
+            <h1>{"Isaac's Website"}</h1>
             <div>
               <Image
                 draggable={false}
                 alt="Surfing computer"
                 src={'/gifs/surfing-computer.gif'}
                 width={84}
-                height={68}
-                unoptimized
-              />
-            </div>
-            <h1>{"Isaac's Website"}</h1>
-            <div>
-              <Image
-                draggable={false}
-                alt="Surfing computer"
-                src={'/gifs/smoking-heart.gif'}
-                width={58}
                 height={68}
                 unoptimized
               />
