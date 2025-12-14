@@ -1,0 +1,51 @@
+.pizza-calculator {
+  padding: 16px;
+  max-width: 700px;
+  margin: auto;
+  font-family: 'ms-dos-ank24', sans-serif;
+  font-size: 20px;
+
+  input,
+  option,
+  select {
+    font-size: 20px;
+    font-family: 'ms-dos-ank24', sans-serif;
+  }
+
+  h1 {
+    padding: 16px 8px;
+    background-color: white;
+    border: 2px solid black;
+    text-align: center;
+    margin: 32px auto;
+  }
+
+  .individual-pizza {
+    background-color: white;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    margin: 16px auto;
+    padding: 8px;
+
+    label {
+      margin-right: 8px;
+    }
+
+    > *:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  /* Chrome, Safari, Edge */
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+}
