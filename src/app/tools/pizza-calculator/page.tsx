@@ -12,11 +12,17 @@ type Pizza = {
   length?: number
 }
 
-function formatAsCurrency(costInCents: number): string {
-  return new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-  }).format(costInCents / 100)
+function getUnitCost(pizza: Pizza) {
+  let unitPrice
+  if (pizza.shape == 'rectangular') {
+    const area = Number(pizza.width) * Number(pizza.length)
+    unitPrice = pizza.costInCents / area
+  } else {
+    const radius = Number(pizza.diameter) / 2
+    const area = Math.PI * radius * radius
+    unitPrice = pizza.costInCents / area
+  }
+  return unitPrice.toFixed(5)
 }
 
 export default function PizzaCalculator() {
@@ -108,6 +114,10 @@ export default function PizzaCalculator() {
                     }
                   }}
                 />
+              </div>
+
+              <div>
+                Unit cost: {getUnitCost(pizza)} ¢/in<sup>2</sup>
               </div>
             </div>
           ))}
