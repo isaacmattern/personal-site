@@ -1,35 +1,43 @@
 .pizza-calculator {
   padding: 16px;
-  max-width: 700px;
+  max-width: 480px;
   margin: auto;
   font-family: 'ms-dos-ank24', sans-serif;
-  font-size: 18px;
+  font-size: 17px;
 
   input,
   option,
   select {
-    font-size: 18px;
+    font-size: 17px;
     font-family: 'ms-dos-ank24', sans-serif;
+  }
+
+  /* Generic form row */
+  .form-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
   }
 
   label,
   .label {
-    display: inline-block;
-    min-width: 110px;
+    flex: 0 0 120px; // fixed label width
     text-align: right;
-    padding-right: 16px;
   }
 
-  input {
-    width: 80px;
+  input,
+  select {
+    flex: 1 1 auto;
+    max-width: 120px;
   }
 
   .header {
-    padding: 16px 8px;
+    padding: 16px;
     background-color: white;
     border: 2px solid black;
     text-align: center;
     margin: 32px auto;
+
     > * {
       margin: 0;
       padding: 0;
@@ -44,10 +52,6 @@
     margin: 16px auto;
     padding: 12px;
 
-    label {
-      margin-right: 8px;
-    }
-
     > *:not(:last-child) {
       margin-bottom: 8px;
     }
@@ -59,23 +63,20 @@
     font-size: 24px;
     padding: 8px;
     text-align: center;
-    :hover {
-      opacity: 70%;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
     }
   }
 
-  .unit-cost {
-    padding-left: 8px;
-  }
-
-  /* Chrome, Safari, Edge */
+  /* Remove number spinners */
   input[type='number']::-webkit-inner-spin-button,
   input[type='number']::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
 
-  /* Firefox */
   input[type='number'] {
     -moz-appearance: textfield;
   }

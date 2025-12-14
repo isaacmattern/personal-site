@@ -32,8 +32,8 @@ function getUnitCost(pizza: Pizza): number | null {
 
 export default function PizzaCalculator() {
   const [pizzas, setPizzas] = useState<Pizza[]>([
-    { costInCents: 999, shape: 'circular', diameter: 12 },
-    { costInCents: 1399, shape: 'rectangular', width: 10, length: 12 },
+    { costInCents: 999, shape: 'circular', diameter: 12, width: 10, length: 12 },
+    { costInCents: 1399, shape: 'rectangular', diameter: 12, width: 10, length: 12 },
   ])
 
   const updatePizza = (index: number, updates: Partial<Pizza>) => {
@@ -63,7 +63,7 @@ export default function PizzaCalculator() {
 
             return (
               <div className="individual-pizza" key={i}>
-                <div>
+                <div className="form-row">
                   <label htmlFor={`shape-${i}`}>Pizza Shape</label>
                   <select
                     id={`shape-${i}`}
@@ -83,8 +83,8 @@ export default function PizzaCalculator() {
                 </div>
 
                 {pizza.shape === 'circular' && (
-                  <div>
-                    <label htmlFor={`diameter-${i}`}>Diameter</label>
+                  <div className="form-row">
+                    <label htmlFor={`diameter-${i}`}>Diameter (in.)</label>
                     <input
                       id={`diameter-${i}`}
                       type="number"
@@ -99,8 +99,8 @@ export default function PizzaCalculator() {
 
                 {pizza.shape === 'rectangular' && (
                   <>
-                    <div>
-                      <label htmlFor={`length-${i}`}>Length</label>
+                    <div className="form-row">
+                      <label htmlFor={`length-${i}`}>Length (in.)</label>
                       <input
                         id={`length-${i}`}
                         type="number"
@@ -112,8 +112,8 @@ export default function PizzaCalculator() {
                       />
                     </div>
 
-                    <div>
-                      <label htmlFor={`width-${i}`}>Width</label>
+                    <div className="form-row">
+                      <label htmlFor={`width-${i}`}>Width (in.)</label>
                       <input
                         id={`width-${i}`}
                         type="number"
@@ -127,7 +127,7 @@ export default function PizzaCalculator() {
                   </>
                 )}
 
-                <div>
+                <div className="form-row">
                   <CurrencyInput
                     index={i}
                     valueCents={pizza.costInCents}
@@ -135,14 +135,14 @@ export default function PizzaCalculator() {
                   />
                 </div>
 
-                <div>
+                <div className="form-row">
                   <span className="label">Unit cost: </span>
                   {unitCost !== null ? (
                     <>
-                      <span className="unit-cost">{unitCost.toFixed(2)} ¢/sq. in</span>
+                      <span>{unitCost.toFixed(2)} ¢/sq. in</span>
                     </>
                   ) : (
-                    <span className="unit-cost">Enter valid dimensions</span>
+                    <span>Enter valid dimensions</span>
                   )}
                 </div>
               </div>
@@ -155,6 +155,10 @@ export default function PizzaCalculator() {
                 ...pizzas,
                 {
                   shape: 'circular',
+                  diameter: 12,
+                  length: 10,
+                  width: 12,
+                  costInCents: 1999,
                 } as Pizza,
               ])
             }
