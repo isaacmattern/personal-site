@@ -2,14 +2,14 @@
   padding: 16px;
   max-width: 480px;
   margin: auto;
-  font-family: 'ms-dos-ank24', sans-serif;
-  font-size: 17px;
+  font-family: 'Libertinus Serif', serif;
+  font-size: 18px;
 
   input,
   option,
   select {
-    font-size: 17px;
-    font-family: 'ms-dos-ank24', sans-serif;
+    font-size: 18px;
+    font-family: 'Libertinus Serif', serif;
   }
 
   /* Generic form row */
@@ -27,7 +27,7 @@
 
   input,
   select {
-    flex: 1 1 auto;
+    flex: 1;
     max-width: 120px;
   }
 
@@ -36,7 +36,7 @@
     background-color: white;
     border: 2px solid black;
     text-align: center;
-    margin: 32px auto;
+    margin: 32px auto 16px;
 
     > * {
       margin: 0;
@@ -60,7 +60,7 @@
   .add-pizza-button {
     background-color: white;
     border: 2px solid black;
-    font-size: 24px;
+    font-size: 20px;
     padding: 8px;
     text-align: center;
     cursor: pointer;
