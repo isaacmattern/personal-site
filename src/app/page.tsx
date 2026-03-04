@@ -32,7 +32,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <p className="welcome-message">Happy Holidays!</p>
+          {/* <p className="welcome-message">Happy Holidays!</p> */}
           <div className="homepage-link-wrapper">
             <HomepageLink href={'/projects'} spriteIdentifier={'projects'} label={'Projects'} />
             <HomepageLink href={'/about'} spriteIdentifier={'about'} label={'About'} />
